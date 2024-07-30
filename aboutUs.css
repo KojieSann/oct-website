@@ -7,6 +7,7 @@
   scroll-behavior: smooth;
 }
 .backToTop {
+  display: flex;
   font-size: 23px;
   height: 45px;
   width: 45px;
@@ -15,16 +16,21 @@
   color: #fff;
   align-items: center;
   justify-content: center;
-  display: none;
   position: fixed;
   z-index: 100000;
   text-decoration: none;
   bottom: 40px;
-  right: 40px;
+  right: -500px;
   transition: 0.5s;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  visibility: hidden;
+  opacity: 0;
 }
-
+.backToTop.activeBtn {
+  visibility: visible;
+  opacity: 1;
+  right: 40px;
+}
 .backToTop:hover {
   color: #40916c;
   background: #fff;

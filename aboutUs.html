@@ -502,15 +502,7 @@
     <script>
       const backToTopButton = document.getElementById("backToTop");
       window.addEventListener("scroll", () => {
-        const sliderSection = document.querySelector(".slider");
-        const sliderBottom =
-          sliderSection.offsetTop + sliderSection.offsetHeight;
-
-        if (window.scrollY > sliderBottom) {
-          backToTopButton.style.display = "flex";
-        } else {
-          backToTopButton.style.display = "none";
-        }
+        backToTopButton.classList.toggle("activeBtn", window.scrollY > 500);
       });
 
       let items = document.querySelectorAll(".slider .list .item");
