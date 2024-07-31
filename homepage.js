@@ -1,15 +1,56 @@
-const showMenu = (toggleId, navId) => {
-  const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId);
-  toggle.addEventListener("click", () => {
-    // Add show-menu class to nav menu
-    nav.classList.toggle("show-menu");
-
-    // Add show-icon to show and hide the menu icon
-    toggle.classList.toggle("show-icon");
-  });
-};
-showMenu("nav-toggle", "nav-menu");
+$("ul.main-menu li").click(function (e) {
+  if ($(this).siblings("li").find("ul.submenu:visible").length) {
+    $("ul.submenu").slideUp("normal");
+  }
+  $(this).find("ul.submenu").slideToggle("normal");
+});
+var tl = new TimelineMax({ paused: true });
+tl.to(".menu", 0.8, {
+  autoAlpha: 1,
+});
+tl.staggerFrom(
+  ".main-menu li a:not(.submenu li a)",
+  1,
+  {
+    opacity: 0,
+    y: 10,
+    ease: Power3.easeInOut,
+  },
+  0.1
+);
+tl.from(".submenu", 0.8, {
+  autoAlpha: 0,
+});
+tl.staggerFrom(
+  ".media-nav ul li",
+  1,
+  {
+    opacity: 0,
+    y: 10,
+    ease: Power3.easeInOut,
+  },
+  0.1,
+  "-=2"
+);
+tl.from(".call", 1, {
+  delay: -2,
+  opacity: 0,
+  y: 10,
+  ease: Power3.easeInOut,
+});
+tl.from(".mail-nav", 1, {
+  delay: -1.6,
+  opacity: 0,
+  y: 10,
+  ease: Power3.easeInOut,
+});
+tl.reverse();
+$(document).on("click", ".menu-btn", function () {
+  tl.reversed(!tl.reversed());
+});
+$(document).on("click", ".close-menu", function () {
+  tl.reversed(!tl.reversed());
+});
 
 let items = document.querySelectorAll(".slider .list .item");
 let next = document.getElementById("next");
@@ -51,51 +92,44 @@ document.querySelectorAll(".question-wrapper").forEach((wrapper) => {
     wrapper.classList.toggle("expanded");
   });
 });
-
-const intro = document.querySelector(".introduction");
-let introWidth = intro.offsetWidth;
-function getScrollAmount() {
-  let introWidth = intro.scrollWidth;
-  return -(introWidth - window.innerWidth);
-}
-const tween = gsap.to(intro, {
-  x: getScrollAmount,
-  duration: 3,
-  ease: "none",
+let currentScroll = 0;
+let isScrollingDown = true;
+let arrows = document.querySelectorAll(".arrow");
+let tween = gsap
+  .to(".marquee-part", {
+    xPercent: -100,
+    repeat: -1,
+    duration: 5,
+    ease: "linear",
+  })
+  .totalProgress(0.5);
+gsap.set(".marquee-inner", { xPercent: -50 });
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset > currentScroll) {
+    isScrollingDown = true;
+  } else {
+    isScrollingDown = false;
+  }
+  gsap.to(tween, {
+    timeScale: isScrollingDown ? 1 : -1,
+  });
+  arrows.forEach((arrow) => {
+    if (isScrollingDown) {
+      arrow.classList.remove("rotate");
+    } else {
+      arrow.classList.add("rotate");
+    }
+  });
+  currentScroll = this.window.pageYOffset;
 });
-ScrollTrigger.create({
-  trigger: ".intro-wrapper",
-  start: "top 5%",
-  end: () => `+=${getScrollAmount() * -1}`,
-  pin: true,
-  animation: tween,
-  invalidateOnRefresh: true,
-  scrub: 1,
-});
-let titleSplit = new SplitText(".split", { type: "chars" });
-// let tl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: ".olivTxt",
-//     start: "top center",
-//     end: "bottom center",
-//     scrub: true,
-//     markers: true,
-//   },
-// });
-// tl.to(".olivTxt", {
-//   fontSize: 10,
-//   duration: 3,
-// });
 
 const lenis = new Lenis();
 
 lenis.on("scroll", (e) => {
   console.log(e);
 });
-
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
 }
-
 requestAnimationFrame(raf);

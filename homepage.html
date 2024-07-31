@@ -15,6 +15,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="main-container">
@@ -31,116 +32,85 @@
           </div>
         </div>
       </a>
-      <header class="desktop">
-        <div class="left">
-          <img src="./img/olivarez-college-tagaytay-logo.png" alt="OCT logo" />
-          <a class="link" href="#">Programs</a>
-          <a class="link" href="#">About us</a>
-          <a class="link" href="#">News</a>
-          <a class="link" href="#">Contact us</a>
-          <a class="link" href="#">Research</a>
+      <div class="title-oct-container">
+        <div class="title-oct">
+          <h2>
+            <span style="color: #95d5b2">olivarez</span> <br />
+            college <br />
+            tagaytay
+          </h2>
         </div>
-        <div class="right">
-          <a class="link" href="#">Student Portal</a>
-          <a href="./admission.html"
-            ><button class="nav-btn">Admission</button></a
-          >
+      </div>
+
+      <header>
+        <img src="./img/olivarez-college-tagaytay-logo.png" alt="" />
+        <div class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
         </div>
       </header>
-      <header class="mobile">
-        <nav class="container">
-          <div class="nav-data">
-            <a href="">
-              <img
-                src="./img/olivarez-college-tagaytay-logo.png"
-                alt="Oct logo"
-              />
-            </a>
-            <div class="nav-toggle" id="nav-toggle">
-              <i class="fa-solid fa-bars nav-burger"></i>
-              <i class="fa-solid fa-xmark nav-close"></i>
-            </div>
-          </div>
-          <div class="nav-menu" id="nav-menu">
-            <ul class="nav-list">
-              <li><a href="" class="nav-link">Home</a></li>
-              <li><a href="" class="nav-link">About us</a></li>
-              <li class="dropdown-item">
-                <div class="nav-link">
-                  Programs <i class="fa-solid fa-angle-down dropdown-arrow"></i>
-                </div>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="./collegePage.html" class="dropdown-link"
-                      >College</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./collegePage.html" class="dropdown-link"
-                      >Senior High School</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./collegePage.html" class="dropdown-link">TESDA</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="" class="nav-link">News</a></li>
-              <li><a href="" class="nav-link">Contact us</a></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <!-- <header>
-        <nav class="container">
-          <div class="nav-data">
-            <a href="">
-              <img
-                src="./img/olivarez-college-tagaytay-logo.png"
-                alt="Oct logo"
-              />
-            </a>
-            <div class="nav-toggle" id="nav-toggle">
-              <i class="fa-solid fa-bars nav-burger"></i>
-              <i class="fa-solid fa-xmark nav-close"></i>
-            </div>
-          </div>
-          <div class="nav-menu" id="nav-menu">
-            <ul class="nav-list">
-              <li><a href="" class="nav-link">Home</a></li>
-              <li><a href="" class="nav-link">About us</a></li>
-              <li class="dropdown-item">
-                <div class="nav-link">
-                  Programs <i class="fa-solid fa-angle-down dropdown-arrow"></i>
-                </div>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="./collegePage.html" class="dropdown-link"
-                      >College</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./collegePage.html" class="dropdown-link"
-                      >Senior High School</a
-                    >
-                  </li>
-                  <li>
-                    <a href="./collegePage.html" class="dropdown-link">TESDA</a>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="" class="nav-link">News</a></li>
-              <li><a href="" class="nav-link">Contact us</a></li>
-            </ul>
-          </div>
-        </nav>
-      </header> -->
-      <div class="title-oct">
-        <h2>
-          <span style="color: #95d5b2">olivarez</span> <br />
-          college <br />
-          tagaytay
-        </h2>
+      <div class="menu">
+        <div class="close-menu">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="nav">
+          <ul class="main-menu">
+            <li class="main-menu-item">
+              <a href="./homepage.html" class="link">Home</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="#">Programs &nbsp; <i class="fa-solid fa-plus"></i></a>
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="./collegePage.html" class="link">College</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="#" class="link">SHS</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="#" class="link">TESDA</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu-item">
+              <a href="./aboutUs.html" class="link">About us</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="./contactus.html" class="link">Contact</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="#" class="link">Student portal</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="./admission.html">
+                <button class="nav-btn">Admission</button></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="contact-nav">
+          <p class="call">
+            &nbsp;&nbsp;&nbsp; <i class="fa-solid fa-phone"></i> +63 902 3002
+            123
+          </p>
+          <p class="mail-nav">
+            &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-envelope"></i> oct@gmail.com
+          </p>
+        </div>
+        <div class="media-nav">
+          <ul>
+            <li>
+              <a href=""><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+            </li>
+            <li>
+              <a href=""
+                ><i class="fa-brands fa-square-instagram"></i> Instagram</a
+              >
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-youtube"></i> Youtube</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <section class="slider">
         <div class="list">
@@ -174,8 +144,48 @@
           <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
       </section>
-      <section class="intro-wrapper">
-        <!-- <div class="introduction">
+      <div class="marquee">
+        <div class="marquee-inner">
+          <div class="marquee-part">
+            Be an Olivarian with us
+            <div class="arrow">
+              <i class="fa-solid fa-arrow-down-long"></i>
+            </div>
+          </div>
+          <div class="marquee-part">
+            Be an Olivarian with us
+            <div class="arrow">
+              <i class="fa-solid fa-arrow-down-long"></i>
+            </div>
+          </div>
+          <div class="marquee-part">
+            Be an Olivarian with us
+            <div class="arrow">
+              <i class="fa-solid fa-arrow-down-long"></i>
+            </div>
+          </div>
+          <div class="marquee-part">
+            Be an Olivarian with us
+            <div class="arrow">
+              <i class="fa-solid fa-arrow-down-long"></i>
+            </div>
+          </div>
+          <div class="marquee-part">
+            Be an Olivarian with us
+            <div class="arrow">
+              <i class="fa-solid fa-arrow-down-long"></i>
+            </div>
+          </div>
+          <div class="marquee-part">
+            Be an Olivarian with us
+            <div class="arrow">
+              <i class="fa-solid fa-arrow-down-long"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <section class="intro-wrapper">
+        <div class="introduction">
 
         <div class="content">
           <div class="desc">
@@ -199,8 +209,8 @@
             Come and be an <span class="olivTxt">olivarian</span> with us
           </div>
         </div>
-      </div> -->
-      </section>
+      </div>
+      </section> -->
       <section class="faq">
         <div class="container">
           <div class="questions">
