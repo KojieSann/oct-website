@@ -1,0 +1,123 @@
+.news {
+  margin-top: 30px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* This will ensure that the content doesn't overflow the viewport */
+  padding: 10px 50px; /* Optional: Add padding for better spacing */
+}
+
+.news .header-news {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.news .header-news .nav-news {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.news .header-news .nav-news h2 {
+  font-size: 1.7em;
+}
+.news .header-news .nav-news a {
+  color: #245b44;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.news .header-news .wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.news .header-news .img-news {
+  position: relative;
+}
+
+.news .header-news .img-news img {
+  filter: brightness(50%);
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.news-text {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: white;
+  width: 40%;
+}
+.news-text h1 {
+  font-size: 3rem;
+}
+.news .swiper-container {
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+  overflow: hidden;
+}
+.swiper-slide {
+  width: 250px !important;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  background: #fff;
+}
+.swiper-slide .card-content {
+  padding: 10px 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.news-content {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 120%;
+}
+
+span {
+  line-height: 140%;
+  color: #9c9c9c;
+  font-size: 0.7rem;
+  margin-top: 10px;
+}
+.news-footer {
+  color: #ef233c;
+  font-size: 0.7rem;
+}
+.mySwiper {
+  margin: 0 40px;
+}
+.news-source {
+  gap: 5px;
+  color: #9b9b9b;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
+}
+.swiper-slide .news-source img {
+  width: 18px;
+}
+.swiper-slide .image {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+}
+.image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}

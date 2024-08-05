@@ -1,5 +1,10 @@
 Splitting();
 
+const backToTopButton = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  backToTopButton.classList.toggle("activeBtn", window.scrollY > 500);
+});
+
 function navigation() {
   $("ul.main-menu li").click(function (e) {
     if ($(this).siblings("li").find("ul.submenu:visible").length) {
@@ -92,17 +97,73 @@ gtl.from(".title-intro .char", {
   ease: "back.out",
 });
 
-gsap.from(".question-mark", {
-  scrollTrigger: {
-    trigger: ".introduction",
-    start: "top 70%",
-    end: "top top",
-    scrub: true,
+const intro = document.querySelector(".scrollHori");
+let introWidth = intro.offsetWidth;
+function getScrollAmount() {
+  let introWidth = intro.scrollWidth;
+  return -(introWidth - window.innerWidth);
+}
+const scrollX = gsap.to(intro, {
+  x: getScrollAmount,
+  duration: 3,
+  ease: "none",
+});
+ScrollTrigger.create({
+  trigger: ".intro-wrapper",
+  start: "50% 50%",
+  end: () => `+=${getScrollAmount() * -1}`,
+  pin: true,
+  animation: scrollX,
+  invalidateOnRefresh: true,
+  scrub: 1,
+});
+
+const video = document.getElementById("octVideo");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    });
   },
-  rotation: 180,
-  x: 400,
-  duration: 1,
-  ease: "bounce",
+  {
+    threshold: 0.5,
+  }
+);
+observer.observe(video);
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  grabCursor: true,
+  pagination: {
+    dynamicBullets: true,
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    420: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 40,
+    },
+  },
 });
 
 let items = document.querySelectorAll(".slider .list .item");
