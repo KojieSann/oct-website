@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0"
+    />
     <title>Olivarez College Tagaytay</title>
     <link
       rel="icon"
@@ -17,73 +20,135 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
+    <div class="preloader">
+      <img
+        src="./img/olivarez-college-tagaytay-logo.png"
+        alt=""
+        class="preloaderImg"
+      />
+      <div class="overlay">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </div>
+    <a href="#toTop" class="backToTop" id="backToTop"
+      ><img src="./img/olivarez-college-tagaytay-logo.png" alt=""
+    /></a>
     <div class="bg-container">
-      <header>
-        <nav>
-          <div class="logo">
-            <a href="./homepage.html"
-              ><img
-                src="./img/olivarez-college-tagaytay-logo.png"
-                alt="oct logo"
-            /></a>
-            Olivarez College Tagaytay
-          </div>
-          <div class="logo-nav">
-            <div class="logo-nav-top">
-              <a href="./aboutUs.html">About us</a>
-              <a href="#">Programs</a>
-              <a href="#">News</a>
-              <a href="./contactus.html">Contact us</a>
-              <a href="#">Research</a>
-            </div>
-            <div class="logo-nav-bottom">
-              <a href="#" style="color: #b7e4c7; font-size: 15px"
-                >Student Portal</a
-              >
-              <button class="nav-btn">Admission</button>
-            </div>
-          </div>
-        </nav>
+      <header id="toTop">
+        <img src="./img/olivarez-college-tagaytay-logo.png" alt="" />
+        <div class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </header>
+      <div class="menu">
+        <div class="close-menu">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="nav">
+          <ul class="main-menu">
+            <li class="main-menu-item">
+              <a href="./homepage.html" class="link">Home</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="#">Programs &nbsp; <i class="fa-solid fa-plus"></i></a>
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="./collegePage.html" class="link">College</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="#" class="link">SHS</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="#" class="link">TESDA</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu-item">
+              <a href="./aboutUs.html" class="link">About us</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="./contactus.html" class="link">Contact</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="#" class="link">Student portal</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="./admission.html">
+                <button class="nav-btn">Admission</button></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="contact-nav">
+          <p class="call">
+            &nbsp;&nbsp;&nbsp; <i class="fa-solid fa-phone"></i> +63 902 3002
+            123
+          </p>
+          <p class="mail-nav">
+            &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-envelope"></i> oct@gmail.com
+          </p>
+        </div>
+        <div class="media-nav">
+          <ul>
+            <li>
+              <a
+                href="https://www.facebook.com/octagaytayofficial"
+                target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i> Facebook</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="fa-brands fa-square-instagram"></i> Instagram</a
+              >
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-youtube"></i> Youtube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <section class="slider">
         <div class="list">
+          <div class="split">
+            <span data-splitting> College </span>
+          </div>
           <div class="item active">
             <img
               src="./img/368365339_629152525987635_5607787583439653668_n.jpg"
               alt=""
             />
-            <div class="content">
-              <h2>College</h2>
-            </div>
           </div>
           <div class="item">
             <img
               src="./img/369741573_629154352654119_8363810160410609985_n.jpg"
               alt=""
             />
-            <div class="content">
-              <h2>College</h2>
-            </div>
           </div>
           <div class="item">
             <img
               src="./img/448771026_796735689229317_3302201126219716909_n.jpg"
               alt=""
             />
-            <div class="content">
-              <h2>College</h2>
-            </div>
           </div>
           <div class="item">
             <img
               src="./img/448868107_796736032562616_3494834045201406244_n.jpg"
               alt=""
             />
-            <div class="content">
-              <h2>College</h2>
-            </div>
           </div>
         </div>
         <div class="arrows">
@@ -211,8 +276,9 @@
         in-demand professional.</span
       >
     </div>
-    <section class="courses">
-      <div class="course-info">
+
+    <section class="left courses">
+      <div class="course-info textFromLeft">
         <span>Bachelor of Science in</span>
         <h2>Business Administration</h2>
         <p>
@@ -246,8 +312,8 @@
         <button>Curriculum Guide</button>
       </div>
     </section>
-    <section class="courses">
-      <div class="course-info">
+    <section class="left courses">
+      <div class="course-info textFromLeft">
         <span>Bachelor of Science in</span>
         <h2>Criminology</h2>
         <p>
@@ -281,8 +347,8 @@
         <button>Curriculum Guide</button>
       </div>
     </section>
-    <section class="courses">
-      <div class="course-info">
+    <section class="left courses">
+      <div class="course-info textFromLeft">
         <span>Bachelor of Science in</span>
         <h2>Hospitality Management / <br />Tourism</h2>
         <p>
@@ -313,8 +379,8 @@
         <button>Curriculum Guide</button>
       </div>
     </section>
-    <section class="courses">
-      <div class="course-info">
+    <section class="left courses">
+      <div class="course-info textFromLeft">
         <span>Bachelor of Science in</span>
         <h2>Nursing</h2>
         <p>
@@ -371,37 +437,9 @@
         <div class="footer-right"></div>
       </div>
     </footer>
-    <script>
-      let items = document.querySelectorAll(".slider .list .item");
-      let next = document.getElementById("next");
-      let prev = document.getElementById("prev");
-      let countItem = items.length;
-      let itemActive = 0;
-      next.onclick = function () {
-        itemActive = itemActive + 1;
-        if (itemActive >= countItem) {
-          itemActive = 0;
-        }
-        showSlider();
-      };
-      prev.onclick = function () {
-        itemActive = itemActive - 1;
-        if (itemActive < 0) {
-          itemActive = countItem - 1;
-        }
-        showSlider();
-      };
-      let refreshInterval = setInterval(() => {
-        next.click();
-      }, 7000);
-      function showSlider() {
-        let itemActiveOld = document.querySelector(
-          ".slider .list .item.active"
-        );
-
-        itemActiveOld.classList.remove("active");
-        items[itemActive].classList.add("active");
-      }
-    </script>
+    <script src="./gsap/gsap.min.js"></script>
+    <script src="./gsap/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://unpkg.com/lenis@1.1.8/dist/lenis.min.js"></script> -->
+    <script src="./collegePage.js"></script>
   </body>
 </html>

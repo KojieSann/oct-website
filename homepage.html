@@ -45,16 +45,26 @@
           </div>
         </div>
       </a>
-      <div class="title-oct-container">
-        <div class="title-oct">
-          <h2>
-            <span style="color: #95d5b2">olivarez</span> <br />
-            college <br />
-            tagaytay
-          </h2>
+      <!-- <div class="preloader">
+        <img
+          src="./img/olivarez-college-tagaytay-logo.png"
+          alt=""
+          class="preloaderImg"
+        />
+        <h1 class="counter">0</h1>
+        <div class="overlay">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
         </div>
-      </div>
-
+      </div> -->
       <header id="toTop">
         <img src="./img/olivarez-college-tagaytay-logo.png" alt="" />
         <div class="menu-btn">
@@ -130,6 +140,15 @@
         </div>
       </div>
       <section class="slider">
+        <div class="title-oct-container">
+          <div class="title-oct">
+            <h2 data-splitting>
+              <span style="color: #95d5b2">olivarez</span> <br />
+              college <br />
+              tagaytay
+            </h2>
+          </div>
+        </div>
         <div class="list">
           <div class="item active">
             <img
@@ -298,10 +317,97 @@
         </div>
       </section>
       <section class="video">
-        <video id="octVideo" controls>
-          <source src="./img/Quinagutan_dataGridView.mp4" />
-          Your video is not supported
-        </video>
+        <div class="video-title">What's Inside OCT?</div>
+        <div class="video-img">
+          <img
+            src="./img/olivarez-college-tagaytay-logo.png"
+            alt=""
+            draggable="false"
+          />
+        </div>
+        <div class="video-thumbnails">
+          <div class="header-thumbnail">
+            <div
+              class="play-btn"
+              data-video-src="./img/Quinagutan_dataGridView.mp4"
+            >
+              <i class="fa-solid fa-play"></i>
+            </div>
+            <img
+              src="./img/368365339_629152525987635_5607787583439653668_n.jpg"
+              alt=""
+            />
+            <div class="video-info">
+              <div class="wrapper"><i class="fa-solid fa-star"></i> video</div>
+              <span>Lorem, ipsum dolor.</span>
+            </div>
+          </div>
+          <div class="videos-container">
+            <div class="video-wrapper">
+              <div
+                class="play-btn"
+                data-video-src="./img/Quinagutan_dataGridView.mp4"
+              >
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <img
+                src="./img/368365339_629152525987635_5607787583439653668_n.jpg"
+                alt=""
+              />
+              <div class="video-info">
+                <div class="wrapper">
+                  <i class="fa-solid fa-star"></i> video
+                </div>
+                <span>Lorem, ipsum dolor.</span>
+              </div>
+            </div>
+            <div class="video-wrapper">
+              <div
+                class="play-btn"
+                data-video-src="./img/Quinagutan_dataGridView.mp4"
+              >
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <img
+                src="./img/368365339_629152525987635_5607787583439653668_n.jpg"
+                alt=""
+              />
+              <div class="video-info">
+                <div class="wrapper">
+                  <i class="fa-solid fa-star"></i> video
+                </div>
+                <span>Lorem, ipsum dolor.</span>
+              </div>
+            </div>
+            <div class="video-wrapper">
+              <div
+                class="play-btn"
+                data-video-src="./img/Quinagutan_dataGridView.mp4"
+              >
+                <i class="fa-solid fa-play"></i>
+              </div>
+              <img
+                src="./img/368365339_629152525987635_5607787583439653668_n.jpg"
+                alt=""
+              />
+              <div class="video-info">
+                <div class="wrapper">
+                  <i class="fa-solid fa-star"></i> video
+                </div>
+                <span>Lorem, ipsum dolor.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="videoModal" class="modal">
+          <div class="modal-content">
+            <span class="close"><i class="fa-solid fa-xmark"></i></span>
+            <video id="videoPlayer" controls>
+              <source id="videoSource" src="" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
       </section>
       <section class="news">
         <div class="header-news">
@@ -596,6 +702,153 @@
           </div>
           <div class="undraw">
             <img src="./img/undraw/undraw_questions_re_1fy7.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section class="comments">
+        <div class="comment-title">What our <br />Olivarian Says</div>
+        <div class="commentsContainer">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="quote">
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+
+              <img
+                src="./img/ludovic-migneault-4uj3iZ5m084-unsplash.jpg"
+                alt=""
+              />
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+                porro quidem quam esse labore minus dicta, praesentium aliquam
+                ea architecto enim necessitatibus, nesciunt assumenda
+                consequuntur soluta accusamus accusantium molestiae id.
+              </p>
+              <div class="commentor">
+                <h5>Andrei Belamide</h5>
+                <p>Information Technology</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="quote">
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+
+              <img
+                src="./img/ludovic-migneault-4uj3iZ5m084-unsplash.jpg"
+                alt=""
+              />
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+                porro quidem quam esse labore minus dicta, praesentium aliquam
+                ea architecto enim necessitatibus, nesciunt assumenda
+                consequuntur soluta accusamus accusantium molestiae id.
+              </p>
+              <div class="commentor">
+                <h5>Andrei Belamide</h5>
+                <p>Information Technology</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="quote">
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+
+              <img
+                src="./img/ludovic-migneault-4uj3iZ5m084-unsplash.jpg"
+                alt=""
+              />
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+                porro quidem quam esse labore minus dicta, praesentium aliquam
+                ea architecto enim necessitatibus, nesciunt assumenda
+                consequuntur soluta accusamus accusantium molestiae id.
+              </p>
+              <div class="commentor">
+                <h5>Andrei Belamide</h5>
+                <p>Information Technology</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="quote">
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+
+              <img
+                src="./img/ludovic-migneault-4uj3iZ5m084-unsplash.jpg"
+                alt=""
+              />
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+                porro quidem quam esse labore minus dicta, praesentium aliquam
+                ea architecto enim necessitatibus, nesciunt assumenda
+                consequuntur soluta accusamus accusantium molestiae id.
+              </p>
+              <div class="commentor">
+                <h5>Andrei Belamide</h5>
+                <p>Information Technology</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="quote">
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+
+              <img
+                src="./img/ludovic-migneault-4uj3iZ5m084-unsplash.jpg"
+                alt=""
+              />
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+                porro quidem quam esse labore minus dicta, praesentium aliquam
+                ea architecto enim necessitatibus, nesciunt assumenda
+                consequuntur soluta accusamus accusantium molestiae id.
+              </p>
+              <div class="commentor">
+                <h5>Andrei Belamide</h5>
+                <p>Information Technology</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="quote">
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+
+              <img
+                src="./img/ludovic-migneault-4uj3iZ5m084-unsplash.jpg"
+                alt=""
+              />
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+                porro quidem quam esse labore minus dicta, praesentium aliquam
+                ea architecto enim necessitatibus, nesciunt assumenda
+                consequuntur soluta accusamus accusantium molestiae id.
+              </p>
+              <div class="commentor">
+                <h5>Andrei Belamide</h5>
+                <p>Information Technology</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="quote">
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+
+              <img
+                src="./img/ludovic-migneault-4uj3iZ5m084-unsplash.jpg"
+                alt=""
+              />
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+                porro quidem quam esse labore minus dicta, praesentium aliquam
+                ea architecto enim necessitatibus, nesciunt assumenda
+                consequuntur soluta accusamus accusantium molestiae id.
+              </p>
+              <div class="commentor">
+                <h5>Andrei Belamide</h5>
+                <p>Information Technology</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

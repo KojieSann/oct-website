@@ -62,6 +62,55 @@ function navigation() {
 }
 navigation();
 
+// function startLoader() {
+//   let counterElement = document.querySelector(".counter");
+//   let currentValue = 0;
+//   function updateCounter() {
+//     if (currentValue === 100) {
+//       return;
+//     }
+//     currentValue += Math.floor(Math.random() * 10) + 1;
+//     if (currentValue > 100) {
+//       currentValue = 100;
+//     }
+//     counterElement.textContent = currentValue;
+//     let delay = Math.floor(Math.random() * 200) + 50;
+//     setTimeout(updateCounter, delay);
+//   }
+//   updateCounter();
+// }
+// startLoader();
+// gsap.to(".counter", 0.25, {
+//   delay: 3.5,
+//   opacity: 0,
+// });
+// gsap.to(".preloaderImg", 0.25, {
+//   y: -100,
+//   delay: 3.5,
+//   opacity: 0,
+// });
+// gsap.to(".bar", 1.5, {
+//   delay: 3.5,
+//   height: 0,
+//   stagger: {
+//     amount: 0.5,
+//   },
+//   ease: "power4.inOut",
+// });
+// gsap.from(".title-oct h2 .char", 1.5, {
+//   delay: 4,
+//   y: 700,
+//   stagger: {
+//     amount: 0.5,
+//   },
+//   ease: "power4.inOut",
+// });
+// gsap.from("#toTop img", 2, {
+//   delay: 4.5,
+//   x: -200,
+//   ease: "power4.inOut",
+// });
+
 gsap.registerPlugin(ScrollTrigger);
 gsap.to(".oct-logo", {
   scrollTrigger: {
@@ -118,28 +167,12 @@ ScrollTrigger.create({
   scrub: 1,
 });
 
-const video = document.getElementById("octVideo");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    });
-  },
-  {
-    threshold: 0.5,
-  }
-);
-observer.observe(video);
-
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
   spaceBetween: 10,
+  loop: true,
+  centerSlide: true,
   grabCursor: true,
+  fade: true,
   pagination: {
     dynamicBullets: true,
     el: ".swiper-pagination",
@@ -156,15 +189,69 @@ var swiper = new Swiper(".mySwiper", {
       spaceBetween: 20,
     },
     768: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 40,
     },
     1024: {
-      slidesPerView: 5,
+      slidesPerView: 4,
       spaceBetween: 40,
     },
   },
 });
+
+var swiper2 = new Swiper(".commentsContainer", {
+  spaceBetween: 10,
+  centerSlide: true,
+  fade: true,
+  loop: true,
+  autoplay: { delay: 3000 },
+  breakpoints: {
+    420: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 50,
+    },
+  },
+});
+
+const modal = document.getElementById("videoModal");
+const videoPlayer = document.getElementById("videoPlayer");
+const videoSource = document.getElementById("videoSource");
+const closeBtn = document.getElementsByClassName("close")[0];
+document.querySelectorAll(".play-btn").forEach((thumbnail) => {
+  thumbnail.onclick = function () {
+    const videoSrc = this.getAttribute("data-video-src");
+    videoSource.src = videoSrc;
+    videoPlayer.load();
+    modal.style.display = "block";
+    videoPlayer.play();
+  };
+});
+
+closeBtn.onclick = function () {
+  modal.style.display = "none";
+  videoPlayer.pause();
+  videoPlayer.currentTime = 0;
+};
+
+window.onclick = function (event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+    videoPlayer.pause();
+    videoPlayer.currentTime = 0;
+  }
+};
 
 let items = document.querySelectorAll(".slider .list .item");
 let next = document.getElementById("next");

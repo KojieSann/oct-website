@@ -18,15 +18,47 @@
 body {
   overflow-x: hidden;
 }
-
+.preloader .overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100000;
+  display: flex;
+}
+.preloader .overlay .bar {
+  width: 10vw;
+  height: 105vh;
+  background: #fff;
+}
+.preloader .counter {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: #4b4b4b;
+  padding: 0.1em 0.4em;
+  font-size: 10vw;
+  z-index: 1000000;
+  font-family: "kanit";
+  font-weight: 900;
+}
+.preloader .preloaderImg {
+  filter: grayscale(20%);
+  z-index: 1000000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20vw;
+}
 ::selection {
   background: #66c887;
   color: #fff;
 }
 header {
   position: absolute;
-  backdrop-filter: blur(10px);
-  background: transparent;
   z-index: 2000;
   padding: 15px 40px;
   width: 100%;
@@ -44,10 +76,10 @@ header .menu-btn {
   color: #fff;
   cursor: pointer;
   z-index: 2001;
-  position: fixed;
   margin: 1em;
   font-size: 24px;
   right: 1.8%;
+  position: absolute;
 }
 .menu {
   position: absolute;
@@ -251,22 +283,6 @@ header .menu-btn {
   filter: brightness(30%);
 }
 
-.slider .list .item .content {
-  position: absolute;
-  left: 5%;
-  bottom: -30px;
-  width: 500px;
-  max-width: 80%;
-  z-index: 1;
-  color: #fff;
-}
-.slider .list .item .content h2 {
-  white-space: nowrap;
-  font-size: 150px;
-  margin: 0;
-  font-family: "roboto";
-  font-weight: 400;
-}
 .slider .list .item.active {
   opacity: 1;
   z-index: 10;
@@ -306,13 +322,14 @@ header .menu-btn {
   top: 50%;
   left: 80%;
   transform: translate(-50%, -50%);
-  z-index: 1000;
+  z-index: 100;
   color: #fff;
   font-size: 5rem;
   text-transform: uppercase;
 }
 .title-oct h2,
 .title-oct span {
+  white-space: nowrap;
   user-select: none;
   line-height: 110px;
   font-family: "Oswald", sans-serif;
@@ -360,6 +377,7 @@ header .menu-btn {
   flex-shrink: 0;
   padding: 0 20px;
 }
+
 .introduction {
   height: 100vh;
   width: 100%;
@@ -462,15 +480,203 @@ header .menu-btn {
   align-items: center;
 }
 .video {
+  overflow: hidden;
+  position: relative;
+  background: #e9fded;
+  padding: 40px 50px;
   margin-top: 50px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.video .video-title {
+  font-size: 4rem;
+  line-height: 100%;
+  font-weight: 700;
+  margin-left: -30px;
+}
+.video .modal {
+  display: none;
+  position: fixed;
+  z-index: 1000000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.video .modal-content {
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.video .close {
+  cursor: pointer;
+  color: #fff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.video video {
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.video .video-img {
+  position: absolute;
+  z-index: 1;
+  bottom: -70%;
+  width: 40vw;
+  left: -30%;
+  opacity: 0.2;
+}
+.video .header-thumbnail {
+  z-index: 5;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
-.video #octVideo {
-  width: 95%;
+.video .header-thumbnail .play-btn {
+  box-shadow: 0px 0px 5px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  background: #52b788;
+  border-radius: 50%;
+  color: #fff;
+  transition: 0.3s;
+  z-index: 10;
+}
+.video .video-wrapper .play-btn {
+  box-shadow: 0px 0px 3px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  background: #52b788;
+  border-radius: 50%;
+  color: #fff;
+  transition: 0.3s;
+  z-index: 10;
+}
+.video .video-wrapper .play-btn i {
+  font-size: 10px;
+}
+.video .header-thumbnail .video-info {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video .video-wrapper .video-info {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.video .header-thumbnail .video-info span {
+  font-size: 1.3rem;
+}
+.video .video-wrapper .video-info span {
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+.video .header-thumbnail .video-info .wrapper {
+  font-size: 0.8rem;
+  padding: 3px 10px;
+  background: #52b788;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.video .video-wrapper .video-info .wrapper {
+  font-size: 0.6rem;
+  padding: 1px 6px;
+  background: #52b788;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.video .header-thumbnail .video-info .wrapper i {
+  font-size: 0.4rem;
+}
+.video .video-wrapper .video-info .wrapper i {
+  font-size: 0.4rem;
+}
+.video .header-thumbnail::after,
+.video .video-wrapper::after {
+  content: "";
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, #000 1%, transparent);
+}
+.video .header-thumbnail .play-btn:hover,
+.video .video-wrapper .play-btn:hover {
+  box-shadow: none;
+  background: #fff;
+  color: #52b788;
+}
+.video .header-thumbnail img {
+  filter: brightness(80%);
   border-radius: 10px;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.video .video-wrapper {
+  z-index: 5;
+  position: relative;
+}
+.video .video-thumbnails .videos-container {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+.video .video-thumbnails .videos-container img {
+  width: 300px;
+  object-fit: cover;
+  height: 200px;
 }
 .news {
   margin-top: 30px;
@@ -548,9 +754,7 @@ header .menu-btn {
 .news .header-news .img-news .news-text h1 {
   font-size: 3rem;
 }
-
 .news .swiper-slide {
-  width: 250px !important;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.08);
   border-radius: 10px;
   background: #fff;
@@ -578,9 +782,10 @@ header .menu-btn {
   font-size: 0.7rem;
 }
 .news .mySwiper {
+  overflow: hidden;
   width: 100%;
   padding: 20px;
-  margin: 0 30px;
+  margin: 10px 0;
   position: relative;
 }
 .news .swiper-slide .news-source {
@@ -675,9 +880,67 @@ header .menu-btn {
   font-size: 1.7rem;
   transition: all 0.3s;
 }
+.comments {
+  margin-top: 30px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+  padding: 10px 70px;
+}
+.comments .commentsContainer {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 40px;
+  margin: 10px 0;
+  position: relative;
+}
+.comments .comment-title {
+  font-size: 4rem;
+  line-height: 100%;
+  font-weight: 700;
+  color: #081c15;
+}
+.comments .swiper-wrapper img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.comments .swiper-wrapper .swiper-slide {
+  padding: 20px 30px;
+  border-radius: 5px;
+  background: #e9fded;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.comments .swiper-wrapper .swiper-slide .quote {
+  position: absolute;
+  top: -40px;
+  color: #2d6a4f;
+  right: -5px;
+  font-size: 4.5rem;
+}
+
+.comments .swiper-wrapper .swiper-slide p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #4b4b4b;
+}
+.comments .swiper-wrapper .swiper-slide .commentor {
+  margin-left: 20px;
+}
+.comments .swiper-wrapper .swiper-slide .commentor p {
+  font-size: 0.7rem;
+  color: #868686;
+}
 /* footer */
 footer {
   width: 100%;
+  background: #f5fff6;
 }
 footer .footer-wrapper {
   padding: 30px;
@@ -693,10 +956,10 @@ footer .footer-wrapper .right-side {
 footer .footer-wrapper .footer-title {
   font-weight: 700;
   font-size: 25px;
+  line-height: 125%;
 }
 footer .footer-wrapper .left-side p {
   font-size: 12px;
-  margin-top: -10px;
 }
 footer .footer-wrapper .footer-title span {
   font-size: 40px;
@@ -779,10 +1042,6 @@ html.lenis body {
   .slider .title h2 {
     font-size: 6rem;
     line-height: 50px;
-  }
-  .oct-logo {
-    bottom: -15vh;
-    width: 10vw;
   }
 
   .title-oct h2 {
@@ -892,7 +1151,7 @@ html.lenis body {
     display: none;
   }
   .news {
-    padding: 10px; /* Optional: Add padding for better spacing */
+    padding: 10px;
   }
   .news .header-news .nav-news h2 {
     font-size: 1rem;
