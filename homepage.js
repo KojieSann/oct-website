@@ -112,20 +112,65 @@ navigation();
 // });
 
 gsap.registerPlugin(ScrollTrigger);
-gsap.to(".oct-logo", {
-  scrollTrigger: {
-    trigger: ".oct-logo",
-    start: "top 60%",
-    end: "bottom 33%",
-    pin: true,
 
-    scrub: true,
-  },
-  scale: 2.3,
-  opacity: 0.1,
-  y: 0,
-  ease: "slow",
-  duration: 2,
+let mm = gsap.matchMedia();
+mm.add("(max-width: 500px)", () => {
+  gsap.to(".oct-logo", {
+    scrollTrigger: {
+      trigger: ".oct-logo",
+      start: "top 60%",
+      end: "bottom 33%",
+      pin: true,
+
+      scrub: true,
+    },
+    scale: 1.8,
+    opacity: 0.1,
+    x: 0,
+    y: -200,
+    ease: "slow",
+    duration: 2,
+  });
+});
+mm.add("(min-width: 500px)", () => {
+  gsap.to(".oct-logo", {
+    scrollTrigger: {
+      trigger: ".oct-logo",
+      start: "top 60%",
+      end: "bottom 33%",
+      pin: true,
+
+      scrub: true,
+    },
+    scale: 1.8,
+    opacity: 0.7,
+    x: 300,
+    y: -180,
+    ease: "slow",
+    duration: 2,
+  });
+});
+const navItems = document.querySelectorAll(".programs-nav > div");
+const swipers = document.querySelectorAll(".programs-swiper");
+
+navItems.forEach((item) => {
+  item.addEventListener("click", function () {
+    // Remove active class from all nav items
+    navItems.forEach((el) => el.classList.remove("activeProg"));
+
+    // Add active class to the clicked item
+    this.classList.add("activeProg");
+
+    // Hide all swipers
+    swipers.forEach((swiper) => (swiper.style.display = "none"));
+
+    // Show the swiper that corresponds to the clicked nav item
+    const target = this.getAttribute("data-target");
+    const targetSwiper = document.querySelector(`.${target}`);
+    if (targetSwiper) {
+      targetSwiper.style.display = "block";
+    }
+  });
 });
 
 const gtl = gsap.timeline({
@@ -224,7 +269,28 @@ var swiper2 = new Swiper(".commentsContainer", {
     },
   },
 });
-
+var swiper3 = new Swiper(".programs-swiper", {
+  spaceBetween: 30,
+  loop: true,
+  autoplay: { delay: 3000 },
+  centerSlide: true,
+  grabCursor: true,
+  fade: true,
+  breakpoints: {
+    420: {
+      slidesPerView: 1,
+      spaceBetween: 30,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
+});
 const modal = document.getElementById("videoModal");
 const videoPlayer = document.getElementById("videoPlayer");
 const videoSource = document.getElementById("videoSource");

@@ -378,33 +378,116 @@ header .menu-btn {
   padding: 0 20px;
 }
 
-.introduction {
-  height: 100vh;
+.programs {
+  width: 100vw;
+  position: relative;
+  padding: 30px 50px;
+}
+.programs .header h1 {
+  font-size: 4rem;
+  font-weight: 500;
+}
+.programs .header p {
+  width: 50%;
+}
+.programs .programs-nav {
+  margin-top: 50px;
+  display: flex;
+  gap: 30px;
+  font-size: 2rem;
+  color: #b9b9b9;
+  font-weight: 400;
+}
+
+.programs-nav > div {
+  transition: color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  padding: 3px 10px;
+}
+.programs .programs-nav .activeProg {
+  color: #000;
+  font-weight: 500;
+}
+.programs .programs-swiper {
+  overflow: hidden;
   width: 100%;
-  z-index: 1;
+  padding: 20px;
+  margin: 10px;
   position: relative;
 }
-.introduction .header {
+.programs .programs-swiper .swiper-slide {
+  padding: 15px 30px;
+  border: 1px solid #4b4b4b;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.programs .programs-swiper .swiper-slide img {
+  position: absolute;
+  width: 120px;
+  z-index: -1;
+  top: 0;
+  right: 0px;
+  opacity: 0.7;
+}
+.programs .programs-swiper .swiper-slide .program-title {
+  margin-top: 50px;
+}
+.programs .programs-swiper .swiper-slide .program-title h3 {
+  color: #95d5b2;
+}
+.programs .programs-swiper .swiper-slide .program-title span {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.programs .programs-swiper .swiper-slide .topDesc {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.programs .programs-swiper .swiper-slide .topDesc span {
+  border: 1px solid #9b9b9b;
+  border-radius: 15px;
+  padding: 2px 15px;
+  color: #9b9b9b;
+}
+.programs .programs-swiper .swiper-slide .topDesc .icon {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100vh;
+  color: #fff;
 }
-.introduction .header .title-intro .char {
+.programs .programs-swiper .swiper-slide {
+  width: 40%;
+}
+.intro-wrapper {
+  margin-top: 50px;
+}
+.intro-wrapper .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro-wrapper .header .title-intro .char {
   display: inline-block;
 }
-.introduction .header .title-intro {
+.intro-wrapper .header .title-intro {
   font-family: "Kanit", sans-serif;
   position: relative;
   margin: 0;
-  font-size: 4.7rem;
+  font-size: 3.5rem;
   text-align: center;
   text-transform: uppercase;
   z-index: 2;
   color: #081c15;
 }
-.introduction .stroke {
+.intro-wrapper .stroke {
   color: transparent;
   -webkit-text-stroke: 1px #000;
   font-size: 3.3rem;
@@ -513,7 +596,7 @@ header .menu-btn {
 .video .modal-content {
   margin: 15% auto;
   padding: 20px;
-  width: 80%;
+  width: 95%;
 }
 
 .video .close {
@@ -685,8 +768,8 @@ header .menu-btn {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow: hidden; /* This will ensure that the content doesn't overflow the viewport */
-  padding: 10px 50px; /* Optional: Add padding for better spacing */
+  overflow: hidden;
+  padding: 10px 50px;
 }
 
 .news .header-news {
@@ -885,14 +968,13 @@ header .menu-btn {
   width: 100vw;
   display: flex;
   justify-content: center;
-
   flex-direction: column;
   padding: 10px 70px;
 }
 .comments .commentsContainer {
   overflow: hidden;
   width: 100%;
-  padding: 20px 40px;
+  padding: 20px;
   margin: 10px 0;
   position: relative;
 }
@@ -1147,9 +1229,6 @@ html.lenis body {
   .introduction .header .title-intro {
     font-size: 3.5rem !important;
   }
-  .introduction .question-mark img {
-    display: none;
-  }
   .news {
     padding: 10px;
   }
@@ -1169,5 +1248,49 @@ html.lenis body {
   }
   .news .header-news .img-news .news-text p {
     font-size: 0.8rem;
+  }
+  .comments .comment-title {
+    font-size: 2.2rem;
+  }
+  .comments .commentsContainer {
+    padding: 20px 5px;
+  }
+  .video .video-thumbnails .videos-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .video .video-wrapper {
+    width: 90vw;
+  }
+  .video .video-thumbnails .videos-container img {
+    width: 100%;
+  }
+  .video .video-title {
+    font-size: 2rem;
+  }
+  .programs {
+    z-index: 2;
+    width: 100vw;
+    position: relative;
+    padding: 30px;
+  }
+  .programs .header p {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .programs .header h1 {
+    line-height: 100%;
+  }
+  .programs .programs-nav {
+    font-size: 1.2rem;
+    gap: 5px;
+  }
+  .programs .programs-nav div {
+    white-space: nowrap;
+  }
+  .oct-logo {
+    bottom: -13vh;
   }
 }

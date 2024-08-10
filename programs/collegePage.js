@@ -1,11 +1,11 @@
 Splitting();
 gsap.to(".preloaderImg", 0.25, {
-  y: -100,
-  delay: 0.5,
+  y: -50,
+  delay: 0.4,
   opacity: 0,
 });
 gsap.to(".bar", 1.5, {
-  delay: 0.5,
+  delay: 0.3,
   height: 0,
   stagger: {
     amount: 0.5,
@@ -13,12 +13,12 @@ gsap.to(".bar", 1.5, {
   ease: "power4.inOut",
 });
 gsap.from("#toTop img", 2, {
-  delay: 1.5,
+  delay: 1,
   x: -200,
   ease: "power4.inOut",
 });
-gsap.from(".split span .char", {
-  delay: 1.5,
+gsap.from(".split span .char", 1.5, {
+  delay: 0.3,
   y: 700,
   stagger: {
     amount: 0.5,
@@ -134,13 +134,3 @@ images.forEach((img, i) => {
     end: "top 20%",
   });
 });
-const lenis = new Lenis();
-
-lenis.on("scroll", (e) => {
-  console.log(e);
-});
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);

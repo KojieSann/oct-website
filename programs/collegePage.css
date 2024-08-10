@@ -1,13 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins";
+  font-family: "poppins";
   scroll-behavior: smooth;
-}
-body {
-  overflow-x: hidden;
+  text-decoration: none;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -16,6 +14,9 @@ body {
   background: #9b9b9b;
   border-radius: 3px;
   cursor: pointer;
+}
+body {
+  overflow-x: hidden;
 }
 .preloader .overlay {
   position: fixed;
@@ -29,7 +30,20 @@ body {
   height: 105vh;
   background: #fff;
 }
-
+.preloader .counter {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: #4b4b4b;
+  padding: 0.1em 0.4em;
+  font-size: 10vw;
+  z-index: 1000000;
+  font-family: "kanit";
+  font-weight: 900;
+}
 .preloader .preloaderImg {
   filter: grayscale(20%);
   z-index: 1000000;
@@ -221,7 +235,103 @@ header .menu-btn {
   color: #40916c;
   background: #fff;
 }
-.bg-container .courses-container {
+.contact {
+  padding: 15px 0px;
+  z-index: 1000;
+  position: fixed;
+  top: 40vh;
+  left: 0;
+  align-items: center;
+  background: #245b44;
+  color: #fff;
+  height: 120px;
+  width: 45px;
+}
+.contact .container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.contact span {
+  font-weight: 400;
+  font-size: 12px;
+  position: absolute;
+  bottom: -50px;
+  white-space: nowrap;
+  transform: rotate(-90deg);
+}
+.slider {
+  margin-bottom: 50px;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.slider .list .item {
+  position: absolute;
+  inset: 0 0 0 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(30%);
+}
+
+.slider .list .item.active {
+  opacity: 1;
+  z-index: 10;
+}
+@keyframes showContent {
+  to {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+.slider .list .item.active p:nth-child(1),
+.slider .list .item.active h2,
+.slider .list .item.active p:nth-child(3) {
+  transform: translateY(30px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
+}
+.slider .list .item.active h2 {
+  animation-delay: 0.5s;
+}
+.slider .list .item.active p:nth-child(3) {
+  animation-duration: 1.3s;
+}
+.slider .split {
+  z-index: 100000;
+  color: #fff;
+  position: absolute;
+  bottom: 30px;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+}
+.slider .split span {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: "kanit";
+}
+.arrows {
+  position: absolute;
+  top: 40%;
+  right: 50px;
+  z-index: 100;
+  display: flex;
+  gap: 10px;
+  display: none;
+}
+.courses-container {
   position: absolute;
   width: 90%;
   background: transparent;
@@ -235,18 +345,11 @@ header .menu-btn {
   padding: 15px 30px;
   overflow: hidden;
 }
-.bg-container .courses-container .courses-wrapper {
+.courses-container .courses-wrapper {
   width: calc(230px * 14);
   display: flex;
   justify-content: space-between;
   animation: scroll 40s linear infinite;
-}
-.bg-container .courses-container .courses-title {
-  font-weight: 700;
-  color: #fff;
-}
-.bg-container {
-  height: 100vh;
 }
 @keyframes scroll {
   0% {
@@ -255,6 +358,10 @@ header .menu-btn {
   100% {
     transform: translateX(calc(-230px * 7));
   }
+}
+.courses-container .courses-title {
+  font-weight: 700;
+  color: #fff;
 }
 .courses-container .wrapper {
   color: #fff;
@@ -277,6 +384,7 @@ header .menu-btn {
   font-weight: 800;
   font-size: 11px;
 }
+
 .title {
   margin: 70px 40px;
 }
@@ -360,116 +468,11 @@ section .text-right p {
 .courses button:hover {
   opacity: 0.8;
 }
-.slider {
-  z-index: -1;
-  height: 100vh;
-  position: relative;
-}
-.slider .split {
-  z-index: 100000;
-  color: #fff;
-  position: absolute;
-  bottom: 30px;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  font-size: 8rem;
-}
-.slider .split span {
-  text-transform: uppercase;
-  font-family: "kanit";
-}
-.slider .list .item {
-  position: absolute;
-  inset: 0 0 0 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: 0.5s;
-}
-.slider .list .item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.slider .list .item::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-image: linear-gradient(to top, #000 0.3%, transparent);
-}
-.slider .list .item .content {
-  position: absolute;
-  left: 5%;
-  bottom: 20%;
-  width: 500px;
-  max-width: 80%;
-  z-index: 1;
-  color: #fff;
-}
-.slider .list .item .content h2 {
-  white-space: nowrap;
-  font-size: 8rem;
-  margin: 0;
-  font-family: "roboto";
-  font-weight: 400;
-  text-transform: uppercase;
-}
-.slider .list .item.active {
-  opacity: 1;
-  z-index: 10;
-}
-
-.slider .list .item.active p:nth-child(1),
-.slider .list .item.active h2,
-.slider .list .item.active p:nth-child(3) {
-  transform: translateY(30px);
-  filter: blur(20px);
-  opacity: 0;
-  animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
-}
-.slider .list .item.active h2 {
-  animation-delay: 0.5s;
-}
-.slider .list .item.active p:nth-child(3) {
-  animation-duration: 1.3s;
-}
-.arrows {
-  opacity: 0;
-  display: none;
-  position: absolute;
-  top: 40%;
-  right: 50px;
-  z-index: 100;
-  display: flex;
-  gap: 10px;
-}
-.arrows button {
-  background-color: #eee5;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 3px;
-  color: #fff;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 600px) {
-  .thumbnail {
-    justify-content: start;
-  }
-  .slider .list .item .content h2 {
-    font-size: 55px;
-  }
-  .arrows {
-    top: 10%;
-  }
-}
 
 /* footer */
 footer {
   width: 100%;
+  background: #f5fff6;
 }
 footer .footer-wrapper {
   padding: 30px;
@@ -485,10 +488,10 @@ footer .footer-wrapper .right-side {
 footer .footer-wrapper .footer-title {
   font-weight: 700;
   font-size: 25px;
+  line-height: 125%;
 }
 footer .footer-wrapper .left-side p {
   font-size: 12px;
-  margin-top: -10px;
 }
 footer .footer-wrapper .footer-title span {
   font-size: 40px;
@@ -530,7 +533,7 @@ footer .footer-wrapper .middle-side {
   display: flex;
   gap: 20px;
   position: absolute;
-  top: 90%;
+  bottom: 1%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -541,36 +544,20 @@ footer .footer-wrapper .middle-side a {
 footer .footer-wrapper .middle-side a:hover {
   font-size: 25px;
 }
-html.lenis,
-html.lenis body {
-  height: auto;
-}
 
-.lenis.lenis-smooth {
-  scroll-behavior: auto !important;
-}
-
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-
-.lenis.lenis-smooth iframe {
-  pointer-events: none;
-}
 @media only screen and (min-width: 300px) and (max-width: 900px) {
   .contact-nav {
     display: none;
   }
-  .slider .split {
-    font-size: 5rem;
-    left: 50%;
-    bottom: 10%;
+  .contact {
+    display: none;
   }
-  .bg-container .courses-container {
+  .slider .split {
+    left: 50%;
+    bottom: 30%;
+  }
+
+  .courses-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -578,7 +565,7 @@ html.lenis body {
     justify-content: center;
   }
   .courses {
-    height: 50vh;
+    height: 70vh;
     padding: 10px;
   }
   section .course-info {
