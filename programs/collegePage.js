@@ -1,30 +1,5 @@
 Splitting();
-gsap.to(".preloaderImg", 0.25, {
-  y: -50,
-  delay: 0.4,
-  opacity: 0,
-});
-gsap.to(".bar", 1.5, {
-  delay: 0.3,
-  height: 0,
-  stagger: {
-    amount: 0.5,
-  },
-  ease: "power4.inOut",
-});
-gsap.from("#toTop img", 2, {
-  delay: 1,
-  x: -200,
-  ease: "power4.inOut",
-});
-gsap.from(".split span .char", 1.5, {
-  delay: 0.3,
-  y: 700,
-  stagger: {
-    amount: 0.5,
-  },
-  ease: "power4.inOut",
-});
+
 const backToTopButton = document.getElementById("backToTop");
 window.addEventListener("scroll", () => {
   backToTopButton.classList.toggle("activeBtn", window.scrollY > 500);
@@ -133,4 +108,31 @@ images.forEach((img, i) => {
     start: "top 90%",
     end: "top 20%",
   });
+});
+
+gsap.to(".preloaderImg", 0.25, {
+  y: -50,
+  delay: 0.4,
+  opacity: 0,
+});
+gsap.to(".bar", 1.5, {
+  delay: 0.3,
+  height: 0,
+  stagger: {
+    amount: 0.5,
+  },
+  ease: "power4.inOut",
+});
+gsap.from("#toTop img", 2, {
+  delay: 1,
+  x: -200,
+  ease: "power4.inOut",
+});
+gsap.from(".split span .char", 1.5, {
+  delay: 0.3,
+  y: 700,
+  stagger: {
+    amount: 0.5,
+  },
+  ease: "power4.inOut",
 });

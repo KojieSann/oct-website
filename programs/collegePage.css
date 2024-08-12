@@ -468,7 +468,34 @@ section .text-right p {
 .courses button:hover {
   opacity: 0.8;
 }
-
+.program-nav {
+  margin-bottom: 50px;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.program-nav .autoBlur {
+  font-size: 7rem;
+  color: #000;
+  font-weight: 400;
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
+}
+@keyframes autoBlurAnimation {
+  0% {
+    filter: blur(30px);
+  }
+  45%,
+  55% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(30px);
+  }
+}
 /* footer */
 footer {
   width: 100%;
