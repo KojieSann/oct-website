@@ -13,7 +13,7 @@ function navigation() {
     $(this).find("ul.submenu").slideToggle("normal");
   });
   var tl = new TimelineMax({ paused: true });
-  tl.to(".menu", 0.8, {
+  tl.to(".menu", 0.3, {
     autoAlpha: 1,
   });
   tl.staggerFrom(
@@ -26,7 +26,7 @@ function navigation() {
     },
     0.1
   );
-  tl.from(".submenu", 0.8, {
+  tl.from(".submenu", 0.3, {
     autoAlpha: 0,
   });
   tl.staggerFrom(
@@ -40,13 +40,13 @@ function navigation() {
     0.1,
     "-=2"
   );
-  tl.from(".call", 1, {
+  tl.from(".call", 0.5, {
     delay: -2,
     opacity: 0,
     y: 10,
     ease: Power3.easeInOut,
   });
-  tl.from(".mail-nav", 1, {
+  tl.from(".mail-nav", 0.5, {
     delay: -1.6,
     opacity: 0,
     y: 10,
@@ -110,18 +110,10 @@ images.forEach((img, i) => {
   });
 });
 
-gsap.to(".preloaderImg", 0.25, {
+gsap.to(".preloaderImg", 1, {
   y: -50,
-  delay: 0.4,
+  delay: 0.8,
   opacity: 0,
-});
-gsap.to(".bar", 1.5, {
-  delay: 0.3,
-  height: 0,
-  stagger: {
-    amount: 0.5,
-  },
-  ease: "power4.inOut",
 });
 gsap.from("#toTop img", 2, {
   delay: 1,

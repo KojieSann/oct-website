@@ -1,16 +1,175 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins";
+  font-family: "poppins";
   scroll-behavior: smooth;
+  text-decoration: none;
+}
+body {
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #9b9b9b;
+  border-radius: 3px;
+  cursor: pointer;
+}
+header {
+  position: absolute;
+  z-index: 2000;
+  padding: 15px 40px;
+  width: 100%;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 50px;
+}
+header .menu-btn {
+  color: #fff;
+  cursor: pointer;
+  z-index: 2001;
+  margin: 1em;
+  font-size: 24px;
+  right: 1.8%;
+  position: absolute;
+}
+.menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #4b4b4b;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+}
+.menu .close-menu {
+  cursor: pointer;
+  position: fixed;
+  margin: 1em;
+  font-size: 24px;
+  color: #ffff;
+  z-index: 1;
+  right: 1.8%;
+}
+.menu .nav {
+  position: absolute;
+  left: 21%;
+  margin-top: 8%;
+}
+.menu .nav ul {
+  list-style-type: none;
+}
+.menu .main-menu-item {
+  padding-top: 30px;
+}
+.menu .main-menu-item a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+.menu .submenu-item a {
+  color: gray;
+}
+.menu .submenu li {
+  margin: 20px 0;
+}
+.menu a i {
+  position: relative;
+  font-size: 9px;
+  opacity: 0.4;
+}
+.menu .submenu {
+  display: none;
+  margin-left: 25%;
+}
+.menu .contact-nav {
+  color: #fff;
+  position: absolute;
+  bottom: 70px;
+  right: 24%;
+}
+.menu .contact-nav p {
+  color: gray;
+}
+.menu .media-nav {
+  position: absolute;
+  bottom: 70px;
+  left: 24%;
+}
+.menu .media-nav ul {
+  list-style: none;
+}
+.menu .media-nav ul li {
+  display: inline-block;
+  padding-right: 16px;
+}
+.menu .media-nav ul li a {
+  text-decoration: none;
+  align-items: center;
+  display: flex;
+  gap: 3px;
+  color: gray;
+}
+.menu .media-nav ul li a i {
+  font-size: 1rem;
+}
+.menu .link::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+.menu .link:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.menu .link:hover {
+  color: #081c15;
+}
+.menu .link::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: #95d5b2;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.menu .nav-btn:hover,
+.menu .nav-btn:focus {
+  box-shadow: inset 8.9em 0 0 0 var(--hover);
+  color: #4b4b4b;
+}
+.menu .nav-btn {
+  transition: 0.25s;
+  --hover: #d8f3dc;
+  background: #52b788;
+  border-radius: 3px;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 9px 25px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
 }
 .backToTop {
   display: flex;
   font-size: 23px;
-  height: 45px;
-  width: 45px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   background: #40916c;
   color: #fff;
@@ -26,6 +185,9 @@
   visibility: hidden;
   opacity: 0;
 }
+.backToTop img {
+  width: 40px;
+}
 .backToTop.activeBtn {
   visibility: visible;
   opacity: 1;
@@ -34,124 +196,6 @@
 .backToTop:hover {
   color: #40916c;
   background: #fff;
-}
-header {
-  z-index: 1000;
-  top: 0;
-  position: absolute;
-  padding: 20px;
-  width: 100%;
-  color: #fff;
-}
-body {
-  overflow-x: hidden;
-}
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background: #95d5b2;
-  border-radius: 3px;
-  cursor: pointer;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  z-index: 50;
-}
-nav .logo img {
-  width: 50px;
-  transition: all 0.3s;
-}
-nav .logo img:hover {
-  opacity: 0.5;
-}
-nav .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-family: "Roboto";
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  position: relative;
-  color: #fff;
-}
-.logo-nav-top a,
-.logo-nav-bottom a {
-  position: relative;
-  text-decoration: none;
-  color: #fff;
-  font-size: 15px;
-  transition: all 0.3s;
-  letter-spacing: 1px;
-}
-.logo-nav-bottom {
-  position: absolute;
-  right: 15px;
-  display: flex;
-  gap: 15px;
-  margin-top: 5px;
-  align-items: center;
-}
-.logo-nav-top {
-  display: flex;
-  gap: 15px;
-}
-.logo-nav .link::before {
-  transform: scaleX(0);
-  transform-origin: bottom right;
-}
-.logo-nav .link:hover::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-.logo-nav .link:hover {
-  color: #081c15;
-}
-.logo-nav .link::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  inset: 0 0 0 0;
-  background: #95d5b2;
-  z-index: -1;
-  transition: transform 0.3s ease;
-}
-.logo-nav .logo-nav-bottom .link::before {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  inset: 0 0 0 0;
-  background: #686868;
-  z-index: -1;
-  transition: transform 0.3s ease;
-}
-header .nav-btn:hover,
-header .nav-btn:focus {
-  box-shadow: inset 7.1em 0 0 0 #66c887;
-  color: #4b4b4b;
-}
-header .nav-btn {
-  transition: 0.25s;
-  background: none;
-  border-radius: 3px;
-  border: 1px solid #fff;
-  font: inherit;
-  line-height: 1;
-  margin: 0.5em;
-  padding: 7px 15px;
-  color: #fff;
-  cursor: pointer;
 }
 .slider {
   height: 100vh;
@@ -168,6 +212,7 @@ header .nav-btn {
   flex-direction: column;
 }
 .slider .links a {
+  pointer-events: all;
   font-weight: 300;
   text-decoration: none;
   color: #fff;
@@ -211,17 +256,9 @@ header .nav-btn {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(80%);
+  filter: brightness(30%);
 }
-.slider .list .item::after {
-  content: "";
-  width: 100%;
-  height: 40%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  background-image: linear-gradient(to top, #000 1%, transparent);
-}
+
 .slider .list .item .content {
   position: absolute;
   left: 5%;
@@ -580,6 +617,7 @@ header .nav-btn {
   bottom: -70px;
   transition: all 0.5s ease-in-out;
   z-index: 100;
+  pointer-events: none;
 }
 .vision-mission .wrapper .second {
   position: absolute;

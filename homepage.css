@@ -18,41 +18,7 @@
 body {
   overflow-x: hidden;
 }
-.preloader .overlay {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  z-index: 100000;
-  display: flex;
-}
-.preloader .overlay .bar {
-  width: 10vw;
-  height: 105vh;
-  background: #fff;
-}
-.preloader .counter {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  color: #4b4b4b;
-  padding: 0.1em 0.4em;
-  font-size: 10vw;
-  z-index: 1000000;
-  font-family: "kanit";
-  font-weight: 900;
-}
-.preloader .preloaderImg {
-  filter: grayscale(20%);
-  z-index: 1000000;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20vw;
-}
+
 ::selection {
   background: #66c887;
   color: #fff;
@@ -413,7 +379,7 @@ header .menu-btn {
   position: relative;
 }
 
-.programs .programs-swiper .swiper-slide img {
+.programs .programs-swiper .swiper-slide .program-img {
   position: absolute;
   width: 120px;
   z-index: -1;
@@ -444,6 +410,9 @@ header .menu-btn {
   border-radius: 15px;
   padding: 2px 15px;
   color: #9b9b9b;
+}
+.programs .programs-swiper .swiper-slide .topDesc img {
+  width: 30px;
 }
 .programs .programs-swiper .swiper-slide .topDesc .icon {
   border: 1px solid #fff;
@@ -693,17 +662,9 @@ header .menu-btn {
   width: 100%;
   height: 100vh;
   object-fit: cover;
-  filter: brightness(80%);
+  filter: brightness(50%);
 }
-.video .video-thumbnail::before {
-  content: "";
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  background-color: #081c15;
-  opacity: 0.6;
-  z-index: 1;
-}
+
 .video .header-thumbnail .play-btn:hover {
   box-shadow: none;
   background: #fff;

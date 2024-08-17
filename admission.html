@@ -2,14 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admission</title>
-    <link rel="stylesheet" href="admission.css" />
-    <link
-      rel="icon"
-      type="x-icon"
-      href="./img/olivarez-college-tagaytay-logo.png"
+    <meta
+      name="viewport"
+      content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0"
     />
+    <title>Document</title>
+    <link rel="stylesheet" href="admission.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -17,137 +15,448 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/splitting/dist/splitting.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/splitting/dist/splitting-cells.css"
+    />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <link rel="stylesheet" href="./gsap/swiper-bundle.min.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="logo">
-          <a href="./homepage.html"
-            ><img src="./img/olivarez-college-tagaytay-logo.png" alt="oct logo"
-          /></a>
-          Olivarez College Tagaytay
+    <div class="main-container">
+      <a href="#toTop" class="backToTop" id="backToTop"
+        ><img src="./img/olivarez-college-tagaytay-logo.png" alt=""
+      /></a>
+      <header id="toTop">
+        <img src="./img/olivarez-college-tagaytay-logo.png" alt="" />
+        <div class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
         </div>
-        <div class="logo-nav">
-          <div class="logo-nav-top">
-            <a href="#">About us</a>
-            <a href="#">Programs</a>
-            <a href="#">News</a>
-            <a href="#">Contact us</a>
-            <a href="#">Research</a>
+      </header>
+      <div class="preloader">
+        <img
+          src="./img/olivarez-college-tagaytay-logo.png"
+          alt=""
+          class="preloaderImg"
+        />
+      </div>
+      <div class="menu">
+        <div class="close-menu">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="nav">
+          <ul class="main-menu">
+            <li class="main-menu-item">
+              <a href="./homepage.html" class="link">Home</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="#">Programs &nbsp; <i class="fa-solid fa-plus"></i></a>
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="./programs/collegePage.html" class="link">College</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="./programs/seniorhigh.html" class="link">SHS</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="./programs/tesda.html" class="link">TESDA</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu-item">
+              <a href="./aboutUs.html" class="link">About us</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="./contactus.html" class="link">Contact</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="#" class="link">Student portal</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="./admission.html">
+                <button class="nav-btn">Admission</button></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="contact-nav">
+          <p class="call">
+            &nbsp;&nbsp;&nbsp; <i class="fa-solid fa-phone"></i> +63 902 3002
+            123
+          </p>
+          <p class="mail-nav">
+            &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-envelope"></i> oct@gmail.com
+          </p>
+        </div>
+        <div class="media-nav">
+          <ul>
+            <li>
+              <a
+                href="https://www.facebook.com/octagaytayofficial"
+                target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i> Facebook</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="fa-brands fa-square-instagram"></i> Instagram</a
+              >
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-youtube"></i> Youtube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <section class="slider">
+        <div class="split">
+          <span data-splitting> Admission </span>
+        </div>
+        <div class="list">
+          <div class="item active">
+            <img
+              src="./img/368365339_629152525987635_5607787583439653668_n.jpg"
+              alt=""
+            />
           </div>
-          <div class="logo-nav-bottom">
+          <div class="item">
+            <img
+              src="./img/369741573_629154352654119_8363810160410609985_n.jpg"
+              alt=""
+            />
+          </div>
+          <div class="item">
+            <img
+              src="./img/448771026_796735689229317_3302201126219716909_n.jpg"
+              alt=""
+            />
+          </div>
+          <div class="item">
+            <img
+              src="./img/448868107_796736032562616_3494834045201406244_n.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="arrows">
+          <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
+          <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </section>
+      <section class="procedures">
+        <div class="programs">
+          <div class="program-title">
+            Program <br />
+            & Procedures
+          </div>
+          <div class="prog-nav openProgram" data-target="senior-high">
+            <span>Senior High</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </div>
+          <div class="prog-nav" data-target="firstYR">
+            <span>First Year College</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </div>
+          <div class="prog-nav" data-target="transferees">
+            <span>Transferees</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </div>
+          <div class="prog-nav" data-target="graduate">
+            <span>Graduate Studies</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </div>
+          <div class="prog-nav" data-target="tesda">
+            <span>TESDA</span>
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </div>
+        </div>
+        <div class="program-contents">
+          <div class="senior-high">
+            <div class="late-procedure">
+              <h3 class="program-title">Senior High</h3>
+              <h5>Late application procedure</h5>
+            </div>
+            <div class="timetable">
+              <h5>Admission Timetable</h5>
+            </div>
+          </div>
+          <div class="firstYR" style="display: none">
+            <div class="late-procedure">
+              <h3 class="program-title">OCT First Year College</h3>
+              <h5>Late application procedure</h5>
+            </div>
+            <div class="timetable">
+              <h5>Admission Timetable</h5>
+            </div>
+          </div>
+          <div class="transferees" style="display: none">
+            <div class="late-procedure">
+              <h3 class="program-title">Transferees</h3>
+              <h5>Late application procedure</h5>
+            </div>
+            <div class="timetable">
+              <h5>Admission Timetable</h5>
+            </div>
+          </div>
+          <div class="graduate" style="display: none">
+            <div class="late-procedure">
+              <h3 class="program-title">Graduate Studies</h3>
+              <h5>Late application procedure</h5>
+            </div>
+            <div class="timetable">
+              <h5>Admission Timetable</h5>
+            </div>
+          </div>
+          <div class="tesda" style="display: none">
+            <div class="late-procedure">
+              <h3 class="program-title">TESDA</h3>
+              <h5>Late application procedure</h5>
+            </div>
+            <div class="timetable">
+              <h5>Admission Timetable</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="reminder">
+        <div class="content">
+          <h2>Application Reminders</h2>
+          <ul>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+              ab.
+            </li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+              consequatur, exercitationem aliquam repellendus dolore amet?
+            </li>
+            <li>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi,
+              vel!
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium atque cumque hic iure eaque fugit rem temporibus omnis
+              veritatis sapiente!
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque,
+              ab.
+            </li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+              consequatur, exercitationem aliquam repellendus dolore amet?
+            </li>
+            <li>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi,
+              vel!
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium atque cumque hic iure eaque fugit rem temporibus omnis
+              veritatis sapiente!
+            </li>
+          </ul>
+        </div>
+        <div class="image">
+          <img src="./img/undraw/undraw_love_it_oct_dxlp.png" alt="" />
+        </div>
+      </section>
+      <footer>
+        <div class="footer-wrapper">
+          <div class="left-side">
+            <img src="./img/olivarez-college-tagaytay-logo.png" alt="" />
+            <div class="footer-title">
+              Join us an be an <br />
+              <span>Olivarian</span>
+            </div>
+            <p>Emilio Aguinaldo Highway, Brgy. San Jose, Tagaytay City</p>
+          </div>
+          <div class="middle-side">
             <a
-              href="#"
-              style="color: #1b4332; font-size: 17px; font-weight: 500"
-              >Student Portal</a
-            >
-            <button class="nav-btn">Admission</button>
+              href="https://www.facebook.com/octagaytayofficial"
+              target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+          <div class="right-side">
+            <div class="contact-wrapper">
+              <div class="footer-contact">MARKETING & ADMISSIONS OFFICE</div>
+              <div class="contact-info">
+                (046) 860-2301 loc 115 +63 921 538 793 <br />
+                oct.marketing@olivarezcollege.edu.ph
+              </div>
+            </div>
+            <div class="contact-wrapper">
+              <div class="footer-contact">REGISTRAR OFFICE</div>
+              <div class="contact-info">
+                (046) 860-2301 loc 120 +63 961 631 3271 <br />
+                oct.resgistrar@olivarezcollege.edu.ph
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
-    <section class="slider">
-      <div class="list">
-        <div class="item active">
-          <img
-            src="./img/368365339_629152525987635_5607787583439653668_n.jpg"
-            alt=""
-          />
-          <div class="content">
-            <p>ADMISSION</p>
-            <h2>Title 01</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
-              tempora suscipit impedit deleniti? Dolores, nesciunt? Molestiae
-              esse quas culpa quaerat ducimus. Aliquid dolorem libero ab saepe
-              laudantium, aspernatur tempore adipisci!
-            </p>
+        <div class="foot-info">
+          <div class="footer-left">
+            <i class="fa-regular fa-copyright"></i> Olivarez College Tagaytay
+            2018, All Rights Reserved
           </div>
         </div>
-        <div class="item">
-          <img
-            src="./img/369741573_629154352654119_8363810160410609985_n.jpg"
-            alt=""
-          />
-          <div class="content">
-            <p>ADMISSION</p>
-            <h2>Title 02</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
-              tempora suscipit impedit deleniti? Dolores, nesciunt? Molestiae
-              esse quas culpa quaerat ducimus. Aliquid dolorem libero ab saepe
-              laudantium, aspernatur tempore adipisci!
-            </p>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="./img/448771026_796735689229317_3302201126219716909_n.jpg"
-            alt=""
-          />
-          <div class="content">
-            <p>ADMISSION</p>
-            <h2>Title 03</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
-              tempora suscipit impedit deleniti? Dolores, nesciunt? Molestiae
-              esse quas culpa quaerat ducimus. Aliquid dolorem libero ab saepe
-              laudantium, aspernatur tempore adipisci!
-            </p>
-          </div>
-        </div>
-        <div class="item">
-          <img
-            src="./img/448868107_796736032562616_3494834045201406244_n.jpg"
-            alt=""
-          />
-          <div class="content">
-            <p>ADMISSION</p>
-            <h2>Title 04</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam
-              tempora suscipit impedit deleniti? Dolores, nesciunt? Molestiae
-              esse quas culpa quaerat ducimus. Aliquid dolorem libero ab saepe
-              laudantium, aspernatur tempore adipisci!
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="arrows">
-        <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
-        <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
-      </div>
-      <div class="thumbnail">
-        <div class="item active">
-          <img
-            src="./img/368365339_629152525987635_5607787583439653668_n.jpg"
-            alt=""
-          />
-          <div class="content">Name Slider</div>
-        </div>
-        <div class="item">
-          <img
-            src="img/369741573_629154352654119_8363810160410609985_n.jpg"
-            alt=""
-          />
-          <div class="content">Name Slider</div>
-        </div>
-        <div class="item">
-          <img
-            src="./img/448771026_796735689229317_3302201126219716909_n.jpg"
-            alt=""
-          />
-          <div class="content">Name Slider</div>
-        </div>
-        <div class="item">
-          <img
-            src="./img/448868107_796736032562616_3494834045201406244_n.jpg"
-            alt=""
-          />
-          <div class="content">Name Slider</div>
-        </div>
-      </div>
-    </section>
-    <script src="./admission.js"></script>
+      </footer>
+    </div>
+    <script src="./gsap/swiper-bundle.min.js"></script>
+    <script src="./gsap/gsap.min.js"></script>
+    <script src="./gsap/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.8/dist/lenis.min.js"></script>
+    <script>
+      Splitting();
+      gsap.to(".preloaderImg", 1, {
+        y: -50,
+        delay: 0.8,
+        opacity: 0,
+      });
+      gsap.from("#toTop img", 2, {
+        delay: 1,
+        x: -200,
+        ease: "power4.inOut",
+      });
+      gsap.from(".split span .char", 1.5, {
+        delay: 0.3,
+        y: 700,
+        stagger: {
+          amount: 0.5,
+        },
+        ease: "power4.inOut",
+      });
+      function navigation() {
+        $("ul.main-menu li").click(function (e) {
+          if ($(this).siblings("li").find("ul.submenu:visible").length) {
+            $("ul.submenu").slideUp("normal");
+          }
+          $(this).find("ul.submenu").slideToggle("normal");
+        });
+        var tl = new TimelineMax({ paused: true });
+        tl.to(".menu", 0.3, {
+          autoAlpha: 1,
+        });
+        tl.staggerFrom(
+          ".main-menu li a:not(.submenu li a)",
+          1,
+          {
+            opacity: 0,
+            y: 10,
+            ease: Power3.easeInOut,
+          },
+          0.1
+        );
+        tl.from(".submenu", 0.3, {
+          autoAlpha: 0,
+        });
+        tl.staggerFrom(
+          ".media-nav ul li",
+          1,
+          {
+            opacity: 0,
+            y: 10,
+            ease: Power3.easeInOut,
+          },
+          0.1,
+          "-=2"
+        );
+        tl.from(".call", 0.5, {
+          delay: -2,
+          opacity: 0,
+          y: 10,
+          ease: Power3.easeInOut,
+        });
+        tl.from(".mail-nav", 0.5, {
+          delay: -1.6,
+          opacity: 0,
+          y: 10,
+          ease: Power3.easeInOut,
+        });
+        tl.reverse();
+        $(document).on("click", ".menu-btn", function () {
+          tl.reversed(!tl.reversed());
+        });
+        $(document).on("click", ".close-menu", function () {
+          tl.reversed(!tl.reversed());
+        });
+      }
+      navigation();
+
+      const backToTopButton = document.getElementById("backToTop");
+      window.addEventListener("scroll", () => {
+        backToTopButton.classList.toggle("activeBtn", window.scrollY > 500);
+      });
+
+      let items = document.querySelectorAll(".slider .list .item");
+      let next = document.getElementById("next");
+      let prev = document.getElementById("prev");
+      let countItem = items.length;
+      let itemActive = 0;
+      next.onclick = function () {
+        itemActive = itemActive + 1;
+        if (itemActive >= countItem) {
+          itemActive = 0;
+        }
+        showSlider();
+      };
+      prev.onclick = function () {
+        itemActive = itemActive - 1;
+        if (itemActive < 0) {
+          itemActive = countItem - 1;
+        }
+        showSlider();
+      };
+      let refreshInterval = setInterval(() => {
+        next.click();
+      }, 7000);
+      function showSlider() {
+        let itemActiveOld = document.querySelector(
+          ".slider .list .item.active"
+        );
+
+        itemActiveOld.classList.remove("active");
+        items[itemActive].classList.add("active");
+      }
+
+      const progNavs = document.querySelectorAll(".prog-nav");
+
+      const programContents = document.querySelectorAll(
+        ".program-contents > div"
+      );
+
+      progNavs.forEach((nav) => {
+        nav.addEventListener("click", function () {
+          progNavs.forEach((nav) => nav.classList.remove("openProgram"));
+
+          this.classList.add("openProgram");
+
+          const targetClass = this.getAttribute("data-target");
+
+          programContents.forEach((content) => {
+            content.style.display = "none";
+          });
+
+          const targetContent = document.querySelector(`.${targetClass}`);
+          if (targetContent) {
+            targetContent.style.display = "block";
+          }
+        });
+      });
+    </script>
   </body>
 </html>

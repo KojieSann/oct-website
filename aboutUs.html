@@ -16,42 +16,87 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="aboutUs.css" />
   </head>
   <body>
     <a href="#toTop" class="backToTop" id="backToTop"
-      ><i class="fa-solid fa-angle-up"></i
-    ></a>
+      ><img src="./img/olivarez-college-tagaytay-logo.png" alt=""
+    /></a>
     <header id="toTop">
-      <nav>
-        <div class="logo">
-          <a href="./homepage.html"
-            ><img src="./img/olivarez-college-tagaytay-logo.png" alt="oct logo"
-          /></a>
-          Olivarez College Tagaytay
-        </div>
-        <div class="logo-nav">
-          <div class="logo-nav-top">
-            <a class="link" href="./aboutUs.html">About us</a>
-            <a class="link" href="#">Programs</a>
-            <a class="link" href="#">News</a>
-            <a class="link" href="#">Contact us</a>
-            <a class="link" href="#">Research</a>
-          </div>
-          <div class="logo-nav-bottom">
-            <a
-              class="link"
-              href="#"
-              style="color: #b7e4c7; font-size: 17px; font-weight: 500"
-              >Student Portal</a
-            >
-            <a href="./admission.html"
-              ><button class="nav-btn">Admission</button></a
-            >
-          </div>
-        </div>
-      </nav>
+      <img src="./img/olivarez-college-tagaytay-logo.png" alt="" />
+      <div class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </header>
+    <div class="menu">
+      <div class="close-menu">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="nav">
+        <ul class="main-menu">
+          <li class="main-menu-item">
+            <a href="./homepage.html" class="link">Home</a>
+          </li>
+          <li class="main-menu-item">
+            <a href="#">Programs &nbsp; <i class="fa-solid fa-plus"></i></a>
+            <ul class="submenu">
+              <li class="submenu-item">
+                <a href="./programs/collegePage.html" class="link">College</a>
+              </li>
+              <li class="submenu-item">
+                <a href="./programs/seniorhigh.html" class="link">SHS</a>
+              </li>
+              <li class="submenu-item">
+                <a href="./programs/tesda.html" class="link">TESDA</a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-menu-item">
+            <a href="./aboutUs.html" class="link">About us</a>
+          </li>
+          <li class="main-menu-item">
+            <a href="./contactus.html" class="link">Contact</a>
+          </li>
+          <li class="main-menu-item">
+            <a href="#" class="link">Student portal</a>
+          </li>
+          <li class="main-menu-item">
+            <a href="./admission.html">
+              <button class="nav-btn">Admission</button></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="contact-nav">
+        <p class="call">
+          &nbsp;&nbsp;&nbsp; <i class="fa-solid fa-phone"></i> +63 902 3002 123
+        </p>
+        <p class="mail-nav">
+          &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-envelope"></i> oct@gmail.com
+        </p>
+      </div>
+      <div class="media-nav">
+        <ul>
+          <li>
+            <a
+              href="https://www.facebook.com/octagaytayofficial"
+              target="_blank"
+              ><i class="fa-brands fa-facebook-f"></i> Facebook</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa-brands fa-square-instagram"></i> Instagram</a
+            >
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-youtube"></i> Youtube</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <section class="slider">
       <div class="links">
         <a href="#school-info">History</a>
@@ -155,42 +200,7 @@
         </div>
       </div>
     </section>
-    <!-- <section class="school-info" id="school-info">
-      <div class="desc">
-        Olivarez College Tagaytay is accredited by the Philippine Association of
-        Colleges and Universities Commission on Accreditation (PACUCOA). The
-        college is duty recognized by the Commission on Higher Education (CHED)
-        and the Technical Education and Skills Development Authority (TESDA).
-      </div>
-      <div class="history">
-        <h3>OCT <span style="color: #74c69d">HISTORY</span></h3>
-        <p>
-          Located in the sprawling and picturesque Olivarez Plaza, Olivarez
-          College Tagaytay was established in 2003 with the vision of bringing
-          quality tertiary education to the youth of Cavite and nearby
-          provinces. To achieve this vision, the college has been sensitive to
-          the ever-changing demands of the information driven world by
-          constantly re-engineering its curricular offerings. The commitment of
-          the College to its students does not end after graduation. The
-          placement services of the College include an extensive industry
-          network system, coupled with very positive industry network system and
-          very positive community image. Thus graduates are employed in
-          prestigious companies, hospitals and schools.
-        </p>
-      </div>
-      <div class="cards">
-        <img
-          src="./img/448771026_796735689229317_3302201126219716909_n.jpg"
-          alt=""
-        />
-        <div class="text">
-          Olivarez College Tagaytay is a private, non-sectarian educational
-          institution conceived and established in the belief that providing
-          educational opportunities for the masses is the best legacy one can
-          offer to the Filipino nation and the world.
-        </div>
-      </div>
-    </section> -->
+
     <section class="core-values" id="core-values">
       <div class="container">
         <div class="title">
@@ -551,7 +561,65 @@
         <div class="footer-right"></div>
       </div>
     </footer>
+    <script src="./gsap/gsap.min.js"></script>
     <script>
+      function navigation() {
+        $("ul.main-menu li").click(function (e) {
+          if ($(this).siblings("li").find("ul.submenu:visible").length) {
+            $("ul.submenu").slideUp("normal");
+          }
+          $(this).find("ul.submenu").slideToggle("normal");
+        });
+        var tl = new TimelineMax({ paused: true });
+        tl.to(".menu", 0.3, {
+          autoAlpha: 1,
+        });
+        tl.staggerFrom(
+          ".main-menu li a:not(.submenu li a)",
+          1,
+          {
+            opacity: 0,
+            y: 10,
+            ease: Power3.easeInOut,
+          },
+          0.1
+        );
+        tl.from(".submenu", 0.3, {
+          autoAlpha: 0,
+        });
+        tl.staggerFrom(
+          ".media-nav ul li",
+          1,
+          {
+            opacity: 0,
+            y: 10,
+            ease: Power3.easeInOut,
+          },
+          0.1,
+          "-=2"
+        );
+        tl.from(".call", 0.5, {
+          delay: -2,
+          opacity: 0,
+          y: 10,
+          ease: Power3.easeInOut,
+        });
+        tl.from(".mail-nav", 0.5, {
+          delay: -1.6,
+          opacity: 0,
+          y: 10,
+          ease: Power3.easeInOut,
+        });
+        tl.reverse();
+        $(document).on("click", ".menu-btn", function () {
+          tl.reversed(!tl.reversed());
+        });
+        $(document).on("click", ".close-menu", function () {
+          tl.reversed(!tl.reversed());
+        });
+      }
+      navigation();
+
       const backToTopButton = document.getElementById("backToTop");
       window.addEventListener("scroll", () => {
         backToTopButton.classList.toggle("activeBtn", window.scrollY > 500);
