@@ -93,43 +93,7 @@ gsap.from("#toTop img", 2, {
 
 gsap.registerPlugin(ScrollTrigger);
 
-let mm = gsap.matchMedia();
-mm.add("(max-width: 500px)", () => {
-  gsap.to(".oct-logo", {
-    scrollTrigger: {
-      trigger: ".oct-logo",
-      start: "top 60%",
-      end: "bottom 33%",
-      pin: true,
 
-      scrub: true,
-    },
-    scale: 1.8,
-    opacity: 0.1,
-    x: 0,
-    y: -180,
-    ease: "slow",
-    duration: 2,
-  });
-});
-mm.add("(min-width: 500px)", () => {
-  gsap.to(".oct-logo", {
-    scrollTrigger: {
-      trigger: ".oct-logo",
-      start: "top 60%",
-      end: "bottom 33%",
-      pin: true,
-
-      scrub: true,
-    },
-    scale: 1.8,
-    opacity: 0.7,
-    x: 300,
-    y: -170,
-    ease: "slow",
-    duration: 2,
-  });
-});
 const navItems = document.querySelectorAll(".programs-nav > div");
 const swipers = document.querySelectorAll(".programs-swiper");
 
@@ -224,7 +188,7 @@ var swiper3 = new Swiper(".programs-swiper", {
     },
     1024: {
       slidesPerView: 3,
-      spaceBetween: 40,
+      spaceBetween: 30,
     },
   },
 });

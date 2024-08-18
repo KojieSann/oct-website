@@ -322,18 +322,18 @@
     <script src="https://unpkg.com/lenis@1.1.8/dist/lenis.min.js"></script>
     <script>
       Splitting();
-      gsap.to(".preloaderImg", 1, {
+      gsap.to(".preloaderImg", .7, {
         y: -50,
-        delay: 0.8,
+        delay: 0.3,
         opacity: 0,
       });
-      gsap.from("#toTop img", 2, {
-        delay: 1,
+      gsap.from("#toTop img", 1.5, {
+        delay: .5,
         x: -200,
         ease: "power4.inOut",
       });
-      gsap.from(".split span .char", 1.5, {
-        delay: 0.3,
+      gsap.from(".split span .char", .7, {
+        delay: 0.2,
         y: 700,
         stagger: {
           amount: 0.5,
