@@ -33,10 +33,13 @@
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
   </head>
   <body>
-    <!-- <div class="sucessMsg">
-      <div class="icon"><i class="fa-solid fa-check"></i></div>
-      <span>Message sent</span>
-    </div> -->
+    <div class="preloader">
+      <img
+        src="./img/olivarez-college-tagaytay-logo.png"
+        alt=""
+        class="preloaderImg"
+      />
+    </div>
     <section class="container">
       <header id="toTop">
         <img src="./img/olivarez-college-tagaytay-logo.png" alt="" />
@@ -149,10 +152,13 @@
         <form
           action="https://formsubmit.co/john.quinagutan@olivarezcollege.edu.ph"
           method="POST"
+          id="contactForm"
         >
           <div class="inputs">
             <div class="texts">
-              <h2>Contact us</h2>
+              <div class="split">
+                <span data-splitting> Contact us </span>
+              </div>
               <p>We would love to hear from you!</p>
             </div>
             <div class="wrapper">
@@ -204,7 +210,7 @@
                 ></textarea>
                 <div id="messageError" class="error-message"></div>
               </div>
-              <button class="send" type="submit">
+              <button class="send" type="submit" onclick="handleSubmit()">
                 Send <i class="fa-regular fa-paper-plane"></i>
               </button>
             </div>

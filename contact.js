@@ -87,17 +87,16 @@ function validateMessage() {
   return true;
 }
 
-// function handleSubmit() {
-//   const isFirstNameValid = validateFirstName();
-//   const isLastNameValid = validateLastName();
-//   const isEmailValid = validateEmail();
-//   const isMessageValid = validateMessage();
+function handleSubmit() {
+  const isFirstNameValid = validateFirstName();
+  const isLastNameValid = validateLastName();
+  const isEmailValid = validateEmail();
+  const isMessageValid = validateMessage();
 
-//   if (isFirstNameValid && isLastNameValid && isEmailValid && isMessageValid) {
-//   } else {
-//     alert("Please correct the errors and try again.");
-//   }
-// }
+  if (isFirstNameValid && isLastNameValid && isEmailValid && isMessageValid) {
+    document.getElementById("contactForm").submit();
+  }
+}
 
 document.querySelector(".send").addEventListener(
   "click",
@@ -141,7 +140,7 @@ gsap.from("#toTop img", 1.5, {
   ease: "power4.inOut",
 });
 gsap.from(".split span .char", 0.7, {
-  delay: 0.2,
+  delay: 0.4,
   y: 700,
   stagger: {
     amount: 0.5,

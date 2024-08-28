@@ -172,6 +172,16 @@ header .menu-btn {
   cursor: pointer;
   border: none;
 }
+.preloader .preloaderImg {
+  filter: grayscale(20%);
+  z-index: 1000000;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20vw;
+  pointer-events: none;
+}
 .container {
   height: 100vh;
   width: 100%;
@@ -215,10 +225,10 @@ header img.hidden {
   transition: width 0.5s ease;
 }
 .container.toggled iframe {
-  width: 73vw;
+  width: 75vw;
 }
 .container.toggled .inputContainer {
-  width: 23vw;
+  width: 25vw;
 }
 .container.toggled #contactForm {
   width: 90%;
@@ -239,10 +249,10 @@ header img.hidden {
   margin-bottom: 10px;
   user-select: none;
 }
-.container .inputs .texts h2 {
+.container .inputs .texts .split {
   font-size: 45px;
-  letter-spacing: 3px;
-  font-weight: 600;
+  letter-spacing: 2px;
+  font-weight: 700;
   white-space: nowrap;
 }
 .container .inputs input {
@@ -272,7 +282,7 @@ header img.hidden {
   width: 100%;
 }
 .container .inputs .input-box {
-  margin-top: 20px;
+  margin-top: 22px;
   width: 100%;
   position: relative;
 }
@@ -316,7 +326,7 @@ header img.hidden {
   color: green;
   text-transform: uppercase;
   font-size: 10px !important;
-  transform: translateY(-21px) translateX(-5px);
+  transform: translateY(-22px) translateX(-6px);
   padding: 0 5px;
   background: transparent;
 }
