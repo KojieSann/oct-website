@@ -318,18 +318,6 @@ header .menu-btn {
   color: #fff;
   cursor: pointer;
 }
-
-@media screen and (max-width: 600px) {
-  .thumbnail {
-    justify-content: start;
-  }
-  .slider .list .item .content h2 {
-    font-size: 55px;
-  }
-  .arrows {
-    top: 10%;
-  }
-}
 .intro {
   padding: 0 50px;
   margin-top: 50px;
@@ -479,7 +467,7 @@ header .menu-btn {
   width: 97%;
   padding: 20px 70px;
   border-radius: 30px;
-  background-color: #081c15;
+  background-color: #1b4332;
   display: flex;
   color: #fff;
   align-items: center;
@@ -506,7 +494,7 @@ header .menu-btn {
 }
 .core-values .container .cards .wrapper {
   display: flex;
-  background: #245b44;
+  background: #40916c;
   padding: 10px 20px;
   border-radius: 8px;
   align-items: center;
@@ -514,6 +502,8 @@ header .menu-btn {
   animation: textFromRight linear;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .core-values .container .cards .wrapper p {
   font-size: 11px;
@@ -534,12 +524,7 @@ header .menu-btn {
 }
 .core-values .container .cards .wrapper:hover {
   box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.8);
-}
-.core-values .container .cards .wrapper:hover h5 {
-  font-size: 22px;
-}
-.core-values .container .cards .wrapper:hover p {
-  font-size: 13px;
+  padding: 20px;
 }
 .school-motto {
   margin-top: 30px;

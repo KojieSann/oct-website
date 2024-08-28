@@ -2,9 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0"
+    />
     <title>Contact us</title>
     <link rel="stylesheet" href="contactUs.css" />
+
     <link
       rel="icon"
       type="x-icon"
@@ -17,68 +21,104 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/splitting/dist/splitting.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/splitting/dist/splitting-cells.css"
+    />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="logo">
-          <a href="./homepage.html"
-            ><img src="./img/olivarez-college-tagaytay-logo.png" alt="oct logo"
-          /></a>
-          Olivarez College Tagaytay
-        </div>
-        <div class="logo-nav">
-          <div class="logo-nav-top">
-            <a class="link" href="./aboutUs.html">About us</a>
-            <a class="link" href="#">Programs</a>
-            <a class="link" href="#">News</a>
-            <a class="link" href="#">Contact us</a>
-            <a class="link" href="#">Research</a>
-          </div>
-          <div class="logo-nav-bottom">
-            <a
-              class="link"
-              href="#"
-              style="color: #1b4332; font-size: 17px; font-weight: 500"
-              >Student Portal</a
-            >
-            <a href="./admission.html"
-              ><button class="nav-btn">Admission</button></a
-            >
-          </div>
-        </div>
-      </nav>
-    </header>
+    <!-- <div class="sucessMsg">
+      <div class="icon"><i class="fa-solid fa-check"></i></div>
+      <span>Message sent</span>
+    </div> -->
     <section class="container">
-      <div class="inputs">
-        <div class="texts">
-          <h2>Contact us</h2>
-          <p>We would love to hear from you!</p>
+      <header id="toTop">
+        <img src="./img/olivarez-college-tagaytay-logo.png" alt="" />
+        <div class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
         </div>
-        <div class="wrapper">
-          <div class="name">
-            <div class="first all">
-              <span>Firstname</span>
-              <input type="text" />
-            </div>
-            <div class="last all">
-              <span>Lastname</span>
-              <input type="text" />
-            </div>
-          </div>
-          <div class="emai all">
-            <span>Email</span>
-            <input type="email" />
-          </div>
-          <div class="content all">
-            <span>Message</span>
-            <textarea name="" id="" cols="40" rows="10"></textarea>
-          </div>
+      </header>
+      <div class="menu">
+        <div class="close-menu">
+          <i class="fa-solid fa-xmark"></i>
         </div>
-        <button>Send Message</button>
+        <div class="nav">
+          <ul class="main-menu">
+            <li class="main-menu-item">
+              <a href="./homepage.html" class="link">Home</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="#">Programs &nbsp; <i class="fa-solid fa-plus"></i></a>
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="./programs/collegePage.html" class="link">College</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="./programs/seniorhigh.html" class="link">SHS</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="./programs/tesda.html" class="link">TESDA</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu-item">
+              <a href="./aboutUs.html" class="link">About us</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="./contactus.html" class="link">Contact</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="#" class="link">Student portal</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="#" class="link">Research</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="./admission.html">
+                <button class="nav-btn">Admission</button></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="contact-nav">
+          <p class="call">
+            &nbsp;&nbsp;&nbsp; <i class="fa-solid fa-phone"></i> +63 902 3002
+            123
+          </p>
+          <p class="mail-nav">
+            &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-envelope"></i> oct@gmail.com
+          </p>
+        </div>
+        <div class="media-nav">
+          <ul>
+            <li>
+              <a
+                href="https://www.facebook.com/octagaytayofficial"
+                target="_blank"
+                ><i class="fa-brands fa-facebook-f"></i> Facebook</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><i class="fa-brands fa-square-instagram"></i> Instagram</a
+              >
+            </li>
+            <li>
+              <a href=""><i class="fa-brands fa-youtube"></i> Youtube</a>
+            </li>
+          </ul>
+        </div>
       </div>
-
       <div class="maps">
+        <div class="switch" id="toggleSwitch">
+          <i class="fa-solid fa-right-left"></i>
+        </div>
         <p>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.2966370296904!2d120.96012747422485!3d14.118644688696312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd79dfb990bf4b%3A0x54e8769a16ad36d1!2sOlivarez%20College%20Tagaytay!5e0!3m2!1sen!2sph!4v1721635709513!5m2!1sen!2sph"
@@ -90,6 +130,87 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </p>
+      </div>
+      <div class="inputContainer">
+        <div class="area">
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <form
+          action="https://formsubmit.co/john.quinagutan@olivarezcollege.edu.ph"
+          method="post"
+          id="contactForm"
+        >
+          <div class="inputs">
+            <div class="texts">
+              <h2>Contact us</h2>
+              <p>We would love to hear from you!</p>
+            </div>
+            <div class="wrapper">
+              <div class="name">
+                <div class="input-box">
+                  <i class="fa-regular fa-user icon"></i>
+                  <input
+                    type="text"
+                    id="firstNameInput"
+                    name="firstname"
+                    required
+                    onkeyup="validateFirstName()"
+                  />
+                  <span>Firstname</span>
+                  <div id="firstNameError" class="error-message"></div>
+                </div>
+                <div class="input-box">
+                  <i class="fa-regular fa-user icon"></i>
+                  <input
+                    type="text"
+                    id="lastNameInput"
+                    name="lastname"
+                    required
+                    onkeyup="validateLastName()"
+                  />
+                  <span>Lastname</span>
+                  <div id="lastNameError" class="error-message"></div>
+                </div>
+              </div>
+              <div class="input-box">
+                <i class="fa-regular fa-envelope icon"></i>
+                <input
+                  type="text"
+                  id="email-field"
+                  name="email"
+                  required
+                  onkeyup="validateEmail()"
+                />
+                <span>Email</span>
+                <div id="emailError" class="error-message"></div>
+              </div>
+              <div class="content">
+                <textarea
+                  placeholder="Send us a message"
+                  id="messageField"
+                  name="message"
+                  required
+                  onkeyup="validateMessage()"
+                ></textarea>
+                <div id="messageError" class="error-message"></div>
+              </div>
+              <button class="send" type="submit">
+                Send <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </section>
     <footer>
@@ -134,5 +255,10 @@
         <div class="footer-right"></div>
       </div>
     </footer>
+
+    <script src="./gsap/MotionPathPlugin.min.js"></script>
+    <script src="./gsap/gsap.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.8/dist/lenis.min.js"></script>
+    <script src="contact.js"></script>
   </body>
 </html>

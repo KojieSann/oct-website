@@ -386,7 +386,7 @@ header .menu-btn {
 
 section .course-img img {
   /* min-width: 350px;
-  width: 40%; */
+  width: 40%; */ 
   width: 350px;
   opacity: 0;
   transition: 0.5s;

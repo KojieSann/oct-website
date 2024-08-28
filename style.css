@@ -1,128 +1,174 @@
-/*
-  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
-  box-shadow: [inset?] [top] [left] [blur] [size] [color];
-
-  Tips:
-    - We're setting all the blurs to 0 since we want a solid fill.
-    - Add the inset keyword so the box-shadow is on the inside of the element
-    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
-    - Multiple shadows can be stacked
-    - If you're animating multiple shadows, be sure to keep the same number of shadows on hover/focus as non-hover/focus (even if you have to create a transparent shadow) so the animation is smooth. Otherwise, you'll get something choppy.
-*/
-.fill:hover,
-.fill:focus {
-  box-shadow: inset 0 0 0 2em var(--hover);
-}
-
-.pulse:hover,
-.pulse:focus {
-  animation: pulse 1s;
-  box-shadow: 0 0 0 2em transparent;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 var(--hover);
+@keyframes button-loading {
+  20% {
+    color: transparent;
+    transform: scale(1, 1);
+  }
+  40% {
+    border-color: #5585ff;
+    background-color: transparent;
+    transform: scale(1, 1);
+  }
+  60% {
+    transform: scale(0.7, 1.1);
+    margin-left: 1.25rem;
+    width: 2.5rem;
+    text-indent: -0.6125rem;
+    color: transparent;
+    border-color: #5585ff;
+    background-color: #5585ff;
+  }
+  80% {
+    transform: scale(1, 1);
+  }
+  100% {
+    margin-left: 1.25rem;
+    width: 2.5rem;
+    background-color: #5585ff;
+    border-color: #5585ff;
+    color: transparent;
   }
 }
-.close:hover,
-.close:focus {
-  box-shadow: inset -3.5em 0 0 0 var(--hover), inset 3.5em 0 0 0 var(--hover);
+@keyframes button-dot-intro {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(0.75, 0.75);
+  }
 }
-
-.raise:hover,
-.raise:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
+@keyframes button-dot-pulse {
+  0% {
+    opacity: 1;
+    transform: scale(0.75, 0.75);
+  }
+  15% {
+    transform: scale(0.85, 0.85);
+  }
+  45% {
+    transform: scale(0.75, 0.75);
+  }
+  55% {
+    transform: scale(0.95, 0.95);
+  }
+  85% {
+    transform: scale(0.75, 0.75);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(0.75, 0.75);
+  }
 }
-
-.up:hover,
-.up:focus {
-  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+@keyframes button-ready {
+  0% {
+    margin-left: 1.25rem;
+    width: 2.5rem;
+  }
+  10% {
+    background-color: #5585ff;
+    border-color: #5585ff;
+  }
+  70% {
+    margin: 0;
+    width: 7.25rem;
+    background-color: #fff;
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    margin: 0;
+    width: 7rem;
+    border-color: #8cce1e;
+    background-color: #fff;
+  }
 }
-
-.slide:hover,
-.slide:focus {
-  box-shadow: inset 6.5em 0 0 0 var(--hover);
+@keyframes button-dot-outro {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1, 1);
+  }
 }
-
-.offset {
-  box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+@keyframes button-ready-label {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.offset:hover, .offset:focus {
-  box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+.container .inputs button {
+  position: relative;
+  overflow: hidden;
+  width: 7rem;
+  color: #5585ff;
+  border: 2px solid #5585ff;
+  background-color: transparent;
+  cursor: pointer;
+  line-height: 2;
+  margin: 0;
+  padding: 0;
+  border-radius: 1.5rem;
+  font-size: 1.125rem;
+  text-transform: lowercase;
+  outline: none;
+  transition: transform 0.125s;
 }
-
-.fill {
-  --color: #a972cb;
-  --hover: #cb72aa;
+.container .inputs button:active {
+  transform: scale(0.9, 0.9);
 }
-
-.pulse {
-  --color: #ef6eae;
-  --hover: #ef8f6e;
+.container .inputs button:before, .container .inputs button:after {
+  position: absolute;
+  opacity: 0;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  margin-top: -1.125rem;
+  margin-left: -1.125rem;
+  width: 2.25rem;
+  height: 2.25rem;
+  content: "";
+  z-index: 1;
 }
-
-.close {
-  --color: #ff7f82;
-  --hover: #ffdc7f;
+.container .inputs button.loading {
+  animation: button-loading 0.5s forwards;
 }
-
-.raise {
-  --color: #ffa260;
-  --hover: #e5ff60;
+.container .inputs button.loading:before {
+  opacity: 1;
+  animation: button-dot-intro 0.5s forwards;
 }
-
-.up {
-  --color: #e4cb58;
-  --hover: #94e458;
+.container .inputs button.loading:after {
+  opacity: 0;
+  animation: button-dot-pulse 1.5s infinite 0.5s;
 }
-
-.slide {
-  --color: #8fc866;
-  --hover: #66c887;
+.container .inputs button.ready {
+  text-indent: 0;
+  color: transparent;
+  background-color: #5585ff;
+  animation: button-ready 0.333s forwards;
 }
-
-.offset {
-  --color: #19bc8b;
-  --hover: #1973bc;
+.container .inputs button.ready:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: auto;
+  margin: 0;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background-color: transparent;
+  color: #8cce1e;
+  content: "ready";
+  opacity: 0;
+  z-index: 2;
+  animation: button-ready-label 0.5s forwards 0.275s;
 }
-
-button {
-  color: var(--color);
-  transition: 0.25s;
-}
-button:hover, button:focus {
-  border-color: var(--hover);
-  color: #fff;
-}
-
-body {
-  color: #fff;
-  background: hsl(227, 10%, 10%);
-  font: 300 1em "Fira Sans", sans-serif;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-}
-
-button {
-  background: none;
-  border: 2px solid;
-  font: inherit;
-  line-height: 1;
-  margin: 0.5em;
-  padding: 1em 2em;
-}
-
-h1 {
-  font-weight: 400;
-}
-
-code {
-  color: #e4cb58;
-  font: inherit;
+.container .inputs button.ready:after {
+  opacity: 1;
+  animation: button-dot-outro 0.333s;
 }/*# sourceMappingURL=style.css.map */

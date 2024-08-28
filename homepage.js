@@ -62,20 +62,20 @@ function navigation() {
 }
 navigation();
 
-window.addEventListener("scroll", reveal);
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var revealTop = reveals[i].getBoundingClientRect().top;
-    var revealPoint = 100;
-    if (revealTop < windowHeight - revealPoint) {
-      reveals[i].classList.add("showContent");
-    } else {
-      reveals[i].classList.remove("showContent");
-    }
-  }
-}
+// window.addEventListener("scroll", reveal);
+// function reveal() {
+//   var reveals = document.querySelectorAll(".reveal");
+//   for (var i = 0; i < reveals.length; i++) {
+//     var windowHeight = window.innerHeight;
+//     var revealTop = reveals[i].getBoundingClientRect().top;
+//     var revealPoint = 100;
+//     if (revealTop < windowHeight - revealPoint) {
+//       reveals[i].classList.add("showContent");
+//     } else {
+//       reveals[i].classList.remove("showContent");
+//     }
+//   }
+// }
 
 gsap.from(".title-oct h2 .char", 1.5, {
   delay: 0.8,
@@ -92,7 +92,6 @@ gsap.from("#toTop img", 2, {
 });
 
 gsap.registerPlugin(ScrollTrigger);
-
 
 const navItems = document.querySelectorAll(".programs-nav > div");
 const swipers = document.querySelectorAll(".programs-swiper");
