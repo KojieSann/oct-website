@@ -87,17 +87,17 @@ function validateMessage() {
   return true;
 }
 
-function handleSubmit() {
-  const isFirstNameValid = validateFirstName();
-  const isLastNameValid = validateLastName();
-  const isEmailValid = validateEmail();
-  const isMessageValid = validateMessage();
+// function handleSubmit() {
+//   const isFirstNameValid = validateFirstName();
+//   const isLastNameValid = validateLastName();
+//   const isEmailValid = validateEmail();
+//   const isMessageValid = validateMessage();
 
-  if (isFirstNameValid && isLastNameValid && isEmailValid && isMessageValid) {
-  } else {
-    alert("Please correct the errors and try again.");
-  }
-}
+//   if (isFirstNameValid && isLastNameValid && isEmailValid && isMessageValid) {
+//   } else {
+//     alert("Please correct the errors and try again.");
+//   }
+// }
 
 document.querySelector(".send").addEventListener(
   "click",
