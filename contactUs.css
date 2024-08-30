@@ -592,13 +592,19 @@ footer .footer-wrapper .middle-side a:hover {
     width: 85%;
     z-index: 1000;
   }
-  .container .inputs .texts h2 {
+  .container .inputs .texts span {
     font-size: 40px;
     letter-spacing: 1px;
     white-space: normal;
   }
   .container .inputs .texts p {
     font-size: 0.9rem;
+  }
+  .container .maps iframe {
+    width: 20vw;
+  }
+  .inputContainer {
+    width: 80vw;
   }
   .container.toggled iframe {
     width: 90vw;

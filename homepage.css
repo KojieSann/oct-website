@@ -70,6 +70,8 @@ header .menu-btn {
   position: absolute;
   left: 21%;
   margin-top: 8%;
+  display: flex;
+  gap: 20px;
 }
 .menu .nav ul {
   list-style-type: none;
@@ -84,6 +86,7 @@ header .menu-btn {
 }
 .menu .submenu-item a {
   color: gray;
+  white-space: nowrap;
 }
 .menu .submenu li {
   margin: 15px 0;
@@ -354,6 +357,7 @@ header .menu-btn {
   font-size: 2rem;
   color: #b9b9b9;
   font-weight: 400;
+  user-select: none;
 }
 
 .programs-nav > div {
@@ -371,6 +375,7 @@ header .menu-btn {
   padding: 20px;
   margin: 10px;
   position: relative;
+  user-select: none;
 }
 .programs .programs-swiper .swiper-slide {
   padding: 15px 30px;
@@ -382,15 +387,21 @@ header .menu-btn {
 
 .programs .programs-swiper .swiper-slide .program-img {
   position: absolute;
-  width: 120px;
+  width: 350px;
   z-index: -1;
   top: -5px;
-  right: 0px;
+  right: -100px;
   opacity: 0.7;
   pointer-events: none;
 }
 .programs .programs-swiper .swiper-slide .program-title {
   margin-top: 50px;
+}
+.programs .shs-swiper .swiper-slide .program-title span {
+  font-size: 0.9rem !important;
+}
+.programs .tesda-swiper .swiper-slide .program-title h3 {
+  font-size: 1rem !important;
 }
 .programs .programs-swiper .swiper-slide .program-title h3 {
   color: #95d5b2;
@@ -402,21 +413,20 @@ header .menu-btn {
   font-size: 1.1rem;
   font-weight: 700;
 }
-.programs .programs-swiper .swiper-slide .topDesc {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 .programs .programs-swiper .swiper-slide .topDesc span {
   border: 1px solid #9b9b9b;
   border-radius: 15px;
   padding: 2px 15px;
   color: #9b9b9b;
 }
-.programs .programs-swiper .swiper-slide .topDesc img {
-  width: 30px;
-}
+/* .programs .programs-swiper .swiper-slide .topDesc img {
+  position: absolute;
+  width: 80px;
+  opacity: 0.8;
+  top: -30px;
+  left: -0px;
+} */
 .programs .programs-swiper .swiper-slide .topDesc .icon {
   border: 1px solid #fff;
   border-radius: 50%;
@@ -1105,6 +1115,9 @@ footer .footer-wrapper {
 footer .footer-wrapper .right-side {
   align-items: right;
 }
+footer .footer-wrapper .right-side .registrar {
+  margin-right: 70px;
+}
 footer .footer-wrapper .footer-title {
   font-weight: 700;
   font-size: 25px;
@@ -1195,8 +1208,9 @@ html.lenis body {
   opacity: 1;
 } */
 @media only screen and (min-width: 300px) and (max-width: 900px) {
-  .nav {
+  .menu .nav {
     margin-top: 20%;
+    flex-direction: column;
   }
   .contact-nav {
     display: none;
