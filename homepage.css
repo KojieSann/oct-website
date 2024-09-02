@@ -233,7 +233,7 @@ header .menu-btn {
 }
 .slider {
   margin-bottom: 50px;
-  height: 100vh;
+  height: 100svh;
   width: 100%;
   position: relative;
   z-index: -1;
@@ -995,7 +995,7 @@ html.lenis body {
 @media only screen and (min-width: 300px) and (max-width: 900px) {
   .menu .nav {
     margin-top: 20%;
-    left: 10%;
+    left: 5%;
     gap: 0px;
   }
   .menu .submenu-item a {
