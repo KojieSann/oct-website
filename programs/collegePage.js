@@ -97,7 +97,7 @@ reveal.forEach((text, i) => {
     trigger: text,
     toggleClass: "revealActive",
     start: "top 90%",
-    end: "top 20%",
+    end: "top 10%",
   });
 });
 const images = gsap.utils.toArray(".course-img img");
@@ -106,25 +106,35 @@ images.forEach((img, i) => {
     trigger: img,
     toggleClass: "revealActiveimg",
     start: "top 90%",
-    end: "top 20%",
+    end: "top 10%",
   });
 });
 
-gsap.to(".preloaderImg", .7, {
-  y: -50,
-  delay: 0.3,
-  opacity: 0,
-});
 gsap.from("#toTop img", 1.5, {
-  delay: .5,
+  delay: 0.5,
   x: -200,
   ease: "power4.inOut",
 });
-gsap.from(".split span .char", .7, {
-  delay: 0.2,
+gsap.from(".split span .char", 0.7, {
+  delay: 0,
   y: 700,
   stagger: {
     amount: 0.5,
   },
   ease: "power4.inOut",
 });
+
+const moreBtns = document.querySelectorAll(".moreBtn");
+const moreInfos = document.querySelectorAll(".moreInfo");
+const closeInfos = document.querySelectorAll(".closeInfo");
+
+function showMoreInfo(event) {
+  const moreInfo = event.target.closest(".course-info").previousElementSibling;
+  moreInfo.classList.add("show");
+}
+
+function hideMoreInfo(event) {
+  event.target.closest(".moreInfo").classList.remove("show");
+}
+moreBtns.forEach((btn) => btn.addEventListener("click", showMoreInfo));
+closeInfos.forEach((btn) => btn.addEventListener("click", hideMoreInfo));

@@ -19,15 +19,6 @@ body {
   overflow-x: hidden;
 }
 
-.preloader .preloaderImg {
-  filter: grayscale(20%);
-  z-index: 1000000;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 250px;
-}
 ::selection {
   background: #66c887;
   color: #fff;
@@ -77,8 +68,10 @@ header .menu-btn {
 }
 .menu .nav {
   position: absolute;
-  left: 21%;
-  margin-top: 8%;
+  left: 19%;
+  margin-top: 5%;
+  display: flex;
+  gap: 20px;
 }
 .menu .nav ul {
   list-style-type: none;
@@ -93,6 +86,7 @@ header .menu-btn {
 }
 .menu .submenu-item a {
   color: gray;
+  white-space: nowrap;
 }
 .menu .submenu li {
   margin: 20px 0;
@@ -288,9 +282,8 @@ header .menu-btn {
   z-index: 100000;
   color: #fff;
   position: absolute;
-  bottom: 30px;
-  left: 30%;
-  transform: translate(-50%, -50%);
+  bottom: 120px;
+  left: 70px;
   font-size: 8rem;
 }
 .slider .split span {
@@ -322,7 +315,7 @@ header .menu-btn {
   overflow: hidden;
 }
 .courses-container .courses-wrapper {
-  width: calc(230px * 14);
+  width: calc(280px * 12);
   display: flex;
   justify-content: space-between;
   animation: scroll 40s linear infinite;
@@ -332,7 +325,7 @@ header .menu-btn {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-230px * 7));
+    transform: translateX(calc(-280px * 6));
   }
 }
 .courses-container .courses-title {
@@ -362,10 +355,10 @@ header .menu-btn {
 }
 
 .title {
-  margin: 70px 40px;
+  margin: 70px 60px;
 }
 .title span {
-  font-size: 15px;
+  font-size: 0.9rem;
 }
 .textFromLeft {
   transform-origin: left;
@@ -385,9 +378,7 @@ header .menu-btn {
 }
 
 section .course-img img {
-  /* min-width: 350px;
-  width: 40%; */
-  width: 350px;
+  width: 380px;
   opacity: 0;
   transition: 0.5s;
   position: relative;
@@ -399,13 +390,7 @@ section .course-img img.revealActiveimg {
 }
 section .course-info {
   margin-top: 30px;
-}
-section .course-info .course-img {
-  position: absolute;
-  right: -230px;
-  top: -50px;
-  opacity: 0.1;
-  z-index: -100;
+  width: 70vw;
 }
 section .course-info span {
   font-size: 20px;
@@ -413,10 +398,12 @@ section .course-info span {
 section .course-info h2 {
   font-size: 50px;
   color: #2d6a4f;
+  line-height: 120%;
+  margin-bottom: 20px;
 }
 section .course-info p {
   font-size: 13px;
-  width: 450px;
+  width: 500px;
 }
 section .text-right p {
   margin-left: auto;

@@ -129,18 +129,14 @@ document.getElementById("toggleSwitch").addEventListener("click", function () {
 });
 
 Splitting();
-gsap.to(".preloaderImg", 0.7, {
-  y: -50,
-  delay: 0.3,
-  opacity: 0,
-});
+
 gsap.from("#toTop img", 1.5, {
   delay: 0.5,
   x: -200,
   ease: "power4.inOut",
 });
 gsap.from(".split span .char", 0.7, {
-  delay: 0.4,
+  delay: 0,
   y: 700,
   stagger: {
     amount: 0.5,
