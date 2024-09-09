@@ -10,6 +10,11 @@
 body {
   overflow-x: hidden;
 }
+
+::selection {
+  background: #66c887;
+  color: #fff;
+}
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -201,6 +206,20 @@ header .menu-btn {
   height: 100vh;
   position: relative;
 }
+.slider .split {
+  z-index: 100;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  font-size: 8rem;
+}
+.slider .split span {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "kanit";
+}
+
 .slider .links {
   top: 45%;
   left: 10%;
@@ -527,52 +546,17 @@ header .menu-btn {
   padding: 20px;
 }
 .school-motto {
-  margin-top: 30px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-}
-.school-motto .container {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
-.school-motto .title {
-  position: relative;
-}
-.school-motto .title img {
-  width: 1200px;
-  height: 400px;
-  border-radius: 10px;
-}
-.school-motto .title .text {
-  font-size: 25px;
-  background: #fff;
-  position: absolute;
-  padding: 8px 25px;
-  box-shadow: 0px 0px 20px rgb(0, 0, 0, 0.8);
-  border-radius: 12px;
-  bottom: -15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.school-motto .motto {
-  display: flex;
   width: 100%;
-  padding: 50px 65px;
-  align-items: center;
-  gap: 50px;
+  padding: 50px;
 }
-.school-motto .motto .motto-title {
-  font-size: 45px;
+.school-motto .motto-title {
+  font-size: 3.7rem;
   font-weight: 500;
+  line-height: 120%;
 }
-
-.school-motto .motto .motto-info {
-  text-align: right;
-  width: 45%;
-  font-size: 15px;
+.school-motto .motto-info {
+  font-size: 0.95rem;
+  margin-top: 30px;
 }
 .vision-mission {
   display: flex;
@@ -867,4 +851,23 @@ footer .footer-wrapper .middle-side a {
 }
 footer .footer-wrapper .middle-side a:hover {
   font-size: 25px;
+}
+.underCons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.underCons img {
+  width: 50vw;
+}
+.underCons a {
+  padding: 3px 15px;
+  color: #fff;
+  background: #95d5b2;
+  border-radius: 5px;
 }

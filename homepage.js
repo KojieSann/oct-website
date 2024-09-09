@@ -260,36 +260,36 @@ document.querySelectorAll(".question-wrapper").forEach((wrapper) => {
   });
 });
 
-// let currentScroll = 0;
-// let isScrollingDown = true;
-// let arrows = document.querySelectorAll(".arrow");
-// let tween = gsap
-//   .to(".marquee-part", {
-//     xPercent: -100,
-//     repeat: -1,
-//     duration: 5,
-//     ease: "linear",
-//   })
-//   .totalProgress(0.5);
-// gsap.set(".marquee-inner", { xPercent: -50 });
-// window.addEventListener("scroll", function () {
-//   if (window.pageYOffset > currentScroll) {
-//     isScrollingDown = true;
-//   } else {
-//     isScrollingDown = false;
-//   }
-//   gsap.to(tween, {
-//     timeScale: isScrollingDown ? 1 : -1,
-//   });
-//   arrows.forEach((arrow) => {
-//     if (isScrollingDown) {
-//       arrow.classList.remove("rotate");
-//     } else {
-//       arrow.classList.add("rotate");
-//     }
-//   });
-//   currentScroll = this.window.pageYOffset;
-// });
+let currentScroll = 0;
+let isScrollingDown = true;
+let arrows = document.querySelectorAll(".arrow");
+let tween = gsap
+  .to(".marquee-part", {
+    xPercent: -100,
+    repeat: -1,
+    duration: 5,
+    ease: "linear",
+  })
+  .totalProgress(0.5);
+gsap.set(".marquee-inner", { xPercent: -50 });
+window.addEventListener("scroll", function () {
+  if (window.pageYOffset > currentScroll) {
+    isScrollingDown = true;
+  } else {
+    isScrollingDown = false;
+  }
+  gsap.to(tween, {
+    timeScale: isScrollingDown ? 1 : -1,
+  });
+  arrows.forEach((arrow) => {
+    if (isScrollingDown) {
+      arrow.classList.remove("rotate");
+    } else {
+      arrow.classList.add("rotate");
+    }
+  });
+  currentScroll = this.window.pageYOffset;
+});
 
 const lenis = new Lenis();
 

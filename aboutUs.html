@@ -17,15 +17,34 @@
       referrerpolicy="no-referrer"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/splitting/dist/splitting.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/splitting/dist/splitting-cells.css"
+    />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <link rel="stylesheet" href="./gsap/swiper-bundle.min.css" />
     <link rel="stylesheet" href="aboutUs.css" />
   </head>
   <body>
+    <div class="underCons">
+      <img src="./img/undraw/undraw_under_construction_-46-pa.svg" alt="" />
+      <h1>Page Under Construction</h1>
+      <a href="./homepage.html">Back</a>
+    </div>
+  </body>
+  <!-- <body>
     <a href="#toTop" class="backToTop" id="backToTop"
       ><img src="./img/olivarez-college-tagaytay-logo.png" alt=""
     /></a>
     <header id="toTop">
-      <img src="./img/olivarez-college-tagaytay-logo.png" alt="" />
+      <a href="./homepage.html"
+        ><img src="./img/olivarez-college-tagaytay-logo.png" alt="OCT logo"
+      /></a>
+
       <div class="menu-btn">
         <i class="fa-solid fa-bars"></i>
       </div>
@@ -101,6 +120,9 @@
       </div>
     </div>
     <section class="slider">
+      <div class="split">
+        <span data-splitting>About us </span>
+      </div>
       <div class="links">
         <a href="#school-info">History</a>
         <a href="#core-values">Core Values</a>
@@ -114,36 +136,24 @@
             src="./img/368365339_629152525987635_5607787583439653668_n.jpg"
             alt=""
           />
-          <div class="content">
-            <h2>About us</h2>
-          </div>
         </div>
         <div class="item">
           <img
             src="./img/369741573_629154352654119_8363810160410609985_n.jpg"
             alt=""
           />
-          <div class="content">
-            <h2>About us</h2>
-          </div>
         </div>
         <div class="item">
           <img
             src="./img/448771026_796735689229317_3302201126219716909_n.jpg"
             alt=""
           />
-          <div class="content">
-            <h2>About us</h2>
-          </div>
         </div>
         <div class="item">
           <img
             src="./img/448868107_796736032562616_3494834045201406244_n.jpg"
             alt=""
           />
-          <div class="content">
-            <h2>About us</h2>
-          </div>
         </div>
       </div>
       <div class="arrows">
@@ -290,34 +300,20 @@
       </div>
     </section>
     <section class="school-motto" id="school-motto">
-      <div class="container">
-        <div class="title">
-          <img
-            src="./img/368365339_629152525987635_5607787583439653668_n.jpg"
-            alt=""
-          />
-          <div class="text">
-            <h2>Our School <span style="color: #2d6a4f">Motto</span></h2>
-          </div>
-        </div>
-        <div class="motto">
-          <div class="motto-title">
-            <i class="fa-solid fa-quote-left"></i> Educating the <br />
-            <span style="color: #2d6a4f; font-size: 55px"
-              >MIND, BODY AND SOUL</span
-            >
-            <i class="fa-solid fa-quote-right"></i>
-          </div>
-          <div class="motto-info">
-            "Educating the MIND, BODY AND SOUL" goes the Olivarian Motto. These
-            words capsulate the Olivarian Philosophy of Education committed to
-            the development of the critical mind capable of intelligent
-            decision-making and analysis; physically fit body that is well
-            versed with arts, skill and athletics. A sound mind make up a total
-            person with a spirit that is in communion with Christian ideals, and
-            one who is dedicated in the service of God, country and men.
-          </div>
-        </div>
+      <div class="motto-title">
+        <p>
+          Educating the <br />
+          MIND, BODY AND SOUL
+        </p>
+      </div>
+      <div class="motto-info">
+        "Educating the MIND, BODY AND SOUL" goes the Olivarian Motto. These
+        words capsulate the Olivarian Philosophy of Education committed to the
+        development of the critical mind capable of intelligent decision-making
+        and analysis; physically fit body that is well versed with arts, skill
+        and athletics. A sound mind make up a total person with a spirit that is
+        in communion with Christian ideals, and one who is dedicated in the
+        service of God, country and men.
       </div>
     </section>
     <section class="vision-mission" id="vision-mission">
@@ -521,6 +517,7 @@
         </div>
       </div>
     </section>
+
     <footer>
       <div class="footer-wrapper">
         <div class="left-side">
@@ -563,8 +560,11 @@
         <div class="footer-right"></div>
       </div>
     </footer>
+    <script src="./gsap/ScrollTrigger.min.js"></script>
+    <script src="./gsap/swiper-bundle.min.js"></script>
     <script src="./gsap/gsap.min.js"></script>
     <script>
+      Splitting();
       function navigation() {
         $("ul.main-menu li").click(function (e) {
           if ($(this).siblings("li").find("ul.submenu:visible").length) {
@@ -658,5 +658,5 @@
         items[itemActive].classList.add("active");
       }
     </script>
-  </body>
+  </body> -->
 </html>
