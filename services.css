@@ -173,7 +173,7 @@ header .menu-btn {
   width: 100vw;
   height: 100vh;
   display: flex;
-  padding: 10px;
+  padding: 0 5px 0 5px;
 }
 .services .left,
 .services .right {
@@ -186,20 +186,40 @@ header .menu-btn {
 }
 .services .wrapper.solo .card {
   width: 100%;
-  padding: 10px;
 }
 .services .wrapper .card {
+  background: #d8f3dc;
   position: relative;
   width: 50%;
-  height: calc(100vh / 3);
+  /* height: calc(95vh / 3); */
+  height: auto;
   overflow: hidden;
+  margin: 3px;
+  border-radius: 10px;
 }
 
 .services .wrapper .card .cardBG img {
-  object-fit: fill;
+  object-fit: cover;
   width: 100%;
   height: 100%;
-  filter: grayscale(50%);
+  filter: grayscale(60%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.services .wrapper .card.other p {
+  color: #000;
+}
+
+.services .wrapper .card.other .oct-logo {
+  position: absolute;
+  width: 280px;
+  bottom: -110px;
+  right: -110px;
+  opacity: 0.8;
+}
+.services .wrapper .card .cardBG img:hover {
+  transform: scale(1.3);
+  filter: grayscale(10%);
 }
 .services .wrapper .card-desc {
   z-index: 100;
@@ -207,4 +227,42 @@ header .menu-btn {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  bottom: 0;
+  color: #fff;
+  padding: 10px;
+  align-items: center;
+}
+.services .wrapper .card-desc p {
+  width: 60%;
+  font-weight: 700;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+.services .wrapper .card-desc .icon {
+  height: 35px;
+  width: 35px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #000;
+  cursor: pointer;
+}
+.services .wrapper .card-desc .icon:hover i {
+  transform: translateX(5px) translateY(-5px) rotate(-40deg);
+}
+.services .wrapper .card-desc .icon i {
+  font-size: 13px;
+  transform: rotate(-40deg);
+  transition: transform 0.3s ease-in-out;
+}
+@media only screen and (min-width: 300px) and (max-width: 900px) {
+  .services {
+    flex-direction: column;
+  }
+  .services .left,
+  .services .right {
+    width: 100%;
+  }
 }
