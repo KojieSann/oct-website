@@ -128,13 +128,26 @@ const moreBtns = document.querySelectorAll(".moreBtn");
 const moreInfos = document.querySelectorAll(".moreInfo");
 const closeInfos = document.querySelectorAll(".closeInfo");
 
+let currentOpenMoreInfo = null;
+
 function showMoreInfo(event) {
   const moreInfo = event.target.closest(".course-info").previousElementSibling;
-  moreInfo.classList.add("show");
+  if (currentOpenMoreInfo && currentOpenMoreInfo !== moreInfo) {
+    currentOpenMoreInfo.classList.remove("show");
+  }
+
+  moreInfo.classList.toggle("show");
+
+  currentOpenMoreInfo = moreInfo.classList.contains("show") ? moreInfo : null;
 }
 
 function hideMoreInfo(event) {
-  event.target.closest(".moreInfo").classList.remove("show");
+  const moreInfo = event.target.closest(".moreInfo");
+  moreInfo.classList.remove("show");
+  if (currentOpenMoreInfo === moreInfo) {
+    currentOpenMoreInfo = null;
+  }
 }
+
 moreBtns.forEach((btn) => btn.addEventListener("click", showMoreInfo));
 closeInfos.forEach((btn) => btn.addEventListener("click", hideMoreInfo));

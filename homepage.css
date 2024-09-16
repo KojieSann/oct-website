@@ -384,10 +384,10 @@ header .menu-btn {
 
 .programs .programs-swiper .swiper-slide .program-img {
   position: absolute;
-  width: 350px;
+  width: 210px;
   z-index: -1;
-  top: -5px;
-  right: -100px;
+  top: 10px;
+  right: -10px;
   opacity: 0.7;
   pointer-events: none;
 }
@@ -486,7 +486,7 @@ header .menu-btn {
   justify-content: center;
 }
 .video .video-thumbnail {
-  width: 95%;
+  width: 100%;
   height: 85vh;
   position: relative;
 }
@@ -705,11 +705,6 @@ header .menu-btn {
 }
 .news .header-news .nav-news h2 {
   font-size: 3.5rem;
-}
-.news .header-news .nav-news a {
-  color: #245b44;
-  font-size: 1.1rem;
-  font-weight: 400;
 }
 .news .header-news .wrapper {
   position: relative;
@@ -956,7 +951,8 @@ footer .footer-wrapper .right-side .registrar {
 }
 footer .footer-wrapper .footer-title {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
+  letter-spacing: 2px;
   line-height: 125%;
 }
 footer .footer-wrapper .left-side p {
@@ -965,6 +961,7 @@ footer .footer-wrapper .left-side p {
 footer .footer-wrapper .footer-title span {
   font-size: 40px;
   color: #40916c;
+  letter-spacing: -1px;
 }
 footer .left-side img {
   width: 60px;
@@ -1192,11 +1189,9 @@ html.lenis body {
     padding: 10px;
   }
   .news .header-news .nav-news h2 {
-    font-size: 1rem;
+    font-size: 1.7rem;
   }
-  .news .header-news .nav-news a {
-    font-size: 0.8rem;
-  }
+
   .news .header-news .img-news .news-text h1 {
     font-size: 1.6rem;
   }

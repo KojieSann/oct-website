@@ -57,7 +57,6 @@ function navigation() {
 navigation();
 
 gsap.from(".services .right .card", 1.5, {
-  delay: 0.8,
   x: 2000,
   stagger: {
     amount: 1.7,
@@ -65,7 +64,6 @@ gsap.from(".services .right .card", 1.5, {
   ease: "power4.inOut",
 });
 gsap.from(".services .left .card", 1.5, {
-  delay: 0.8,
   x: -2000,
   stagger: {
     amount: 1.7,
@@ -73,7 +71,7 @@ gsap.from(".services .left .card", 1.5, {
   ease: "power4.inOut",
 });
 gsap.from("#toTop img", 2, {
-  delay: 1.5,
+  delay: 2,
   x: -200,
   ease: "power4.inOut",
 });

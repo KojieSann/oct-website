@@ -207,11 +207,12 @@ header .menu-btn {
   position: relative;
 }
 .slider .split {
-  z-index: 100;
+  z-index: 1000;
   color: #fff;
   position: absolute;
-  bottom: 0;
-  left: 5%;
+  bottom: -110px;
+  left: 25%;
+  transform: translate(-50%, -50%);
   font-size: 8rem;
 }
 .slider .split span {
@@ -743,10 +744,10 @@ footer .footer-wrapper .middle-side a:hover {
     line-height: 50px;
   }
   .slider .split {
-    width: 100%;
-    font-size: 4.5rem;
-    left: 30px;
-    bottom: 50px;
+    font-size: 4.2rem;
+    left: 50%;
+    bottom: 10px;
+    white-space: nowrap;
     line-height: 80%;
   }
   .slider .links {

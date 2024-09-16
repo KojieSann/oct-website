@@ -372,9 +372,7 @@ header .menu-btn {
 }
 
 section .course-img img {
-  /* min-width: 350px;
-  width: 40%; */
-  width: 350px;
+  width: 380px;
   opacity: 0;
   transition: 0.5s;
   position: relative;
@@ -444,10 +442,25 @@ section .course-info p {
 .moreInfo.show {
   transform: translateX(0);
 }
+.moreInfo .identifier {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  line-height: 120%;
+}
+.moreInfo .identifier h2 {
+  font-size: 0.95rem;
+  color: #4b4b4b;
+  font-family: "Montserrat";
+}
+.moreInfo .identifier span {
+  font-size: 1.3rem;
+  color: #fff;
+}
 .moreInfo .features {
   width: 35%;
   background: #95d5b2;
-  padding: 20px 20px 20px 60px;
+  padding: 70px 20px 20px 60px;
 }
 .moreInfo .features h4 {
   font-size: 2rem;
@@ -466,7 +479,7 @@ section .course-info p {
   width: 65%;
   position: relative;
   z-index: 20;
-  padding: 20px 20px 20px 60px;
+  padding: 50px 20px 20px 60px;
 }
 .moreInfo .outcomes .infos {
   width: 85%;
@@ -527,12 +540,13 @@ footer .footer-wrapper {
   align-items: center;
   position: relative;
 }
-footer .footer-wrapper .right-side {
-  align-items: right;
+footer .footer-wrapper .right-side .registrar {
+  margin-right: 70px;
 }
 footer .footer-wrapper .footer-title {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
+  letter-spacing: 2px;
   line-height: 125%;
 }
 footer .footer-wrapper .left-side p {
@@ -541,6 +555,7 @@ footer .footer-wrapper .left-side p {
 footer .footer-wrapper .footer-title span {
   font-size: 40px;
   color: #40916c;
+  letter-spacing: -1px;
 }
 footer .left-side img {
   width: 60px;
@@ -573,6 +588,7 @@ footer .footer-wrapper .right-side {
   flex-direction: column;
   gap: 25px;
   margin-bottom: -50px;
+  align-items: right;
 }
 footer .footer-wrapper .middle-side {
   display: flex;
@@ -601,7 +617,7 @@ footer .footer-wrapper .middle-side a:hover {
     font-size: 4rem;
     white-space: nowrap;
     left: 50%;
-    bottom: 20%;
+    bottom: 100px;
   }
 
   .courses-container {
@@ -610,6 +626,7 @@ footer .footer-wrapper .middle-side a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 0;
   }
   .courses {
     height: 65vh;

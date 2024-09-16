@@ -19,15 +19,7 @@ body {
   background-color: #f8f8f8;
   overflow-x: hidden;
 }
-.preloader .preloaderImg {
-  filter: grayscale(20%);
-  z-index: 1000000;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20vw;
-}
+
 ::selection {
   background: #66c887;
   color: #fff;
@@ -334,16 +326,53 @@ header .menu-btn {
 .procedures .program-contents {
   width: calc(100% - 40%);
 }
-.procedures .program-contents .late-procedure {
+.procedures .procedure .wrapper {
+  width: 50%;
+  position: relative;
+  padding: 0 20px 0 20px;
+}
+.procedures .procedure .wrapper .line {
+  height: 100%;
+  width: 1px;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.procedures .procedure .wrapper ul {
+  margin: 20px 0 0 20px;
+}
+.procedures .procedure .wrapper ul li {
+  list-style: square;
+  margin: 5px;
+  font-size: 1rem;
+}
+.procedures .program-contents .procedure {
   height: 500px;
   background: #245b44;
   padding: 20px;
   color: #fff;
+  display: flex;
 }
 .procedures .program-contents .timetable {
   padding: 20px;
   height: 300px;
   background: #d8f3dc;
+  position: relative;
+}
+.procedures .program-contents .timetable h3 {
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #66c887;
+  font-size: 25px;
+  font-family: "kanit";
+}
+.procedures .program-contents .timetable span {
+  color: #4b4b4b;
+  font-size: 30px;
 }
 .reminder {
   background: #fff;
@@ -391,9 +420,13 @@ footer .footer-wrapper {
 footer .footer-wrapper .right-side {
   align-items: right;
 }
+footer .footer-wrapper .right-side .registrar {
+  margin-right: 70px;
+}
 footer .footer-wrapper .footer-title {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
+  letter-spacing: 2px;
   line-height: 125%;
 }
 footer .footer-wrapper .left-side p {
@@ -402,6 +435,7 @@ footer .footer-wrapper .left-side p {
 footer .footer-wrapper .footer-title span {
   font-size: 40px;
   color: #40916c;
+  letter-spacing: -1px;
 }
 footer .left-side img {
   width: 60px;

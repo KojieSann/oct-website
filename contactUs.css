@@ -452,10 +452,65 @@ header img.hidden {
     border-radius: 50%;
   }
 }
+.contacts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.contacts .top,
+.contacts .bottom {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+}
+.contacts .card {
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid #dddd;
 
+  padding: 5px;
+  flex-direction: column;
+  gap: 10px;
+  background: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+.contacts .card:hover {
+  transform: scale(1.1);
+}
+.contacts .top .card {
+  width: calc(100% / 5);
+}
+.contacts .bottom .card {
+  width: calc(100% / 4);
+}
+.contacts .card .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.contacts .card .wrapper p {
+  font-size: 12px;
+  width: 100%;
+  white-space: normal;
+  word-break: break-all;
+  color: #4b4b4b;
+}
+.contacts .card .wrapper i {
+  font-size: 14px;
+  color: #4b4b4b;
+}
+.contacts .card .wrapper .contactName {
+  font-size: 14px;
+  color: #000;
+  font-weight: 600;
+}
 /* footer */
 footer {
   width: 100%;
+  background: #f5fff6;
 }
 footer .footer-wrapper {
   padding: 30px;
@@ -468,17 +523,20 @@ footer .footer-wrapper {
 footer .footer-wrapper .right-side {
   align-items: right;
 }
+
 footer .footer-wrapper .footer-title {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  line-height: 125%;
 }
 footer .footer-wrapper .left-side p {
   font-size: 12px;
-  margin-top: -10px;
 }
 footer .footer-wrapper .footer-title span {
   font-size: 40px;
   color: #40916c;
+  letter-spacing: -1px;
 }
 footer .left-side img {
   width: 60px;
@@ -516,7 +574,7 @@ footer .footer-wrapper .middle-side {
   display: flex;
   gap: 20px;
   position: absolute;
-  top: 90%;
+  bottom: 1%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -533,6 +591,13 @@ footer .footer-wrapper .middle-side a:hover {
   }
   .contact-nav {
     display: none;
+  }
+  .contacts .top,
+  .contacts .bottom {
+    flex-direction: column;
+  }
+  .contacts .card {
+    width: 100% !important;
   }
   footer {
     height: auto;

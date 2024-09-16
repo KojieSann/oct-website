@@ -282,8 +282,9 @@ header .menu-btn {
   z-index: 100000;
   color: #fff;
   position: absolute;
-  bottom: 120px;
-  left: 70px;
+  bottom: 30px;
+  left: 25%;
+  transform: translate(-50%, -50%);
   font-size: 8rem;
 }
 .slider .split span {
@@ -378,7 +379,7 @@ header .menu-btn {
 }
 
 section .course-img img {
-  width: 380px;
+  width: 370px;
   opacity: 0;
   transition: 0.5s;
   position: relative;
@@ -445,12 +446,13 @@ footer .footer-wrapper {
   align-items: center;
   position: relative;
 }
-footer .footer-wrapper .right-side {
-  align-items: right;
+footer .footer-wrapper .right-side .registrar {
+  margin-right: 70px;
 }
 footer .footer-wrapper .footer-title {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
+  letter-spacing: 2px;
   line-height: 125%;
 }
 footer .footer-wrapper .left-side p {
@@ -459,6 +461,7 @@ footer .footer-wrapper .left-side p {
 footer .footer-wrapper .footer-title span {
   font-size: 40px;
   color: #40916c;
+  letter-spacing: -1px;
 }
 footer .left-side img {
   width: 60px;
@@ -491,6 +494,7 @@ footer .footer-wrapper .right-side {
   flex-direction: column;
   gap: 25px;
   margin-bottom: -50px;
+  align-items: right;
 }
 footer .footer-wrapper .middle-side {
   display: flex;
@@ -516,10 +520,10 @@ footer .footer-wrapper .middle-side a:hover {
     display: none;
   }
   .slider .split {
-    font-size: 4rem;
+    font-size: 3.7rem;
     white-space: nowrap;
     left: 50%;
-    bottom: 20%;
+    bottom: 100px;
   }
 
   .courses-container {
@@ -528,6 +532,7 @@ footer .footer-wrapper .middle-side a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 0;
   }
   .courses {
     height: 65vh;
@@ -540,12 +545,10 @@ footer .footer-wrapper .middle-side a:hover {
     justify-content: center;
   }
   section .course-info h2 {
-    text-align: center;
     font-size: 2rem;
   }
   section .course-info p {
-    width: 90%;
-    text-align: center;
+    width: 100%;
   }
   .course-img img {
     display: none;
@@ -556,6 +559,7 @@ footer .footer-wrapper .middle-side a:hover {
   }
   footer {
     height: auto;
+    margin-top: 70px;
   }
   footer .foot-info {
     margin-top: 40px;
@@ -592,5 +596,8 @@ footer .footer-wrapper .middle-side a:hover {
     white-space: normal;
     text-align: center;
     margin-top: 5px;
+  }
+  footer .footer-wrapper .right-side .registrar {
+    margin-right: 0;
   }
 }
