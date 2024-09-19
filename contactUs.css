@@ -460,6 +460,7 @@ header img.hidden {
   padding: 10px;
 }
 .contacts .top,
+.contacts .middle,
 .contacts .bottom {
   display: flex;
   width: 100%;
@@ -470,8 +471,7 @@ header img.hidden {
   display: flex;
   border-radius: 5px;
   border: 1px solid #dddd;
-
-  padding: 5px;
+  padding: 10px 12px;
   flex-direction: column;
   gap: 10px;
   background: #fff;
@@ -480,12 +480,10 @@ header img.hidden {
 .contacts .card:hover {
   transform: scale(1.1);
 }
-.contacts .top .card {
-  width: calc(100% / 5);
+.contacts .card {
+  width: calc(100% / 3);
 }
-.contacts .bottom .card {
-  width: calc(100% / 4);
-}
+
 .contacts .card .wrapper {
   display: flex;
   align-items: center;
@@ -593,6 +591,7 @@ footer .footer-wrapper .middle-side a:hover {
     display: none;
   }
   .contacts .top,
+  .contacts .middle,
   .contacts .bottom {
     flex-direction: column;
   }
