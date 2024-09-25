@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0"
+    />
 
     <title>Document</title>
     <link rel="stylesheet" href="services.css" />
@@ -108,7 +111,7 @@
     <section class="services">
       <div class="left">
         <div class="wrapper solo">
-          <div class="card">
+          <div class="card communityExtensionCard" onclick="toggleInfo(this)">
             <div class="cardBG">
               <img src="./img/communityExtension.jpg" alt="" />
             </div>
@@ -121,7 +124,7 @@
           </div>
         </div>
         <div class="wrapper">
-          <div class="card">
+          <div class="card registrarCard" onclick="toggleInfo(this)">
             <div class="cardBG">
               <img src="./img/registrar.jpg" alt="registrar" />
             </div>
@@ -132,7 +135,7 @@
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card marketingCard" onclick="toggleInfo(this)">
             <div class="cardBG">
               <img src="./img/marketing.png" alt="marketing" />
             </div>
@@ -145,7 +148,7 @@
           </div>
         </div>
         <div class="wrapper">
-          <div class="card">
+          <div class="card learningCard" onclick="toggleInfo(this)">
             <div class="cardBG">
               <img src="./img/learning.jpg" alt="" />
             </div>
@@ -156,7 +159,7 @@
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card clinicCard" onclick="toggleInfo(this)">
             <div class="cardBG">
               <img src="./img/clinic.jpg" alt="" />
             </div>
@@ -171,7 +174,7 @@
       </div>
       <div class="right">
         <div class="wrapper">
-          <div class="card">
+          <div class="card osaCard" onclick="toggleInfo(this)">
             <div class="cardBG">
               <img src="./img/osa.jpg" alt="Office of the Student Affairs" />
             </div>
@@ -182,7 +185,7 @@
               </div>
             </div>
           </div>
-          <div class="card">
+          <div class="card tesdaCard" onclick="toggleInfo(this)">
             <div class="cardBG">
               <img
                 src="./img/tesdaAssesment.jpg"
@@ -198,12 +201,12 @@
           </div>
         </div>
         <div class="wrapper solo">
-          <div class="card">
+          <div class="card researchCard" onclick="toggleInfo(this)">
             <div class="cardBG">
               <img src="./img/research.jpg" alt="" />
             </div>
             <div class="card-desc">
-              <p style="text-transform: capitalize">
+              <p style="text-transform: uppercase">
                 CENTER FOR RESEARCH PUBLICATION PLANNING AND DEVELOPMENT (CRPPD)
               </p>
               <div class="icon">
@@ -213,7 +216,7 @@
           </div>
         </div>
         <div class="wrapper">
-          <div class="card">
+          <div class="card guidanceCard" onclick="toggleInfo(this)">
             <div class="cardBG">
               <img src="./img/guidance.jpg" alt="Guidance and Testing Office" />
             </div>
@@ -224,7 +227,7 @@
               </div>
             </div>
           </div>
-          <div class="card other">
+          <div class="card other" onclick="toggleInfo(this)">
             <img
               src="./img/olivarez-college-tagaytay-logo.png"
               alt="OCT Logo"
@@ -239,7 +242,108 @@
           </div>
         </div>
       </div>
+      <div class="details">
+        <div class="card-info communityExtension">
+          <div class="left-info">
+            <div class="navigation">
+              <div class="back">back</div>
+              <div class="communityExtensionNav">
+                Community Extension Services & Campus Ministry Program
+              </div>
+              <div class="registrarNav">Office of the Registrar</div>
+              <div class="marketingNav">Marketing and Admission office</div>
+              <div class="learningNav">Learning Resource Center</div>
+              <div class="clinicNav">School Clinic</div>
+              <div class="osaNav">Office of the Student Affairs</div>
+              <div class="tesdaNav">TESDA Assessment Center</div>
+              <div class="researchNav">
+                Center for Research Publication and Development
+              </div>
+              <div class="guidanceNav">Guidance and Testing Office</div>
+              <div class="otherNav">Other Services</div>
+            </div>
+          </div>
+          <div class="right-info"></div>
+        </div>
+        <div class="card-info learningInfo">
+          <div class="left-info">learning</div>
+          <div class="right-info"></div>
+        </div>
+        <div class="card-info registrarInfo">
+          <div class="left-info">registrar</div>
+          <div class="right-info"></div>
+        </div>
+        <div class="card-info marketingInfo">
+          <div class="left-info">marketing</div>
+          <div class="right-info"></div>
+        </div>
+        <div class="card-info clinicInfo">
+          <div class="left-info">clinic</div>
+          <div class="right-info"></div>
+        </div>
+        <div class="card-info osaInfo">
+          <div class="left-info">osa</div>
+          <div class="right-info"></div>
+        </div>
+        <div class="card-info tesdaInfo">
+          <div class="left-info">tesda</div>
+          <div class="right-info"></div>
+        </div>
+        <div class="card-info researchInfo">
+          <div class="left-info">research</div>
+          <div class="right-info"></div>
+        </div>
+        <div class="card-info guidanceInfo">
+          <div class="left-info">guidance</div>
+          <div class="right-info"></div>
+        </div>
+        <div class="card-info otherInfo">
+          <div class="left-info">other</div>
+          <div class="right-info"></div>
+        </div>
+      </div>
     </section>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="left-side">
+          <img src="./img/olivarez-college-tagaytay-logo.png" alt="" />
+          <div class="footer-title">
+            Join us and be an <br />
+            <span>Olivarian today!</span>
+          </div>
+          <p>Emilio Aguinaldo Highway, Brgy. San Jose, Tagaytay City</p>
+        </div>
+        <div class="middle-side">
+          <a href="https://www.facebook.com/octagaytayofficial" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="right-side">
+          <div class="contact-wrapper">
+            <div class="footer-contact">MARKETING & ADMISSIONS OFFICE</div>
+            <div class="contact-info">
+              (046) 860-2301 loc 115 +63 921 538 793 <br />
+              oct.marketing@olivarezcollege.edu.ph
+            </div>
+          </div>
+          <div class="contact-wrapper registrar">
+            <div class="footer-contact">REGISTRAR OFFICE</div>
+            <div class="contact-info">
+              (046) 860-2301 loc 120 +63 961 631 3271 <br />
+              oct.resgistrar@olivarezcollege.edu.ph
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot-info">
+        <div class="footer-left">
+          <i class="fa-regular fa-copyright"></i> Olivarez College Tagaytay
+          2018, All Rights Reserved
+        </div>
+      </div>
+    </footer>
     <script src="./gsap/swiper-bundle.min.js"></script>
     <script src="./gsap/gsap.min.js"></script>
     <script src="./gsap/ScrollTrigger.min.js"></script>
