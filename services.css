@@ -277,6 +277,7 @@ header .menu-btn {
   gap: 10px;
   padding: 10px;
   position: absolute;
+  overflow: hidden;
 }
 .details p {
   position: absolute;
@@ -284,23 +285,32 @@ header .menu-btn {
 .details .card-info .left-info,
 .details .card-info .right-info {
   background: #9b9b9b;
-  width: 50%;
   border-radius: 10px;
   height: 100%;
-  transition: transform 0.3s ease-in-out 0.5s;
+  transition: transform 0.5s ease-in-out;
 }
 .details .card-info .left-info {
-  transform: translateX(-50vw);
+  transform: translateX(-30vw);
+  width: 30%;
+  pointer-events: fill;
 }
 .details .card-info .right-info {
-  transform: translateX(50vw);
+  transform: translateX(70vw);
+  width: 70%;
 }
 .details .card-info .navigation {
-  width: 100vw;
-  display: flex;
+  width: 100%;
   justify-content: space-between;
   z-index: 1000;
-  display: none;
+}
+.details .card-info .navigation .nav {
+  padding: 3px 10px;
+  margin: 5px;
+  background: yellow;
+  cursor: pointer;
+}
+.details .card-info .navigation .nav.active {
+  background: red;
 }
 /* footer */
 footer {

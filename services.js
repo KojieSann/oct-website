@@ -104,11 +104,13 @@ function toggleInfo(card) {
   const rightInfo = targetSection.querySelector(".right-info");
   const servicesLeft = document.querySelector(".services .left");
   const servicesRight = document.querySelector(".services .right");
+
   card.classList.toggle("openInfo");
 
   if (card.classList.contains("openInfo")) {
     leftInfo.style.transform = "translateX(0)";
     rightInfo.style.transform = "translateX(0)";
+    targetSection.style.zIndex = "1000"; // Set z-index when open
 
     const translateLeft = window.innerWidth <= 768 ? "-100vw" : "-50vw";
     const translateRight = window.innerWidth <= 768 ? "100vw" : "50vw";
@@ -117,10 +119,75 @@ function toggleInfo(card) {
     servicesRight.style.transform = `translateX(${translateRight})`;
   } else {
     setTimeout(() => {
-      leftInfo.style.transform = "translateX(-50vw)";
-      rightInfo.style.transform = "translateX(50vw)";
+      leftInfo.style.transform = "translateX(-30vw)";
+      rightInfo.style.transform = "translateX(70vw)";
+      targetSection.style.zIndex = ""; // Reset z-index when closed
     }, 300);
     servicesLeft.style.transform = "translateX(0)";
     servicesRight.style.transform = "translateX(0)";
   }
 }
+
+function handleNavigation(navItem) {
+  let targetSection;
+
+  if (navItem.classList.contains("registrarNav")) {
+    targetSection = document.querySelector(".registrarInfo");
+  } else if (navItem.classList.contains("communityExtensionNav")) {
+    targetSection = document.querySelector(".communityExtension");
+  } else if (navItem.classList.contains("marketingNav")) {
+    targetSection = document.querySelector(".marketingInfo");
+  } else if (navItem.classList.contains("learningNav")) {
+    targetSection = document.querySelector(".learningInfo");
+  } else if (navItem.classList.contains("clinicNav")) {
+    targetSection = document.querySelector(".clinicInfo");
+  } else if (navItem.classList.contains("osaNav")) {
+    targetSection = document.querySelector(".osaInfo");
+  } else if (navItem.classList.contains("tesdaNav")) {
+    targetSection = document.querySelector(".tesdaInfo");
+  } else if (navItem.classList.contains("researchNav")) {
+    targetSection = document.querySelector(".researchInfo");
+  } else if (navItem.classList.contains("guidanceNav")) {
+    targetSection = document.querySelector(".guidanceInfo");
+  } else if (navItem.classList.contains("otherNav")) {
+    targetSection = document.querySelector(".otherInfo");
+  }
+
+  const openCard = document.querySelector(".card.openInfo");
+  const openSection = document.querySelector(".card-info.openInfo");
+
+  if (openCard && openSection) {
+    openCard.classList.remove("openInfo");
+
+    const leftInfo = openSection.querySelector(".left-info");
+    const rightInfo = openSection.querySelector(".right-info");
+
+    leftInfo.style.transform = "translateX(-50vw)";
+    rightInfo.style.transform = "translateX(70vw)";
+    openSection.style.zIndex = ""; // Reset z-index of previous section
+  }
+
+  if (targetSection) {
+    const leftInfo = targetSection.querySelector(".left-info");
+    const rightInfo = targetSection.querySelector(".right-info");
+    const servicesLeft = document.querySelector(".services .left");
+    const servicesRight = document.querySelector(".services .right");
+
+    leftInfo.style.transform = "translateX(0)";
+    rightInfo.style.transform = "translateX(0)";
+    targetSection.style.zIndex = "1000"; // Set z-index of newly opened section
+
+    const translateLeft = window.innerWidth <= 768 ? "-100vw" : "-50vw";
+    const translateRight = window.innerWidth <= 768 ? "100vw" : "50vw";
+    servicesLeft.style.transform = `translateX(${translateLeft})`;
+    servicesRight.style.transform = `translateX(${translateRight})`;
+
+    targetSection.classList.add("openInfo");
+  }
+}
+
+document.querySelectorAll(".navigation .nav").forEach((navItem) => {
+  navItem.addEventListener("click", function () {
+    handleNavigation(navItem);
+  });
+});

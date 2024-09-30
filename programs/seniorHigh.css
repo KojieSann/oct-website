@@ -233,7 +233,7 @@ header .menu-btn {
 }
 .slider {
   margin-bottom: 50px;
-  height: 100vh;
+  height: 100svh;
   width: 100%;
   position: relative;
   z-index: -1;

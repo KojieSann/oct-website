@@ -40,13 +40,13 @@ function navigation() {
     0.1,
     "-=2"
   );
-  tl.from(".call", 0.5, {
+  tl.from(".call", 1, {
     delay: -2,
     opacity: 0,
     y: 10,
     ease: Power3.easeInOut,
   });
-  tl.from(".mail-nav", 0.5, {
+  tl.from(".mail-nav", 1, {
     delay: -1.6,
     opacity: 0,
     y: 10,
