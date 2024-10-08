@@ -55,8 +55,11 @@ function navigation() {
   tl.reverse();
   $(document).on("click", ".menu-btn", function () {
     tl.reversed(!tl.reversed());
+    tl.timeScale(1);
   });
+
   $(document).on("click", ".close-menu", function () {
+    tl.timeScale(4);
     tl.reversed(!tl.reversed());
   });
 }

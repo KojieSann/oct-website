@@ -28,6 +28,22 @@
     />
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <link rel="stylesheet" href="../gsap/swiper-bundle.min.css" />
+    <style>
+      .content-container {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .content-container p {
+        text-indent: 50px;
+        margin-top: 5px;
+      }
+      .content-container .mainLists li {
+        list-style-type: disc;
+        font-size: 14px;
+      }
+    </style>
   </head>
   <body>
     <header id="toTop">
@@ -219,7 +235,7 @@
                     <i class="fa-solid fa-arrow-right"></i></div
                 ></a>
               </div>
-              <div class="bottom-right">
+              <div class="bottom-right activePage">
                 <img
                   src="../img/communityExtension.jpg"
                   alt=""
@@ -261,7 +277,7 @@
               </div>
             </div>
             <div class="right">
-              <div class="top-right activePage">
+              <div class="top-right">
                 <img src="../img/osa.jpg" alt="" loading="lazy" />
                 <div class="contentDesc">
                   <span>Office of the Student Affair</span>
@@ -303,144 +319,48 @@
         </div>
       </div>
       <div class="content-container">
-        <div class="title">Office of the Student Affair</div>
-        <p>
-          The provision of essential services to the student body at Olivarez
-          College Tagaytay is supervised by the Office for Student Affairs
-          (OSA). In order to satisfy the general mandate to address the range of
-          concerns related to the general safety and welfare of students, these
-          cover a wide range, from everyday student life to emergency scenarios
-          and everything in between. These consist of, but are not restricted
-          to:
-        </p>
-        <ul class="mainLists">
-          <li>
-            <span>Administrative Services</span>
-            <p>
-              Student ID card issuance (replacement, temporary, and validation),
-              Granting requests for temporary parking permits and temporary
-              vehicle passes; Managing the services for lost and found;
-              Responding to inquiries about student information from various
-              offices and departments; Handling student official summonses
-            </p>
-          </li>
-          <li>
-            <span>Student Formation </span>
-            <p>
-              Promoting student formation guidelines establishes expectations
-              for student conduct, encompassing adherence to Christian,
-              Filipino, and Olivarian values alongside specific rules regarding
-              grooming, attire, and the proper use of facilities.
-            </p>
-          </li>
-          <li>
-            <span>Student Conduct and Discipline: </span>
-            <ul class="subLists">
-              <li>
-                <p>
-                  Handling infractions by students (ID violations, smoking,
-                  littering, and other violations written in the Student
-                  Handbook)
-                </p>
-              </li>
-              <li>
-                <p>
-                  Managing inquiries into incidents of gender-based misconduct,
-                  student discipline, and security concerns involving students
-                  Delineates procedures for addressing policy violations,
-                  including reporting, investigation, and disciplinary action by
-                  the Student Formation Committee.
-                </p>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <span>Emergency and Crisis Management: </span>
-            <ul class="subLists">
-              <li>
-                <p>
-                  Offering situational support during emergencies and personal
-                  crises, as well as specialized assistance to people with
-                  disabilities
-                </p>
-              </li>
-              <li>
-                <p>
-                  Managing emergency response services in tandem with the
-                  Olivarez Risk Management Unit, Health Services, and Guidance
-                  and Counseling
-                </p>
-              </li>
-            </ul>
-          </li>
-
-          <li>
-            <span>Student Activities </span>
-            <p>
-              Offering security assistance for student-organized events that
-              aims to nurture the holistic development of its students by
-              offering a range of co-curricular and extra-curricular activities
-              alongside its academic program.
-            </p>
-          </li>
-          <li>
-            <span>Student Recognition and Engagement: </span>
-            <ul class="subLists">
-              <li><p>Supervising the creation of student yearbooks</p></li>
-              <li>
-                <p>
-                  Supervising the selection of students to attend regional and
-                  worldwide student conferences and giving out awards
-                </p>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <span>Student Organizations </span>
-            <p>
-              The Office of Student Affairs is tasked with fostering the
-              complete development of students. It encourages the establishment
-              of student organizations as platforms for managerial and
-              leadership skill development.
-            </p>
-          </li>
-          <li>
-            <span>Student Publication </span>
-            <p>
-              The Office of Student Affairs upholds the principle of press
-              freedom as a constructive tool for development. It mandates that
-              every student publication adheres to the highest standards of
-              responsible campus journalism, emphasizing integrity, accuracy,
-              and ethical reporting practices.
-            </p>
-          </li>
-          <li>
-            <span>Scholarships</span>
-            <ul class="subLists">
-              <li>
-                <p>
-                  The OSA serves as the central hub for disseminating
-                  information about available scholarships to the student body.
-                </p>
-              </li>
-              <li>
-                <p>Scholarships Available:</p>
-                <ul class="secondList">
-                  <li><p>ELO (Edukasyong Libre ni Olivarez)</p></li>
-                  <li><p>Student Assistant Program</p></li>
-                  <li>
-                    <p>
-                      Entrance Scholarships for Valedictorian and Salutatorian
-                    </p>
-                  </li>
-                  <li>
-                    <p>CHED Scholarships: Tulong Dunong, CSP, TDP-TES</p>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <div class="wrapper">
+          <div class="title">COMMUNITY EXTENSION SERVICES</div>
+          <p>
+            The school’s commitment in total education rests on the realization
+            of the value of integrating the formation of social consciousness in
+            the training and formation of the Olivarians so that they will
+            become not only competent but also socially responsible professional
+            citizens.
+          </p>
+          <p>
+            The Committee Outreach Program is an important instrument that would
+            link the classroom to social reality and thus facilitate a more
+            dynamic learning. In the process, the student acquires a Christian
+            Orientation for his chosen profession on viewing it always with
+            reference to love and service for others, especially the needy and
+            the powerless.
+          </p>
+        </div>
+        <div class="wrapper">
+          <div class="title">CAMPUS MINISTRY PROGRAM</div>
+          <p>
+            The Campus Ministry is an apostolate of service to the entire school
+            community by providing care and concern for the persons, by
+            proclaiming the Gospel and its value, by building and strengthening
+            a community of faith, by celebrating the life of the community
+            especially through the Liturgy.
+          </p>
+          <ul class="mainLists">
+            <span>The Program consists of the following:</span>
+            <li>
+              The Liturgical Program provides the members of the institution
+              with revenues for liturgical workshops by organizing, implementing
+              and centralizing religious activities (every first Friday of the
+              month and during special occasions).
+            </li>
+            <li>
+              The Spiritual Formation Program provides a venue to enrich, assess
+              and strengthen one’s personal spirituality through retreats,
+              recollections and religious activities
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 

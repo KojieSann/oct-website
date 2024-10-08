@@ -28,6 +28,29 @@
     />
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <link rel="stylesheet" href="../gsap/swiper-bundle.min.css" />
+    <style>
+      .content .listContainer {
+        display: flex;
+        gap: 50px;
+      }
+      .content .contentTitle {
+        font-size: 20px;
+        color: #40916c;
+        font-weight: 700;
+        margin-top: 10px;
+      }
+      .content .listContainer .listWrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .content .listContainer .listWrapper li {
+        font-size: 15px;
+      }
+      .content .listContainer .listWrapper h4 {
+        color: #40916c;
+      }
+    </style>
   </head>
   <body>
     <header id="toTop">
@@ -239,7 +262,7 @@
           </div>
           <div class="bottom">
             <div class="left">
-              <div class="top-left">
+              <div class="top-left activePage">
                 <img src="../img/marketing.png" alt="" loading="lazy" />
                 <div class="contentDesc">
                   <span>Marketing and Admission Office</span>
@@ -261,7 +284,7 @@
               </div>
             </div>
             <div class="right">
-              <div class="top-right activePage">
+              <div class="top-right">
                 <img src="../img/osa.jpg" alt="" loading="lazy" />
                 <div class="contentDesc">
                   <span>Office of the Student Affair</span>
@@ -303,144 +326,83 @@
         </div>
       </div>
       <div class="content-container">
-        <div class="title">Office of the Student Affair</div>
+        <div class="title">Marketing and Admission Office</div>
         <p>
-          The provision of essential services to the student body at Olivarez
-          College Tagaytay is supervised by the Office for Student Affairs
-          (OSA). In order to satisfy the general mandate to address the range of
-          concerns related to the general safety and welfare of students, these
-          cover a wide range, from everyday student life to emergency scenarios
-          and everything in between. These consist of, but are not restricted
-          to:
+          Olivarez College Tagaytay's Marketing and Admissions Office is the
+          nerve center of the institution's enrollment strategies. Their main
+          responsibility is to create and implement extensive marketing
+          campaigns. The office leads the recruitment drives and actively
+          involves prospective students in the admissions process.
         </p>
-        <ul class="mainLists">
-          <li>
-            <span>Administrative Services</span>
-            <p>
-              Student ID card issuance (replacement, temporary, and validation),
-              Granting requests for temporary parking permits and temporary
-              vehicle passes; Managing the services for lost and found;
-              Responding to inquiries about student information from various
-              offices and departments; Handling student official summonses
-            </p>
-          </li>
-          <li>
-            <span>Student Formation </span>
-            <p>
-              Promoting student formation guidelines establishes expectations
-              for student conduct, encompassing adherence to Christian,
-              Filipino, and Olivarian values alongside specific rules regarding
-              grooming, attire, and the proper use of facilities.
-            </p>
-          </li>
-          <li>
-            <span>Student Conduct and Discipline: </span>
-            <ul class="subLists">
-              <li>
-                <p>
-                  Handling infractions by students (ID violations, smoking,
-                  littering, and other violations written in the Student
-                  Handbook)
-                </p>
-              </li>
-              <li>
-                <p>
-                  Managing inquiries into incidents of gender-based misconduct,
-                  student discipline, and security concerns involving students
-                  Delineates procedures for addressing policy violations,
-                  including reporting, investigation, and disciplinary action by
-                  the Student Formation Committee.
-                </p>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <span>Emergency and Crisis Management: </span>
-            <ul class="subLists">
-              <li>
-                <p>
-                  Offering situational support during emergencies and personal
-                  crises, as well as specialized assistance to people with
-                  disabilities
-                </p>
-              </li>
-              <li>
-                <p>
-                  Managing emergency response services in tandem with the
-                  Olivarez Risk Management Unit, Health Services, and Guidance
-                  and Counseling
-                </p>
-              </li>
-            </ul>
-          </li>
-
-          <li>
-            <span>Student Activities </span>
-            <p>
-              Offering security assistance for student-organized events that
-              aims to nurture the holistic development of its students by
-              offering a range of co-curricular and extra-curricular activities
-              alongside its academic program.
-            </p>
-          </li>
-          <li>
-            <span>Student Recognition and Engagement: </span>
-            <ul class="subLists">
-              <li><p>Supervising the creation of student yearbooks</p></li>
-              <li>
-                <p>
-                  Supervising the selection of students to attend regional and
-                  worldwide student conferences and giving out awards
-                </p>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <span>Student Organizations </span>
-            <p>
-              The Office of Student Affairs is tasked with fostering the
-              complete development of students. It encourages the establishment
-              of student organizations as platforms for managerial and
-              leadership skill development.
-            </p>
-          </li>
-          <li>
-            <span>Student Publication </span>
-            <p>
-              The Office of Student Affairs upholds the principle of press
-              freedom as a constructive tool for development. It mandates that
-              every student publication adheres to the highest standards of
-              responsible campus journalism, emphasizing integrity, accuracy,
-              and ethical reporting practices.
-            </p>
-          </li>
-          <li>
-            <span>Scholarships</span>
-            <ul class="subLists">
-              <li>
-                <p>
-                  The OSA serves as the central hub for disseminating
-                  information about available scholarships to the student body.
-                </p>
-              </li>
-              <li>
-                <p>Scholarships Available:</p>
-                <ul class="secondList">
-                  <li><p>ELO (Edukasyong Libre ni Olivarez)</p></li>
-                  <li><p>Student Assistant Program</p></li>
-                  <li>
-                    <p>
-                      Entrance Scholarships for Valedictorian and Salutatorian
-                    </p>
-                  </li>
-                  <li>
-                    <p>CHED Scholarships: Tulong Dunong, CSP, TDP-TES</p>
-                  </li>
+        <div class="content">
+          <div class="contentTitle">List of Admission Requirements</div>
+          <div class="listContainer">
+            <div class="listWrapper">
+              <div class="wrapper">
+                <h4>New Students (SHS)</h4>
+                <ul>
+                  <li>Certificate of Good Moral (original)</li>
+                  <li>F137</li>
+                  <li>F138 (Original)</li>
+                  <li>PSA (photo copy)</li>
+                  <li>Passport size picture (2pcs)</li>
                 </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
+              </div>
+              <div class="wrapper">
+                <h4>For Transferees (SHS)</h4>
+                <ul>
+                  <li>Certificate of Good Moral (original)</li>
+                  <li>F137 (recent)</li>
+                  <li>F138 (certified true copy)</li>
+                  <li>PSA (photo copy)</li>
+                  <li>Passport size picture (2pcs)</li>
+                </ul>
+              </div>
+              <div class="wrapper">
+                <h4>For College Freshmen</h4>
+                <ul>
+                  <li>Certificate of Good Moral (original)</li>
+                  <li>F137 (shs)</li>
+                  <li>PSA (photo copy)</li>
+                  <li>Passport size picture (2pcs)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="listWrapper">
+              <div class="wrapper">
+                <h4>For College Irregular Students/Transferee</h4>
+                <ul>
+                  <li>Certificate of Good Moral (original)</li>
+                  <li>
+                    Transfer Credential (TOR for Evaluation and TOR copy for
+                    OCT)
+                  </li>
+                  <li>F137 (SHS) photocopy</li>
+                  <li>PSA (photo copy)</li>
+                  <li>Passport size picture (2pcs)</li>
+                </ul>
+              </div>
+              <div class="wrapper">
+                <h4>For Foreign Students</h4>
+                <ul>
+                  <li>Certificate of Alien Eligibility</li>
+                  <li>Photocopy of Passport and Visa Validity</li>
+                  <li>Recent Medical ( 1 month upon arrival)</li>
+                  <li>NBI Clearance</li>
+                  <li>
+                    Certificate of Quarantine from accredited hospital or clinic
+                  </li>
+                  <li>
+                    Certificate of grades from last school attended from the
+                    origin country
+                  </li>
+                  <li>Picture 1x1 (4pcs)</li>
+                  <li>Picture 2x2( 2pcs)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

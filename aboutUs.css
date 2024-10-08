@@ -20,9 +20,10 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   background: #9b9b9b;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
 }
+
 header {
   position: absolute;
   z-index: 2000;
@@ -68,8 +69,10 @@ header .menu-btn {
 }
 .menu .nav {
   position: absolute;
-  left: 21%;
-  margin-top: 8%;
+  left: 18%;
+  margin-top: 4%;
+  display: flex;
+  gap: 20px;
 }
 .menu .nav ul {
   list-style-type: none;
@@ -86,7 +89,7 @@ header .menu-btn {
   color: gray;
 }
 .menu .submenu li {
-  margin: 20px 0;
+  margin: 15px 0;
 }
 .menu a i {
   position: relative;
@@ -96,6 +99,7 @@ header .menu-btn {
 .menu .submenu {
   display: none;
   margin-left: 25%;
+  width: 150%;
 }
 .menu .contact-nav {
   color: #fff;
@@ -170,6 +174,35 @@ header .menu-btn {
   cursor: pointer;
   border: none;
 }
+.menu .supportServices .submenu {
+  margin-left: 15%;
+}
+.contact {
+  padding: 15px 0px;
+  z-index: 1000;
+  position: fixed;
+  top: 40vh;
+  left: 0;
+  align-items: center;
+  background: #245b44;
+  color: #fff;
+  height: 120px;
+  width: 45px;
+}
+.contact .container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.contact span {
+  font-weight: 400;
+  font-size: 12px;
+  position: absolute;
+  bottom: -50px;
+  white-space: nowrap;
+  transform: rotate(-90deg);
+}
 .backToTop {
   display: flex;
   font-size: 23px;
@@ -210,9 +243,8 @@ header .menu-btn {
   z-index: 1000;
   color: #fff;
   position: absolute;
-  bottom: -110px;
-  left: 25%;
-  transform: translate(-50%, -50%);
+  bottom: 0;
+  left: 70px;
   font-size: 8rem;
 }
 .slider .split span {
@@ -681,7 +713,8 @@ footer .footer-wrapper .right-side .registrar {
 }
 footer .footer-wrapper .footer-title {
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
+  letter-spacing: 2px;
   line-height: 125%;
 }
 footer .footer-wrapper .left-side p {
@@ -690,6 +723,7 @@ footer .footer-wrapper .left-side p {
 footer .footer-wrapper .footer-title span {
   font-size: 40px;
   color: #40916c;
+  letter-spacing: -1px;
 }
 footer .left-side img {
   width: 60px;
@@ -739,16 +773,37 @@ footer .footer-wrapper .middle-side a:hover {
   font-size: 25px;
 }
 @media only screen and (min-width: 300px) and (max-width: 900px) {
+  .menu .nav {
+    margin-top: 15%;
+    left: 5%;
+    gap: 0px;
+  }
+  .menu .submenu-item a {
+    white-space: normal;
+  }
+  .menu .supportServices .submenu {
+    margin-left: 7%;
+    width: 100%;
+  }
+  .menu .supportServices a {
+    font-size: 0.85rem;
+  }
+  .contact {
+    display: none;
+  }
+  .contact-nav {
+    display: none;
+  }
   .slider .title h2 {
     font-size: 6rem;
     line-height: 50px;
   }
   .slider .split {
-    font-size: 4.2rem;
-    left: 50%;
-    bottom: 10px;
+    font-size: 4rem;
     white-space: nowrap;
-    line-height: 80%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
   }
   .slider .links {
     left: 10px;
@@ -816,6 +871,9 @@ footer .footer-wrapper .middle-side a:hover {
     width: 100%;
   }
   .visionMission .line {
+    display: none;
+  }
+  .philosophy .bg {
     display: none;
   }
   .philosophy {

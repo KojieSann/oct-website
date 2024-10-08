@@ -1,5 +1,10 @@
 Splitting();
 
+const backToTopButton = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+  backToTopButton.classList.toggle("activeBtn", window.scrollY > 500);
+});
+
 function navigation() {
   $("ul.main-menu li").click(function (e) {
     if ($(this).siblings("li").find("ul.submenu:visible").length) {
@@ -50,8 +55,11 @@ function navigation() {
   tl.reverse();
   $(document).on("click", ".menu-btn", function () {
     tl.reversed(!tl.reversed());
+    tl.timeScale(1);
   });
+
   $(document).on("click", ".close-menu", function () {
+    tl.timeScale(4);
     tl.reversed(!tl.reversed());
   });
 }

@@ -12,7 +12,7 @@
 }
 ::-webkit-scrollbar-thumb {
   background: #9b9b9b;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
 }
 body {
@@ -68,8 +68,10 @@ header .menu-btn {
 }
 .menu .nav {
   position: absolute;
-  left: 21%;
-  margin-top: 8%;
+  left: 18%;
+  margin-top: 4%;
+  display: flex;
+  gap: 20px;
 }
 .menu .nav ul {
   list-style-type: none;
@@ -86,7 +88,7 @@ header .menu-btn {
   color: gray;
 }
 .menu .submenu li {
-  margin: 20px 0;
+  margin: 15px 0;
 }
 .menu a i {
   position: relative;
@@ -96,6 +98,7 @@ header .menu-btn {
 .menu .submenu {
   display: none;
   margin-left: 25%;
+  width: 150%;
 }
 .menu .contact-nav {
   color: #fff;
@@ -169,6 +172,9 @@ header .menu-btn {
   color: #fff;
   cursor: pointer;
   border: none;
+}
+.menu .supportServices .submenu {
+  margin-left: 15%;
 }
 .backToTop {
   display: flex;
@@ -1042,7 +1048,7 @@ html.lenis body {
 } */
 @media only screen and (min-width: 300px) and (max-width: 900px) {
   .menu .nav {
-    margin-top: 20%;
+    margin-top: 15%;
     left: 5%;
     gap: 0px;
   }
@@ -1051,6 +1057,7 @@ html.lenis body {
   }
   .menu .supportServices .submenu {
     margin-left: 7%;
+    width: 100%;
   }
   .menu .supportServices a {
     font-size: 0.85rem;
