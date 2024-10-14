@@ -418,8 +418,7 @@ header .menu-btn {
   line-height: 1;
   margin: 0.5em;
 }
-.research .content-box .content .card .btns a:hover,
-.research .content-box .content .card .btns a:focus {
+.research .content-box .content .card .btns a:hover {
   box-shadow: inset 19em 0 0 0 var(--hover);
   color: #fff;
   border: 1px solid var(--hover);
