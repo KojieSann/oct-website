@@ -397,35 +397,95 @@ header .menu-btn {
 .research .content-box .content .card p {
   font-size: 13px;
 }
-.research .content-box .content .card .btns {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
+
+.dropdown {
+  position: relative;
+  width: 200px;
+  height: 35px;
 }
-.research .content-box .content .card .btns a {
-  padding: 7px 50px;
-  border: 1px solid #9b9b9b;
-  color: #000;
-  border-radius: 7px;
+.dropdown .input {
+  cursor: pointer;
+  position: absolute;
+  border: 1px solid #4b4b4b;
+  border-radius: 8px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 10px 15px;
   font-size: 13px;
-  font-weight: 600;
-  display: flex;
-  gap: 10px;
+}
+.dropdown.activeShow .option {
+  visibility: visible;
+  opacity: 1;
+}
+.dropdown.activeShow .icon-down {
+  transform: rotate(180deg);
+}
+.dropdown .icon-down {
+  pointer-events: none;
   align-items: center;
+  justify-content: center;
+  display: flex;
+  left: 170px;
+  top: 8px;
+  transition: all 0.3s ease;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+}
+.dropdown .icon-down i {
+  font-size: 13px;
+}
+.dropdown .option {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  top: 40px;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  color: #4b4b4b;
+  z-index: 100;
+  border: 0.5px solid #dddddd;
+  transition: opacity 0.2s ease-in-out;
+}
+.dropdown .option a {
+  padding: 10px 15px;
+  color: #000;
+  font-size: 13px;
   transition: 0.25s;
   --hover: #52b788;
   background: #fff;
   line-height: 1;
   margin: 0.5em;
+  border-radius: 5px;
 }
-.research .content-box .content .card .btns a:hover {
+.dropdown .option a:hover {
   box-shadow: inset 19em 0 0 0 var(--hover);
   color: #fff;
-  border: 1px solid var(--hover);
 }
-.research .content-box .content .card .btns a i {
-  font-size: 11px;
+.dropdown .option a {
+  padding: 10px 15px;
+  color: #000;
+  font-size: 13px;
+  transition: 0.25s;
+  --hover: #52b788;
+  background: #fff;
+  line-height: 1;
+  margin: 0.5em;
+  border-radius: 5px;
 }
+.dropdown .option a:hover {
+  box-shadow: inset 19em 0 0 0 var(--hover);
+  color: #fff;
+}
+
 .research .content-box .content p {
   font-size: 20px;
   font-weight: 500;
@@ -449,7 +509,9 @@ footer .footer-wrapper {
 footer .footer-wrapper .right-side {
   align-items: right;
 }
-
+footer .footer-wrapper .right-side .registrar {
+  margin-right: 70px;
+}
 footer .footer-wrapper .footer-title {
   font-weight: 700;
   font-size: 30px;
@@ -570,6 +632,9 @@ footer .footer-wrapper .middle-side a:hover {
   }
   footer .foot-info {
     margin-top: 40px;
+  }
+  footer .footer-wrapper .right-side .registrar {
+    margin-right: 0;
   }
   footer .footer-wrapper {
     flex-direction: column;

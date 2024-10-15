@@ -79,6 +79,35 @@ gsap.from(".split span .char", 0.7, {
   ease: "power4.inOut",
 });
 
+function handleClick(event, url, title) {
+  event.preventDefault();
+  show(title, event.currentTarget.closest(".dropdown"));
+  const newTab = window.open(url, "_blank");
+  newTab.focus();
+}
+
+function show(title, dropdown) {
+  const textbox = dropdown.querySelector(".textbox");
+  textbox.value = title;
+}
+
+const dropdowns = document.querySelectorAll(".dropdown");
+
+dropdowns.forEach((dropdown) => {
+  dropdown.onclick = function () {
+    dropdown.classList.toggle("activeShow");
+  };
+});
+
+document.addEventListener("click", (e) => {
+  dropdowns.forEach((dropdown) => {
+    const textbox = dropdown.querySelector(".textbox");
+    if (!dropdown.contains(e.target) && e.target !== textbox) {
+      dropdown.classList.remove("activeShow");
+    }
+  });
+});
+
 let items = document.querySelectorAll(".slider .list .item");
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
