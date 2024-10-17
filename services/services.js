@@ -60,11 +60,9 @@ function navigation() {
 }
 navigation();
 
-function validateEmail(formType) {
-  const emailInput = document.getElementById(`email-field-${formType}`);
-  const emailError = document.getElementById(
-    `emailError${formType.charAt(0).toUpperCase() + formType.slice(1)}`
-  );
+function validateEmail() {
+  const emailInput = document.getElementById("email-field");
+  const emailError = document.getElementById("emailError");
   const emailPattern =
     /^[A-Za-z._\-0-9]+@[A-Za-z]+\.[A-Za-z]{2,}(\.[A-Za-z]{2,})?$/;
 
@@ -87,13 +85,9 @@ function validateEmail(formType) {
   return true;
 }
 
-function validateMessage(formType) {
-  const messageField = document.getElementById(
-    `messageField${formType.charAt(0).toUpperCase() + formType.slice(1)}`
-  );
-  const messageError = document.getElementById(
-    `messageError${formType.charAt(0).toUpperCase() + formType.slice(1)}`
-  );
+function validateMessage() {
+  const messageField = document.getElementById("messageField");
+  const messageError = document.getElementById("messageError");
 
   if (!messageField.value) {
     messageError.innerHTML =
@@ -107,39 +101,24 @@ function validateMessage(formType) {
   return true;
 }
 
-function handleSubmit(formType) {
-  const isEmailValid = validateEmail(formType);
-  const isMessageValid = validateMessage(formType);
+function handleSubmit() {
+  const isEmailValid = validateEmail();
+  const isMessageValid = validateMessage();
 
   if (isEmailValid && isMessageValid) {
-    document
-      .getElementById(
-        `contactForm${formType.charAt(0).toUpperCase() + formType.slice(1)}`
-      )
-      .submit();
+    document.getElementById("contactForm").submit();
   }
 }
 
-const collegeContact = document.querySelector(".modalBG-College");
-const collegeBtn = document.querySelector(".collegeBtn");
-const collegeClose = document.querySelector(".closeCollege");
+const contactModal = document.querySelector(".modalBG");
+const openContact = document.querySelector(".contact");
+const closeContact = document.querySelector(".close");
 
-collegeBtn.addEventListener("click", () => {
-  collegeContact.classList.add("showContact");
+openContact.addEventListener("click", () => {
+  contactModal.classList.add("showContact");
 });
-collegeClose.addEventListener("click", () => {
-  collegeContact.classList.remove("showContact");
-});
-
-const shsContact = document.querySelector(".modalBG-shs");
-const shsBtn = document.querySelector(".shsBtn");
-const shsClose = document.querySelector(".closeShs");
-
-shsBtn.addEventListener("click", () => {
-  shsContact.classList.add("showContactSHS");
-});
-shsClose.addEventListener("click", () => {
-  shsContact.classList.remove("showContactSHS");
+closeContact.addEventListener("click", () => {
+  contactModal.classList.remove("showContact");
 });
 
 const openNav = document.querySelector(".toggle .icon");

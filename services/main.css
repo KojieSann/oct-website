@@ -195,6 +195,35 @@ header .menu-btn {
   display: flex;
   position: relative;
 }
+.contact {
+  z-index: 100;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  height: 45px;
+  width: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  background: rgb(149, 213, 178);
+  background: radial-gradient(
+    circle,
+    rgba(149, 213, 178, 1) 0%,
+    rgba(82, 183, 136, 1) 100%
+  );
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.contact:hover {
+  background: rgb(149, 213, 178);
+  background: radial-gradient(
+    circle,
+    rgba(149, 213, 178, 1) 100%,
+    rgba(82, 183, 136, 1) 100%
+  );
+}
 .modalBG {
   width: 100%;
   height: 100vh;
@@ -206,25 +235,17 @@ header .menu-btn {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-.modalBG-College {
   display: none;
 }
-.modalBG-shs {
-  display: none;
-}
-.modalBG-shs.showContactSHS {
-  display: flex;
-}
-.modalBG-College.showContact {
+.modalBG.showContact {
   display: flex;
 }
 .modal {
   align-items: center;
   justify-content: center;
   display: flex;
-  height: 350px;
-  width: 500px;
+  height: auto;
+  width: 480px;
   position: relative;
   z-index: 100;
   padding: 30px;
@@ -243,7 +264,7 @@ header .menu-btn {
   font-size: 20px;
   cursor: pointer;
 }
-.modal #contactForm {
+.modal form {
   width: 90%;
   z-index: 1000;
 }
@@ -452,37 +473,7 @@ header .menu-btn {
     border-radius: 50%;
   }
 }
-.contact-wrapper {
-  display: flex;
-  gap: 30px;
-  margin-top: 40px;
-}
-.contact {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  height: 40px;
-  width: 150px;
-  padding: 5px;
-  background: #66c887;
-  border-radius: 10px;
-}
-.contact span {
-  color: #4b4b4b;
-  font-weight: 700;
-}
-.contact .icon {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.contact:hover {
-}
+
 .content-container {
   position: relative;
   margin-top: 10px;

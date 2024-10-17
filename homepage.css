@@ -813,10 +813,9 @@ header .menu-btn {
   object-fit: cover;
   border-radius: 10px;
 }
-.faq .undraw img {
-  width: 30em;
-}
+
 .faq {
+  position: relative;
   margin-top: 50px;
   display: flex;
   width: 100%;
@@ -825,14 +824,15 @@ header .menu-btn {
 }
 .faq .container {
   justify-content: space-between;
-  padding: 70px 7vw;
+  padding: 70px 9vw;
   display: flex;
+  align-items: center;
   width: 95%;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 .faq .container .questions {
-  width: 45%;
+  width: 95%;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -854,6 +854,10 @@ header .menu-btn {
   height: auto;
   padding: 8px 25px 20px;
 }
+.faq .questions .question-wrapper.expanded .undraw {
+  opacity: 0;
+  visibility: hidden;
+}
 .faq .questions .question-wrapper.expanded i {
   transform: rotate(180deg);
 }
@@ -871,7 +875,7 @@ header .menu-btn {
 .faq .questions .question-wrapper .question-title {
   display: flex;
   gap: 20px;
-  font-size: 2.5rem;
+  font-size: 25px;
   font-weight: 600;
   align-items: center;
   margin-top: 10px;
@@ -1055,6 +1059,7 @@ html.lenis body {
   .menu .submenu-item a {
     white-space: normal;
   }
+
   .menu .supportServices .submenu {
     margin-left: 7%;
     width: 100%;
@@ -1106,6 +1111,9 @@ html.lenis body {
   }
   footer .footer-wrapper .left-side .footer-title {
     line-height: 30px;
+  }
+  footer .footer-wrapper .footer-title span {
+    font-size: 38px;
   }
   footer .footer-wrapper .right-side .contact-wrapper {
     display: flex;
@@ -1160,7 +1168,7 @@ html.lenis body {
     justify-content: center;
   }
   .faq .questions .question-wrapper .question-title span {
-    font-size: 2rem;
+    font-size: 14px;
   }
   .marquee {
     padding: 20px;
