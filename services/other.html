@@ -35,6 +35,14 @@
         flex-direction: column;
         gap: 20px;
       }
+      .content-container .wrapper {
+        position: relative;
+        margin-bottom: 30px;
+      }
+      .contact {
+        position: absolute;
+        bottom: -40px;
+      }
       .content-container p {
         text-indent: 50px;
         margin-top: 5px;
@@ -118,9 +126,7 @@
                   >
                 </li>
                 <li class="submenu-item">
-                  <a href="./learning.html" class="link"
-                    >Learning Resource Center</a
-                  >
+                  <a href="./learning.html" class="link">Learning Commons</a>
                 </li>
                 <li class="submenu-item">
                   <a href="./guidance.html" class="link"
@@ -154,10 +160,12 @@
       </div>
       <div class="contact-nav">
         <p class="call">
-          &nbsp;&nbsp;&nbsp; <i class="fa-solid fa-phone"></i> +63 902 3002 123
+          &nbsp;&nbsp;&nbsp; <i class="fa-solid fa-phone"></i> (046) 860-2301
+          loc 115 +63 921 538 793
         </p>
         <p class="mail-nav">
-          &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-envelope"></i> oct@gmail.com
+          &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-envelope"></i>
+          oct.marketing@olivarezcollege.edu.ph
         </p>
       </div>
       <div class="media-nav">
@@ -178,6 +186,201 @@
             <a href=""><i class="fa-brands fa-youtube"></i> Youtube</a>
           </li>
         </ul>
+      </div>
+    </div>
+    <div class="modalBG modalBG-accounting">
+      <div class="modal">
+        <div class="close closeAccounting">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="area">
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <form
+          action="https://formsubmit.co/pandamania0881@gmail.com"
+          method="POST"
+          id="contactFormCollege"
+        >
+          <div class="inputs">
+            <div class="texts">
+              <div class="split">
+                <span> ACCOUNTING OFFICE </span>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-box">
+                <i class="fa-regular fa-envelope icon"></i>
+                <input
+                  type="text"
+                  id="email-field-accounting"
+                  name="email"
+                  required
+                  onkeyup="validateEmail('accounting')"
+                />
+                <span>Email</span>
+                <div id="emailErrorAccounting" class="error-message"></div>
+              </div>
+              <div class="content">
+                <textarea
+                  placeholder="Send us a message"
+                  id="messageFieldAccounting"
+                  name="message"
+                  required
+                  onkeyup="validateMessage('accounting')"
+                ></textarea>
+                <div id="messageErrorAccounting" class="error-message"></div>
+              </div>
+              <button
+                class="send"
+                type="submit"
+                onclick="handleSubmit('accounting')"
+              >
+                Send <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modalBG modalBG-canteen">
+      <div class="modal">
+        <div class="close closeCanteen">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="area">
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <form
+          action="https://formsubmit.co/johnlester.quinagutan@gmail.com"
+          method="POST"
+          id="contactFormShs"
+        >
+          <div class="inputs">
+            <div class="texts">
+              <div class="split">
+                <span>School Canteen</span>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-box">
+                <i class="fa-regular fa-envelope icon"></i>
+                <input
+                  type="text"
+                  id="email-field-canteen"
+                  name="email"
+                  required
+                  onkeyup="validateEmail('canteen')"
+                />
+                <span>Email</span>
+                <div id="emailErrorCanteen" class="error-message"></div>
+              </div>
+              <div class="content">
+                <textarea
+                  placeholder="Send us a message"
+                  id="messageFieldCanteen"
+                  name="message"
+                  required
+                  onkeyup="validateMessage('canteen')"
+                ></textarea>
+                <div id="messageErrorCanteen" class="error-message"></div>
+              </div>
+              <button
+                class="send"
+                type="submit"
+                onclick="handleSubmit('canteen')"
+              >
+                Send <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modalBG modalBG-bookstore">
+      <div class="modal">
+        <div class="close closeBookstore">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="area">
+          <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <form
+          action="https://formsubmit.co/johnlester.quinagutan@gmail.com"
+          method="POST"
+          id="contactFormShs"
+        >
+          <div class="inputs">
+            <div class="texts">
+              <div class="split">
+                <span>Bookstore</span>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="input-box">
+                <i class="fa-regular fa-envelope icon"></i>
+                <input
+                  type="text"
+                  id="email-field-bookstore"
+                  name="email"
+                  required
+                  onkeyup="validateEmail('bookstore')"
+                />
+                <span>Email</span>
+                <div id="emailErrorBookstore" class="error-message"></div>
+              </div>
+              <div class="content">
+                <textarea
+                  placeholder="Send us a message"
+                  id="messageFieldBookstore"
+                  name="message"
+                  required
+                  onkeyup="validateMessage('bookstore')"
+                ></textarea>
+                <div id="messageErrorBookstore" class="error-message"></div>
+              </div>
+              <button
+                class="send"
+                type="submit"
+                onclick="handleSubmit('bookstore')"
+              >
+                Send <i class="fa-regular fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
     <div class="main-container">
@@ -343,6 +546,9 @@
             <li>The Payment Section</li>
             <li>Section of Cashiers</li>
           </ul>
+          <div class="contact accountingBtn">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
         </div>
         <div class="wrapper">
           <div class="title">SCHOOL CANTEEN</div>
@@ -359,6 +565,9 @@
             to one-third of a student's daily caloric intake, substantially
             impacting their nutrition and general health.
           </p>
+          <div class="contact canteenBtn">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
         </div>
         <div class="wrapper">
           <div class="title">BOOKSTORE</div>
@@ -378,6 +587,9 @@
               staff and students
             </li>
           </ul>
+          <div class="contact bookstoreBtn">
+            <i class="fa-solid fa-envelope"></i>
+          </div>
         </div>
       </div>
     </div>
@@ -386,6 +598,166 @@
     <script src="../gsap/gsap.min.js"></script>
     <script src="../gsap/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.8/dist/lenis.min.js"></script>
-    <script src="./services.js"></script>
+    <script>
+      function navigation() {
+        $("ul.main-menu li").click(function (e) {
+          if ($(this).siblings("li").find("ul.submenu:visible").length) {
+            $("ul.submenu").slideUp("normal");
+          }
+          $(this).find("ul.submenu").slideToggle("normal");
+        });
+        var tl = new TimelineMax({ paused: true });
+        tl.to(".menu", 0.3, {
+          autoAlpha: 1,
+        });
+        tl.staggerFrom(
+          ".main-menu li a:not(.submenu li a)",
+          1,
+          {
+            opacity: 0,
+            y: 10,
+            ease: Power3.easeInOut,
+          },
+          0.1
+        );
+        tl.from(".submenu", 0.3, {
+          autoAlpha: 0,
+        });
+        tl.staggerFrom(
+          ".media-nav ul li",
+          1,
+          {
+            opacity: 0,
+            y: 10,
+            ease: Power3.easeInOut,
+          },
+          0.1,
+          "-=2"
+        );
+        tl.from(".call", 1, {
+          delay: -2,
+          opacity: 0,
+          y: 10,
+          ease: Power3.easeInOut,
+        });
+        tl.from(".mail-nav", 1, {
+          delay: -1.6,
+          opacity: 0,
+          y: 10,
+          ease: Power3.easeInOut,
+        });
+        tl.reverse();
+        $(document).on("click", ".menu-btn", function () {
+          tl.reversed(!tl.reversed());
+          tl.timeScale(1);
+        });
+
+        $(document).on("click", ".close-menu", function () {
+          tl.timeScale(4);
+          tl.reversed(!tl.reversed());
+        });
+      }
+      navigation();
+      const openNav = document.querySelector(".toggle .icon");
+      openNav.addEventListener("click", () => {
+        const container = document.querySelector(".navigation-container");
+        container.classList.toggle("openNavigation");
+      });
+
+      function validateEmail(formType) {
+        const emailInput = document.getElementById(`email-field-${formType}`);
+        const emailError = document.getElementById(
+          `emailError${formType.charAt(0).toUpperCase() + formType.slice(1)}`
+        );
+        const emailPattern =
+          /^[A-Za-z._\-0-9]+@[A-Za-z]+\.[A-Za-z]{2,}(\.[A-Za-z]{2,})?$/;
+
+        if (!emailInput.value) {
+          emailError.innerHTML =
+            "<i class='fa-solid fa-circle-xmark'></i> Email field cannot be empty";
+          emailInput.style.borderBottomColor = "red";
+          return false;
+        }
+
+        if (!emailPattern.test(emailInput.value)) {
+          emailError.innerHTML =
+            "<i class='fa-solid fa-circle-xmark'></i> Please enter a valid email address";
+          emailInput.style.borderBottomColor = "red";
+          return false;
+        }
+
+        emailError.innerHTML = "";
+        emailInput.style.borderBottomColor = "green";
+        return true;
+      }
+
+      function validateMessage(formType) {
+        const messageField = document.getElementById(
+          `messageField${formType.charAt(0).toUpperCase() + formType.slice(1)}`
+        );
+        const messageError = document.getElementById(
+          `messageError${formType.charAt(0).toUpperCase() + formType.slice(1)}`
+        );
+
+        if (!messageField.value) {
+          messageError.innerHTML =
+            "<i class='fa-solid fa-circle-xmark'></i> Message cannot be empty";
+          messageField.style.borderBottomColor = "red";
+          return false;
+        }
+
+        messageError.innerHTML = "";
+        messageField.style.borderBottomColor = "green";
+        return true;
+      }
+
+      function handleSubmit(formType) {
+        const isEmailValid = validateEmail(formType);
+        const isMessageValid = validateMessage(formType);
+
+        if (isEmailValid && isMessageValid) {
+          document
+            .getElementById(
+              `contactForm${
+                formType.charAt(0).toUpperCase() + formType.slice(1)
+              }`
+            )
+            .submit();
+        }
+      }
+
+      const accountingContact = document.querySelector(".modalBG-accounting");
+      const accountingBtn = document.querySelector(".accountingBtn");
+      const accountingClose = document.querySelector(".closeAccounting");
+
+      accountingBtn.addEventListener("click", () => {
+        accountingContact.classList.add("showContact");
+      });
+      accountingClose.addEventListener("click", () => {
+        accountingContact.classList.remove("showContact");
+      });
+
+      const canteenContact = document.querySelector(".modalBG-canteen");
+      const canteenBtn = document.querySelector(".canteenBtn");
+      const canteenClose = document.querySelector(".closeCanteen");
+
+      canteenBtn.addEventListener("click", () => {
+        canteenContact.classList.add("showContact");
+      });
+      canteenClose.addEventListener("click", () => {
+        canteenContact.classList.remove("showContact");
+      });
+
+      const bookstoreContact = document.querySelector(".modalBG-bookstore");
+      const bookstoreBtn = document.querySelector(".bookstoreBtn");
+      const bookstoreClose = document.querySelector(".closeBookstore");
+
+      bookstoreBtn.addEventListener("click", () => {
+        bookstoreContact.classList.add("showContact");
+      });
+      bookstoreClose.addEventListener("click", () => {
+        bookstoreContact.classList.remove("showContact");
+      });
+    </script>
   </body>
 </html>
