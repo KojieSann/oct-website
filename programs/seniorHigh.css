@@ -599,6 +599,9 @@ footer .footer-wrapper .middle-side a:hover {
   footer .footer-wrapper .left-side .footer-title {
     line-height: 30px;
   }
+  footer .footer-wrapper .footer-title span {
+    font-size: 38px;
+  }
   footer .footer-wrapper .right-side .contact-wrapper {
     display: flex;
     flex-direction: column;

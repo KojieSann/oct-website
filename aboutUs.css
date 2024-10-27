@@ -655,42 +655,25 @@ header .menu-btn {
   font-weight: 500;
   margin-bottom: 10px;
 }
-.philosophy {
-  height: 100vh;
+
+.philo {
+  margin-top: 50px;
   width: 100%;
-  gap: 70px;
   display: flex;
   align-items: center;
+  gap: 20px;
+  padding: 50px;
 }
-.philosophy .image {
-  height: 200px;
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #d8f3dc;
+.philo .wrapper img {
+  width: 500px;
+  height: 350px;
 }
-.philosophy .image img {
-  width: 150px;
-  opacity: 0.7;
+.philo h5 {
+  font-family: "montserrat";
+  font-size: 35px;
 }
-.philosophy .philContent p {
-  font-size: 3.7rem;
-  font-weight: 500;
-  line-height: 120%;
-  margin-bottom: 30px;
-}
-.philosophy .bg {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    165deg,
-    rgba(255, 255, 255, 1) 36%,
-    rgba(216, 243, 220, 1) 100%
-  );
+.philo .content {
+  font-size: 0.95rem;
 }
 /* footer */
 footer {
@@ -873,29 +856,8 @@ footer .footer-wrapper .middle-side a:hover {
   .visionMission .line {
     display: none;
   }
-  .philosophy .bg {
-    display: none;
-  }
-  .philosophy {
-    gap: 20px;
-  }
-  .philosophy .image {
-    height: 150px;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #d8f3dc;
-  }
-  .philosophy .image img {
-    width: 100px;
-  }
-  .philosophy .philContent p {
-    font-size: 2.5rem;
-  }
-  .philosophy .philContent span {
-    font-size: 0.9rem;
-    text-align: center;
+  .philo {
+    flex-direction: column;
   }
   footer {
     height: auto;
@@ -920,6 +882,9 @@ footer .footer-wrapper .middle-side a:hover {
   }
   footer .footer-wrapper .left-side .footer-title {
     line-height: 30px;
+  }
+  footer .footer-wrapper .footer-title span {
+    font-size: 38px;
   }
   footer .footer-wrapper .right-side .contact-wrapper {
     display: flex;
