@@ -137,21 +137,17 @@ var swiper = new Swiper(".mySwiper", {
   },
 
   breakpoints: {
-    420: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
     640: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20,
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 40,
     },
     1024: {
-      slidesPerView: 4,
-      spaceBetween: 40,
+      slidesPerView: 3,
+      spaceBetween: 50,
     },
   },
 });
@@ -161,26 +157,22 @@ var swiper2 = new Swiper(".commentsContainer", {
   centerSlide: true,
   fade: true,
   loop: true,
-  autoplay: { delay: 3000 },
   breakpoints: {
-    420: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
     640: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20,
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 40,
     },
     1024: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 50,
     },
   },
 });
+
 var swiper3 = new Swiper(".programs-swiper", {
   spaceBetween: 30,
   loop: true,
@@ -203,33 +195,37 @@ var swiper3 = new Swiper(".programs-swiper", {
     },
   },
 });
+
 const modal = document.getElementById("videoModal");
 const videoPlayer = document.getElementById("videoPlayer");
 const videoSource = document.getElementById("videoSource");
 const closeBtn = document.getElementsByClassName("close")[0];
+
 document.querySelectorAll(".play-btn").forEach((thumbnail) => {
   thumbnail.onclick = function () {
     const videoSrc = this.getAttribute("data-video-src");
     videoSource.src = videoSrc;
     videoPlayer.load();
-    modal.style.display = "block";
+    modal.style.display = "flex";
     videoPlayer.play();
   };
 });
 
 closeBtn.onclick = function () {
-  modal.style.display = "none";
-  videoPlayer.pause();
-  videoPlayer.currentTime = 0;
+  closeModal();
 };
 
 window.onclick = function (event) {
   if (event.target === modal) {
-    modal.style.display = "none";
-    videoPlayer.pause();
-    videoPlayer.currentTime = 0;
+    closeModal();
   }
 };
+
+function closeModal() {
+  modal.style.display = "none";
+  videoPlayer.pause();
+  videoPlayer.currentTime = 0;
+}
 
 let items = document.querySelectorAll(".slider .list .item");
 let next = document.getElementById("next");
