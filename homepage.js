@@ -5,6 +5,11 @@ window.addEventListener("scroll", () => {
   backToTopButton.classList.toggle("activeBtn", window.scrollY > 500);
 });
 
+const hiddenHeader = document.getElementById("hiddenHeader");
+window.addEventListener("scroll", () => {
+  hiddenHeader.classList.toggle("showHeader", window.scrollY > 500);
+});
+
 function navigation() {
   $("ul.main-menu li").click(function (e) {
     if ($(this).siblings("li").find("ul.submenu:visible").length) {
