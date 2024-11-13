@@ -1,5 +1,10 @@
 Splitting();
 
+const hiddenHeader = document.getElementById("hiddenHeader");
+window.addEventListener("scroll", () => {
+  hiddenHeader.classList.toggle("showHeader", window.scrollY > 500);
+});
+
 const backToTopButton = document.getElementById("backToTop");
 window.addEventListener("scroll", () => {
   backToTopButton.classList.toggle("activeBtn", window.scrollY > 500);

@@ -46,8 +46,40 @@ header .menu-btn {
   right: 1.8%;
   position: absolute;
 }
-.menu {
+.hiddenHeader {
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+  background-color: #fff;
+  padding: 10px 40px;
+  width: 100vw;
+  transform: translateY(-50px);
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10000;
+  transition: 0.3s;
+}
+.hiddenHeader img {
+  width: 50px;
+}
+.hiddenHeader .menu-btn {
+  color: #363636;
+  cursor: pointer;
+  z-index: 2001;
+  margin: 1em;
+  font-size: 24px;
+  right: 1.8%;
   position: absolute;
+}
+.hiddenHeader.showHeader {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.menu {
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100vh;

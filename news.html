@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta
+          name="viewport"
+          content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0"
+        /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link rel="stylesheet" href="news.css" />
+    <link
+      rel="icon"
+      type="x-icon"
+      href="./img/olivarez-college-tagaytay-logo.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/splitting/dist/splitting.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/splitting/dist/splitting-cells.css"
+    />
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <link rel="stylesheet" href="./gsap/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <a href="#toTop" class="backToTop" id="backToTop"
+      ><img src="./img/olivarez-college-tagaytay-logo.png" alt="oct logo"
+    /></a>
+    <a href="./contactus.html">
+      <div class="contact">
+        <div class="container">
+          <i class="fa-regular fa-envelope"></i>
+          <span>Contact us</span>
+        </div>
+      </div>
+    </a>
+
+    <header id="toTop">
+      <a href="./homepage.html">
+        <img src="./img/olivarez-college-tagaytay-logo.png" alt="oct logo" />
+      </a>
+      <div class="menu-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </header>
+    <div class="menu">
+      <div class="close-menu">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="nav">
+        <div class="nav-wrapper">
+          <ul class="main-menu">
+            <li class="main-menu-item">
+              <a href="./homepage.html" class="link">Home</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="#">Programs &nbsp; <i class="fa-solid fa-plus"></i></a>
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="./programs/collegePage.html" class="link">College</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="./programs/seniorhigh.html" class="link">SHS</a>
+                </li>
+                <li class="submenu-item">
+                  <a href="./programs/tesda.html" class="link">TESDA</a>
+                </li>
+              </ul>
+            </li>
+            <li class="main-menu-item">
+              <a href="./aboutUs.html" class="link">About us</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="./contactus.html" class="link">Contact</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="./services/other.html" class="link">Other Services</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="./research.html" class="link">Research</a>
+            </li>
+            <li class="main-menu-item">
+              <a href="./admission.html">
+                <button class="nav-btn">Admission</button></a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="nav-wrapper supportServices">
+          <ul class="main-menu">
+            <li class="main-menu-item">
+              <a href="#"
+                >Academic support services &nbsp;
+                <i class="fa-solid fa-plus"></i
+              ></a>
+              <ul class="submenu">
+                <li class="submenu-item">
+                  <a href="./services/osa.html" class="link"
+                    >Office of the Student Affairs</a
+                  >
+                </li>
+                <li class="submenu-item">
+                  <a href="./services/marketing.html" class="link"
+                    >Marketing and Admission Office</a
+                  >
+                </li>
+                <li class="submenu-item">
+                  <a href="./services/learning.html" class="link"
+                    >Learning Commons</a
+                  >
+                </li>
+                <li class="submenu-item">
+                  <a href="./services/guidance.html" class="link"
+                    >Guidance and Testing Office</a
+                  >
+                </li>
+                <li class="submenu-item">
+                  <a href="./services/clinic.html" class="link"
+                    >School Clinic
+                  </a>
+                </li>
+                <li class="submenu-item">
+                  <a href="./services/registrar.html" class="link"
+                    >Office of the Registrar</a
+                  >
+                </li>
+                <li class="submenu-item">
+                  <a href="./services/tesda.html" class="link"
+                    >TESDA Assesment Center</a
+                  >
+                </li>
+                <li class="submenu-item">
+                  <a href="./services/research.html" class="link">CRPPD</a>
+                </li>
+
+                <li class="submenu-item">
+                  <a href="./services/campusCommunity.html" class="link"
+                    >Campus Ministry & Community Extension Program
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="contact-nav">
+        <p class="call">
+          &nbsp;&nbsp;&nbsp; <i class="fa-solid fa-phone"></i> (046) 860-2301
+          loc 115 +63 921 538 793
+        </p>
+        <p class="mail-nav">
+          &nbsp;&nbsp;&nbsp;<i class="fa-solid fa-envelope"></i>
+          oct.marketing@olivarezcollege.edu.ph
+        </p>
+      </div>
+      <div class="media-nav">
+        <ul>
+          <li>
+            <a
+              href="https://www.facebook.com/octagaytayofficial"
+              target="_blank"
+              ><i class="fa-brands fa-facebook-f"></i> Facebook</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><i class="fa-brands fa-square-instagram"></i> Instagram</a
+            >
+          </li>
+          <li>
+            <a href=""><i class="fa-brands fa-youtube"></i> Youtube</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="newsNav">
+      <a href="#news1"
+        >Foundation Weeks <span class="desc">Decades Of Excellence </span></a
+      >
+      <a href="#news2"
+        >General Student Orientation
+        <span class="desc">OCT Pushed Through Academic Year 2024-2025 </span></a
+      >
+      <a href="#news3"
+        >ISA Orientation
+        <span class="desc"
+          >Olivarez College: Moving Towards Greater Learning Competence!
+        </span></a
+      >
+      <a href="#news4"
+        >Graduation Ceremony
+        <span class="desc"
+          >Bravo Batch 2024! The 18th Commencement Exercises of OCT was a great
+          success!
+        </span></a
+      >
+    </div>
+    <div class="main-container">
+      <div class="container">
+        <div class="wrapper" id="news1">
+          <div class="newsContent">Foundation Week</div>
+          <h3 class="newsTitle">
+            Olivarez College Tagaytay's 20th Founding Anniversary celebration
+            comes to an end.
+          </h3>
+          <div class="author">
+            <div class="wrap">
+              <img src="./img/user (3).png" alt="" />
+              <p>Patrisha Maranan</p>
+            </div>
+            <div class="wrap">
+              <img src="./img/camera.png" alt="" />
+              <p>
+                Mikhaela Bergado, Ma Reinna Mandap, Chrysler Versoza, Eugene
+                Pascual
+              </p>
+            </div>
+          </div>
+          <div class="news">
+            <div class="image">
+              <img src="./img/news image/news1.jpg" alt="" />
+              <h5>Decades Of Excellence</h5>
+            </div>
+            <p>
+              Olivarez College Tagaytay (OCT) recently celebrated its 20th
+              Founding Anniversary with week-long activities and events that
+              concluded with an awarding and closing program held at the OCT
+              Gymnasium on March 16, 2024. The foundation week was a reflection
+              of the school's past achievements and growth, while also looking
+              forward to the future with hope and youth.
+            </p>
+            <p>
+              During the closing program, winners of different competitions were
+              announced, including E-Games, Sportsfest, Cheerdance, and Overall
+              Champions for the founding anniversary.
+            </p>
+            <ul>
+              <li>CHAMPION - STEM Strand</li>
+              <li>1ST RUNNER UP - HUMSS Strand</li>
+              <li>2ND RUNNER UP - BSN & BSCrim Department</li>
+            </ul>
+            <p>
+              For two decades, OCT has been a beacon of knowledge and light that
+              has guided generations of students. In the coming years, the
+              school will continue to educate the Mind, Body, and Soul with a
+              H.E.A.R.T.
+            </p>
+            <a
+              href="https://www.facebook.com/echolivarianoct?mibextid=LQQJ4d"
+              target="_blank"
+              >Visit our fb page</a
+            >
+          </div>
+        </div>
+        <div class="wrapper" id="news2">
+          <div class="newsContent">General Student Orientation</div>
+          <h3 class="newsTitle">
+            Olivarez College Tagaytay successfully welcomed college freshmen,
+            transferees, and returnees from every department into the academic
+            year 2024-2025 at the Tagaytay Country Hotel (TCH) Pavilion on the
+            21st day of August 2024.
+          </h3>
+          <div class="author">
+            <div class="wrap">
+              <img src="./img/user (3).png" alt="" />
+              <p>Lyza Morillo</p>
+            </div>
+            <div class="wrap">
+              <img src="./img/camera.png" alt="" />
+              <p>Rasel Vidallon, Brix Mendoza</p>
+            </div>
+          </div>
+          <div class="news">
+            <div class="image">
+              <img src="./img/news image/new2.jpg" alt="" />
+              <h5>OCT Pushed Through Academic Year 2024-2025</h5>
+            </div>
+            <p>
+              Dr. Jean Rizza Dela Cruz, College Dean, opened the day by assuring
+              the students of a quality education and improvements for the
+              Olivarians. “What we can assure you is that this is a new
+              opportunity for learning and growth," said Dr. Dela Cruz in her
+              opening remarks.
+            </p>
+            <p>
+              “Rest assured that our faculty members and our members of the
+              administration will be supporting you all the way, so we will be
+              able to achieve your dreams and your goals in life," she added as
+              she talked about the challenges that will be encountered along the
+              student’s academic journey.
+            </p>
+            <p>
+              Moreover, a surprise was revealed in the orientation, as OCT’s
+              classroom, laboratories, and other facilities are now fully
+              equipped with air conditioning units.
+            </p>
+            <div class="image">
+              <img src="./img/news image/news3.jpg" alt="" />
+            </div>
+            <p>
+              In addition to welcoming the students, OCT held a raffle during
+              the program to distribute merchandise such as tote bags and mugs,
+              as well as cash prizes and a brand new laptop.
+            </p>
+            <p>
+              Discussion of policies, reminders, and guidance was also done by
+              the respective heads of each department.
+            </p>
+            <p>
+              The said orientation was conducted in two batches: students from
+              the Bachelor of Science in Criminology, Bachelor of Science in
+              Accountancy and Accounting Information System, Bachelor of Science
+              in Business Administration, and Bachelor of Science in Information
+              Technology held their orientation in the morning.
+            </p>
+            <p>
+              On the other hand, the second batch held theirs in the afternoon
+              and consisted of students from the Bachelor of Science in Nursing,
+              Bachelor of Science in Tourism Management, Bachelor of Science in
+              Hospitality Management, Bachelor of Elementary Education, as well
+              as the students of Caregiving and Bread and Pastry Production
+              (TESDA short courses).
+            </p>
+            <p>
+              Lastly, BS Information Technology was recognized and topped as the
+              outstanding enrollment growth rate for the academic year, while BS
+              Criminology remains the most populated program in OCT.
+            </p>
+            <a
+              href="https://www.facebook.com/echolivarianoct?mibextid=LQQJ4d"
+              target="_blank"
+              >Visit our fb page</a
+            >
+          </div>
+        </div>
+        <div class="wrapper" id="news3">
+          <div class="newsContent">ISA Orientation</div>
+          <h3 class="newsTitle">
+            On August 15, 2014, Olivarez College Tagaytay and Parañaque hosted
+            an Institutional Sustainability Assessment (ISA) orientation for the
+            entire institution
+          </h3>
+          <div class="author">
+            <div class="wrap">
+              <img src="./img/user (3).png" alt="" />
+              <p>Ann Rachel Y. Cuadra, LPT, MAEd</p>
+            </div>
+            <div class="wrap">
+              <img src="./img/camera.png" alt="" />
+              <p>Lito Bajado Jr., MSHRM</p>
+            </div>
+          </div>
+          <div class="news">
+            <div class="image">
+              <img src="./img/news image/news4.png" alt="" />
+              <h5>
+                Olivarez College: Moving Towards Greater Learning Competence!
+              </h5>
+            </div>
+            <p>
+              At this historic event, educators and support staff from two
+              locations came together for a full day of stimulating workshops
+              aimed at improving curriculum and advancing the campuses'
+              sustainability initiatives. Participants in the orientation sought
+              to improve institutional norms, processes, and curriculum for
+              students and other stakeholders. In addition to providing for the
+              demands of the present needs, Olivarez College is committed to
+              establishing new benchmarks for sustainability in education. This
+              proactive strategy demonstrates a dedication to providing
+              excellence and ongoing development.
+            </p>
+            <a
+              href="https://www.facebook.com/echolivarianoct?mibextid=LQQJ4d"
+              target="_blank"
+              >Visit our fb page</a
+            >
+          </div>
+        </div>
+        <div class="wrapper" id="news4">
+          <div class="newsContent">Graduation Ceremony</div>
+          <h3 class="newsTitle">
+            On June 7, 2024, the 18th Commencement Exercises of OCT marked a
+            significant day for the graduation world for the class of 2024.
+          </h3>
+          <div class="author">
+            <div class="wrap">
+              <img src="./img/user (3).png" alt="" />
+              <p>Ann Rachel Y. Cuadra, LPT, MAEd</p>
+            </div>
+            <div class="wrap">
+              <img src="./img/camera.png" alt="" />
+              <p>Peter Jr. C. Sesma, LPT</p>
+            </div>
+          </div>
+          <div class="news">
+            <div class="image">
+              <img src="./img/news image/news6.jpg" alt="" />
+              <h5>
+                Bravo Batch 2024! The 18th Commencement Exercises of OCT was a
+                great success!
+              </h5>
+            </div>
+            <p>
+              The event focused on "Demystifying Excellence in the Better Normal
+              Landscape," highlighting the students' readiness to move on to the
+              next phase of their lives.
+            </p>
+            <p>
+              The awards ceremony, which took place at the Convention Center,
+              was attended by excited families, esteemed faculty members,
+              administrators, and honored guests. The commencement theme,
+              "Demystifying Excellence in the Better Normal Landscape,"
+              signified a shift from traditional graduation ceremonies while
+              remaining an enjoyable and significant experience.
+            </p>
+            <div class="image">
+              <img src="./img/news image/news5.jpg" alt="" />
+            </div>
+            <p>
+              Dr. Rommel Pilapil Sergio, a scholar and lecturer, delivered a
+              moving speech emphasizing the need to embrace change for better
+              achievement. His words profoundly impacted both the graduates and
+              the audience, stressing the importance of intelligent visioning
+              and adapting to the new normal.
+            </p>
+
+            <p>
+              Special awards were given to outstanding students excelling in
+              academic achievement, leadership, and community service
+            </p>
+            <p>
+              As tassels were turned and caps were thrown, the Class of 2024
+              officially graduated, feeling palpable excitement and a sense of
+              achievement. They celebrated their accomplishments and looked
+              forward to the future.
+            </p>
+            <p>
+              Equipped with knowledge and fond memories from their years at OCT,
+              the graduates move forward confidently, ready to face the
+              following stages of their lives. They are inspired to contribute
+              to creating a better normal after the pandemic, building on the
+              knowledge and inspiration gained from their graduation.
+            </p>
+            <a
+              href="https://www.facebook.com/echolivarianoct?mibextid=LQQJ4d"
+              target="_blank"
+              >Visit our fb page</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="left-side">
+          <img src="./img/olivarez-college-tagaytay-logo.png" alt="" />
+          <div class="footer-title">
+            Join us and be an <br />
+            <span>Olivarian today!</span>
+          </div>
+          <p>Emilio Aguinaldo Highway, Brgy. San Jose, Tagaytay City</p>
+        </div>
+        <div class="middle-side">
+          <a href="https://www.facebook.com/octagaytayofficial" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="right-side">
+          <div class="contact-wrapper">
+            <div class="footer-contact">MARKETING & ADMISSIONS OFFICE</div>
+            <div class="contact-info">
+              (046) 860-2301 loc 115 +63 921 538 793 <br />
+              oct.marketing@olivarezcollege.edu.ph
+            </div>
+          </div>
+          <div class="contact-wrapper registrar">
+            <div class="footer-contact">REGISTRAR OFFICE</div>
+            <div class="contact-info">
+              (046) 860-2301 loc 120 +63 961 631 3271 <br />
+              oct.resgistrar@olivarezcollege.edu.ph
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="foot-info">
+        <div class="footer-left">
+          <i class="fa-regular fa-copyright"></i> Olivarez College Tagaytay
+          2018, All Rights Reserved
+        </div>
+      </div>
+    </footer>
+    <script src="./gsap/gsap.min.js"></script>
+    <script src="./news.js"></script>
+  </body>
+</html>

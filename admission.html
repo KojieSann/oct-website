@@ -33,6 +33,14 @@
       <a href="#toTop" class="backToTop" id="backToTop"
         ><img src="./img/olivarez-college-tagaytay-logo.png" alt=""
       /></a>
+      <div class="hiddenHeader" id="hiddenHeader">
+        <a href="./homepage.html"
+          ><img src="./img/olivarez-college-tagaytay-logo.png" alt="oct logo"
+        /></a>
+        <div class="menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
       <a href="./contactus.html">
         <div class="contact">
           <div class="container">
@@ -474,7 +482,10 @@
     <script src="https://unpkg.com/lenis@1.1.8/dist/lenis.min.js"></script>
     <script>
       Splitting();
-
+      const hiddenHeader = document.getElementById("hiddenHeader");
+      window.addEventListener("scroll", () => {
+        hiddenHeader.classList.toggle("showHeader", window.scrollY > 500);
+      });
       gsap.from("#toTop img", 1.5, {
         delay: 0.5,
         x: -200,

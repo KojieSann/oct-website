@@ -273,6 +273,25 @@ document.querySelectorAll(".question-wrapper").forEach((wrapper) => {
   });
 });
 
+const maxLength = 100;
+const titles = document.querySelectorAll(".news-title");
+
+titles.forEach((h3) => {
+  if (h3.innerText.length > maxLength) {
+    h3.innerText = h3.innerText.slice(0, maxLength) + "...";
+  }
+});
+
+// const maxWords = 15;
+// const titles = document.querySelectorAll('.news-title');
+
+// titles.forEach(h3 => {
+//     const words = h3.innerText.split(" ");
+//     if (words.length > maxWords) {
+//         h3.innerText = words.slice(0, maxWords).join(" ") + "...";
+//     }
+// });
+
 let currentScroll = 0;
 let isScrollingDown = true;
 let arrows = document.querySelectorAll(".arrow");
