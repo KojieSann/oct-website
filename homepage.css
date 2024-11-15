@@ -758,6 +758,9 @@ header .menu-btn {
 .news .nav-news h2 {
   font-size: 2.5rem;
 }
+.news .nav-news a {
+  color: #2d6a4f;
+}
 .news .header-news .wrapper {
   position: relative;
   display: flex;
@@ -861,7 +864,10 @@ header .menu-btn {
   object-fit: cover;
   border-radius: 10px;
 }
-
+.news .swiper-slide .read-more-button {
+  color: blue;
+  font-size: 0.87rem;
+}
 .faq {
   position: relative;
   margin-top: 50px;

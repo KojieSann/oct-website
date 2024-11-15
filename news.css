@@ -291,7 +291,16 @@ header .menu-btn {
   transform: scale(1);
 }
 .wrapper {
+  position: relative;
   margin-top: 100px;
+}
+.line {
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background-color: #a8a8a8;
+  top: -30px;
+  left: 0;
 }
 .newsContent {
   color: #9c9c9c;
