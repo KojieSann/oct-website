@@ -310,7 +310,8 @@ header .menu-btn {
   font-size: 13px;
 }
 .slider .list .item .content h2 {
-  font-size: 80px;
+  font-size: 45px;
+  line-height: 100%;
   margin: 0;
 }
 @keyframes showContent {
@@ -379,11 +380,11 @@ header .menu-btn {
   padding: 30px 50px;
 }
 .programs .header h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 500;
 }
 .programs .header p {
-  width: 50%;
+  width: 60%;
 }
 .programs .programs-nav {
   margin-left: 5px;
