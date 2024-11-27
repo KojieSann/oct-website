@@ -389,7 +389,7 @@ header .menu-btn {
   width: 40%;
   right: 30px;
   bottom: 50px;
-  z-index: 10000;
+  z-index: 1000;
   color: #fff;
   font-size: 0.9rem;
   font-weight: 300;
