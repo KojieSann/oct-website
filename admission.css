@@ -450,10 +450,14 @@ header .menu-btn {
 .reminder .content {
   width: 50%;
 }
-.reminder .content h2 {
+.reminder .content .title {
+  margin-bottom: 20px;
+}
+.reminder .content .title h2 {
   font-size: 3.5rem;
   white-space: nowrap;
   margin-left: -10px;
+  margin-bottom: -10px;
 }
 .reminder .content ul {
   display: flex;
@@ -464,6 +468,14 @@ header .menu-btn {
   list-style: decimal;
   font-size: 0.9rem;
   font-weight: 400;
+}
+.reminder .content .wrap .sub li {
+  list-style: circle;
+  margin-left: 30px;
+}
+.reminder .content li span {
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 .reminder .image img {
   width: 250px;
@@ -515,6 +527,7 @@ footer .foot-info {
   display: flex;
   font-weight: 300;
 }
+
 .contact-wrapper {
   text-align: right;
 }
@@ -593,7 +606,7 @@ footer .footer-wrapper .middle-side a:hover {
   .reminder {
     padding: 30px;
   }
-  .reminder .content h2 {
+  .reminder .content .title h2 {
     font-size: 1.5rem;
     margin-bottom: 15px;
   }

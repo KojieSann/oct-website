@@ -181,7 +181,7 @@ var swiper2 = new Swiper(".commentsContainer", {
 var swiper3 = new Swiper(".programs-swiper", {
   spaceBetween: 30,
   loop: true,
-  autoplay: { delay: 3000 },
+  autoplay: { delay: 2000 },
   centerSlide: true,
   grabCursor: true,
   fade: true,
@@ -272,6 +272,35 @@ document.querySelectorAll(".question-wrapper").forEach((wrapper) => {
     wrapper.classList.toggle("expanded");
   });
 });
+
+document.querySelector(".iconDeveloper").addEventListener("click", () => {
+  document.querySelector(".hiddenSection").classList.toggle("showDeveloper");
+});
+
+function getRandomNumber(min, max) {
+  return Math.random() * (max - min) + min;
+}
+function createCircles(numCircles) {
+  const circlesContainer = document.querySelector("footer .circles");
+
+  for (let i = 0; i < numCircles; i++) {
+    const li = document.createElement("li");
+
+    const leftPosition = getRandomNumber(0, 100);
+    li.style.left = `${leftPosition}%`;
+
+    const animationDelay = getRandomNumber(0, 20);
+    const animationDuration = getRandomNumber(15, 50);
+    li.style.animationDelay = `${animationDelay}s`;
+    li.style.animationDuration = `${animationDuration}s`;
+    const size = getRandomNumber(1, 4);
+    li.style.width = `${size}px`;
+    li.style.height = `${size}px`;
+
+    circlesContainer.appendChild(li);
+  }
+}
+createCircles(150);
 
 const maxLength = 100;
 const titles = document.querySelectorAll(".news-title");

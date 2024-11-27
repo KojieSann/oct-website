@@ -18,7 +18,7 @@
   z-index: 150;
 }
 body {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 ::selection {
@@ -169,7 +169,7 @@ header .menu-btn {
   display: flex;
   position: relative;
 }
-.contact {
+/* .contact .contactIcon i {
   z-index: 100;
   margin: 20px 0 0 20px;
   height: 45px;
@@ -188,13 +188,81 @@ header .menu-btn {
   border-radius: 50%;
   cursor: pointer;
 }
-.contact:hover {
+.contact .contactIcon:hover {
   background: rgb(149, 213, 178);
   background: radial-gradient(
     circle,
     rgba(149, 213, 178, 1) 100%,
     rgba(82, 183, 136, 1) 100%
   );
+} */
+.contact {
+  color: #fff;
+  z-index: 100;
+  position: relative;
+  background: rgb(149, 213, 178);
+  background: radial-gradient(
+    circle,
+    rgba(149, 213, 178, 1) 0%,
+    rgba(82, 183, 136, 1) 100%
+  );
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.contact .tooltip {
+  white-space: nowrap;
+  position: absolute;
+  top: -5px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.contact .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.contact:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.contact:hover span,
+.contact:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.contact:hover,
+.contact:hover .tooltip,
+.contact:hover .tooltip::before {
+  background: #d8f3dc;
+  color: #4b4b4b;
 }
 .modalBG {
   width: 100%;
@@ -448,7 +516,7 @@ header .menu-btn {
 .navigation-container {
   display: flex;
   align-items: center;
-  transform: translateX(-45vw);
+  transform: translateX(-24vw);
   transition: transform 0.5s ease-in-out;
   z-index: 10;
   background: #fff;
@@ -459,7 +527,7 @@ header .menu-btn {
   width: 55px;
 }
 .navigation {
-  gap: 13px;
+  gap: 15px;
   display: flex;
   align-items: center;
   height: 100vh;
@@ -467,10 +535,25 @@ header .menu-btn {
 }
 .navigation-container .navigation .wrapper {
   height: 100%;
-  width: calc(65vw / 3);
+  width: calc(45vw / 2);
+  max-height: 95vh;
+  overflow-y: auto;
+  direction: rtl;
+  padding-left: 10px;
+}
+.navigation-container .navigation .activeNav {
+  direction: ltr;
+}
+.navigation-container .navigation .wrapper::-webkit-scrollbar {
+  width: 5px;
+  margin-left: 10px;
 }
 .navigation-container .navigation .wrapper .card-navigation {
   height: 25%;
+  direction: ltr;
+}
+.navigation-container .navigation .activeNav .card-navigation {
+  direction: rtl;
 }
 .navigation-container .toggle .icon {
   height: 40px;
@@ -503,6 +586,9 @@ header .menu-btn {
   font-size: 11px;
   font-weight: 600;
   text-transform: capitalize;
+}
+.navigation .activeNav .contentDesc span {
+  text-align: left;
 }
 .navigation .icon {
   height: 30px;
@@ -548,16 +634,16 @@ header .menu-btn {
 .navigation .activePage .icon {
   background-color: #1b4332;
   color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
 }
-.navigation-container.openNavigation {
+.main-container.openNavigation .navigation-container {
   transform: translateX(0);
 }
-.navigation-container.openNavigation .toggle .icon i {
+.main-container.openNavigation .toggle .icon i {
   transform: rotate(180deg);
   transition: transform 0.5s ease-in-out;
 }
-.navigation-container.openNavigation .toggle .icon:hover i {
+.main-container.openNavigation .toggle .icon:hover i {
   transform: translate(-5px) rotate(180deg);
 }
 .navigation .otherServices {
@@ -573,13 +659,13 @@ header .menu-btn {
   margin: 8px 0 8px 0;
   border-radius: 15px;
   position: relative;
-  z-index: 20001;
+  z-index: 10;
   overflow: hidden;
 }
-.navigation-container.openNavigation .otherServices .image {
+.main-container.openNavigation .otherServices .image {
   left: 30px;
 }
-.navigation-container.openNavigation .navigation .otherServices .image img {
+.main-container.openNavigation .navigation .otherServices .image img {
   display: block;
 }
 .navigation .otherServices .text {
@@ -622,14 +708,15 @@ header .menu-btn {
 }
 .content-container {
   position: relative;
-  margin-top: 30px;
-  margin-left: -44vw;
+  margin-top: 50px;
+  margin-left: -25vw;
   padding: 20px 30px;
   max-height: 95vh;
   overflow-y: auto;
   overflow-x: hidden;
   z-index: 1;
   box-sizing: border-box;
+  transition: 0.6s;
 }
 
 .content-container .title {
@@ -661,6 +748,9 @@ header .menu-btn {
 .content-container .secondList li {
   list-style-type: decimal;
 }
+.main-container.openNavigation .content-container {
+  margin-left: 0;
+}
 @media only screen and (min-width: 300px) and (max-width: 900px) {
   .menu .nav {
     margin-top: 15%;
@@ -680,12 +770,40 @@ header .menu-btn {
   .contact-nav {
     display: none;
   }
-
   .modal {
     height: 390px;
     width: 90%;
   }
   .modal .inputs .texts .split {
     font-size: 15px;
+  }
+  .navigation-container {
+    transform: translateX(-91vw);
+  }
+  .navigation-container .navigation .wrapper {
+    width: calc(68vw / 2);
+  }
+  .navigation .activeNav {
+    width: 50vw !important;
+  }
+  .navigation .contentDesc span {
+    font-size: 8px;
+  }
+  .navigation .icon {
+    height: 25px;
+    width: 25px;
+  }
+  .navigation .icon i {
+    font-size: 9px;
+  }
+  .content-container {
+    margin-left: -95vw;
+  }
+  .main-container .otherServices .image {
+    display: none;
+  }
+
+  .navigation .otherServices .text {
+    font-size: 25px;
   }
 }

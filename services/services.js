@@ -123,6 +123,6 @@ closeContact.addEventListener("click", () => {
 
 const openNav = document.querySelector(".toggle .icon");
 openNav.addEventListener("click", () => {
-  const container = document.querySelector(".navigation-container");
+  const container = document.querySelector(".main-container");
   container.classList.toggle("openNavigation");
 });

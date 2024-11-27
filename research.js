@@ -160,3 +160,32 @@ tabs.forEach((tab, index) => {
     allContent[index].classList.add("activeTab");
   });
 });
+
+document.querySelector(".iconDeveloper").addEventListener("click", () => {
+  document.querySelector(".hiddenSection").classList.toggle("showDeveloper");
+});
+
+function getRandomNumber(min, max) {
+  return Math.random() * (max - min) + min;
+}
+function createCircles(numCircles) {
+  const circlesContainer = document.querySelector("footer .circles");
+
+  for (let i = 0; i < numCircles; i++) {
+    const li = document.createElement("li");
+
+    const leftPosition = getRandomNumber(5, 100);
+    li.style.left = `${leftPosition}%`;
+
+    const animationDelay = getRandomNumber(0, 10);
+    const animationDuration = getRandomNumber(10, 35);
+    li.style.animationDelay = `${animationDelay}s`;
+    li.style.animationDuration = `${animationDuration}s`;
+    const size = getRandomNumber(2, 4);
+    li.style.width = `${size}px`;
+    li.style.height = `${size}px`;
+
+    circlesContainer.appendChild(li);
+  }
+}
+createCircles(70);
