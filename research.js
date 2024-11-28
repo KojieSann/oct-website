@@ -11,15 +11,84 @@ window.addEventListener("scroll", () => {
 });
 
 const infoblaze = document.querySelector(".modalBG-infoblaze");
-      const infoblazeBtn = document.querySelector(".infoblazeBtn");
-      const infoblazeClose = document.querySelector(".closeInfoblaze");
+const infoblazeBtn = document.querySelector(".infoblazeBtn");
+const infoblazeClose = document.querySelector(".closeInfoblaze");
+infoblazeBtn.addEventListener("click", () => {
+  infoblaze.classList.add("showModal");
+});
+infoblazeClose.addEventListener("click", () => {
+  infoblaze.classList.remove("showModal");
+});
 
-      infoblazeBtn.addEventListener("click", () => {
-        infoblaze.classList.add("showModal");
-      });
-      infoblazeClose.addEventListener("click", () => {
-        infoblaze.classList.remove("showModal");
-      });
+const forum = document.querySelector(".modalBG-forum");
+const forumBtn = document.querySelector(".forumBtn");
+const forumClose = document.querySelector(".closeForum");
+forumBtn.addEventListener("click", () => {
+  forum.classList.add("showModal");
+});
+forumClose.addEventListener("click", () => {
+  forum.classList.remove("showModal");
+});
+
+const business = document.querySelector(".modalBG-business");
+const businessBtn = document.querySelector(".businessBtn");
+const businessClose = document.querySelector(".closeBusiness");
+businessBtn.addEventListener("click", () => {
+  business.classList.add("showModal");
+});
+businessClose.addEventListener("click", () => {
+  business.classList.remove("showModal");
+});
+
+const gateway = document.querySelector(".modalBG-gateway");
+const gatewayBtn = document.querySelector(".gatewayBtn");
+const gatewayClose = document.querySelector(".closeGateway");
+gatewayBtn.addEventListener("click", () => {
+  gateway.classList.add("showModal");
+});
+gatewayClose.addEventListener("click", () => {
+  gateway.classList.remove("showModal");
+});
+
+const educare = document.querySelector(".modalBG-educare");
+const educareBtn = document.querySelector(".educareBtn");
+const educareClose = document.querySelector(".closeEducare");
+educareBtn.addEventListener("click", () => {
+  educare.classList.add("showModal");
+});
+educareClose.addEventListener("click", () => {
+  educare.classList.remove("showModal");
+});
+
+const spectrum = document.querySelector(".modalBG-spectrum");
+const spectrumBtn = document.querySelector(".spectrumBtn");
+const spectrumClose = document.querySelector(".closeSpectrum");
+spectrumBtn.addEventListener("click", () => {
+  spectrum.classList.add("showModal");
+});
+spectrumClose.addEventListener("click", () => {
+  spectrum.classList.remove("showModal");
+});
+
+const infotech = document.querySelector(".modalBG-infotech");
+const infotechBtn = document.querySelector(".infotechBtn");
+const infotechClose = document.querySelector(".closeInfotech");
+infotechBtn.addEventListener("click", () => {
+  infotech.classList.add("showModal");
+});
+infotechClose.addEventListener("click", () => {
+  infotech.classList.remove("showModal");
+});
+
+const accounthink = document.querySelector(".modalBG-accounthink");
+const accounthinkBtn = document.querySelector(".accounthinkBtn");
+const accounthinkClose = document.querySelector(".closeAccounthink");
+accounthinkBtn.addEventListener("click", () => {
+  accounthink.classList.add("showModal");
+});
+accounthinkClose.addEventListener("click", () => {
+  accounthink.classList.remove("showModal");
+});
 
 function navigation() {
   $("ul.main-menu li").click(function (e) {
@@ -171,29 +240,3 @@ tabs.forEach((tab, index) => {
     allContent[index].classList.add("activeTab");
   });
 });
-function getRandomNumber(min, max) {
-  return Math.random() * (max - min) + min;
-}
-function createCircles(numCircles) {
-  const circlesContainer = document.querySelector("footer .circles");
-
-  for (let i = 0; i < numCircles; i++) {
-    const li = document.createElement("li");
-
-    const leftPosition = getRandomNumber(5, 100);
-    li.style.left = `${leftPosition}%`;
-
-    const animationDelay = getRandomNumber(0, 10);
-    const animationDuration = getRandomNumber(10, 35);
-    li.style.animationDelay = `${animationDelay}s`;
-    li.style.animationDuration = `${animationDuration}s`;
-    const size = getRandomNumber(2, 4);
-    li.style.width = `${size}px`;
-    li.style.height = `${size}px`;
-
-    circlesContainer.appendChild(li);
-  }
-}
-createCircles(70);
-
-    
