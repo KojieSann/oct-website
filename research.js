@@ -10,6 +10,17 @@ window.addEventListener("scroll", () => {
   backToTopButton.classList.toggle("activeBtn", window.scrollY > 500);
 });
 
+const infoblaze = document.querySelector(".modalBG-infoblaze");
+      const infoblazeBtn = document.querySelector(".infoblazeBtn");
+      const infoblazeClose = document.querySelector(".closeInfoblaze");
+
+      infoblazeBtn.addEventListener("click", () => {
+        infoblaze.classList.add("showModal");
+      });
+      infoblazeClose.addEventListener("click", () => {
+        infoblaze.classList.remove("showModal");
+      });
+
 function navigation() {
   $("ul.main-menu li").click(function (e) {
     if ($(this).siblings("li").find("ul.submenu:visible").length) {
@@ -160,11 +171,6 @@ tabs.forEach((tab, index) => {
     allContent[index].classList.add("activeTab");
   });
 });
-
-document.querySelector(".iconDeveloper").addEventListener("click", () => {
-  document.querySelector(".hiddenSection").classList.toggle("showDeveloper");
-});
-
 function getRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
@@ -189,3 +195,5 @@ function createCircles(numCircles) {
   }
 }
 createCircles(70);
+
+    
