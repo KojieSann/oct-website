@@ -79,6 +79,58 @@ function navigation() {
 }
 navigation();
 
+function startLoader() {
+  let counterElement = document.querySelector(".counter");
+  let currentValue = 0;
+  function updateCounter() {
+    if (currentValue === 100) {
+      return;
+    }
+    currentValue += Math.floor(Math.random() * 10) + 1;
+
+    if (currentValue > 100) {
+      currentValue = 100;
+    }
+    counterElement.textContent = currentValue;
+    let delay = Math.floor(Math.random() * 200) + 50;
+    setTimeout(updateCounter, delay);
+  }
+  updateCounter();
+}
+startLoader();
+gsap.to(".counter", 0.25, {
+  delay: 3.6,
+  opacity: 0,
+});
+gsap.to(".bar", 1.5, {
+  delay: 3.6,
+  opacity: 0,
+  height: 0,
+  stagger: {
+    amount: 0.5,
+  },
+  ease: "power4.inOut",
+});
+gsap.from(".title-oct h2 .char", 1.5, {
+  delay: 3.8,
+  y: 700,
+  stagger: {
+    amount: 0.5,
+  },
+  ease: "power4.inOut",
+});
+gsap.from("#toTop img", 2, {
+  delay: 4.1,
+  x: -200,
+  ease: "power4.inOut",
+});
+gsap.to(".preloaderImg", 2, {
+  delay: 3.6,
+  y: -300,
+  opacity: 0,
+  ease: "power4.inOut",
+});
+
 // window.addEventListener("scroll", reveal);
 // function reveal() {
 //   var reveals = document.querySelectorAll(".reveal");
@@ -93,20 +145,6 @@ navigation();
 //     }
 //   }
 // }
-
-gsap.from(".title-oct h2 .char", 1.5, {
-  delay: 0.8,
-  y: 700,
-  stagger: {
-    amount: 0.5,
-  },
-  ease: "power4.inOut",
-});
-gsap.from("#toTop img", 2, {
-  delay: 1.5,
-  x: -200,
-  ease: "power4.inOut",
-});
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -351,14 +389,3 @@ window.addEventListener("scroll", function () {
   });
   currentScroll = this.window.pageYOffset;
 });
-
-const lenis = new Lenis();
-
-lenis.on("scroll", (e) => {
-  console.log(e);
-});
-function raf(time) {
-  lenis.raf(time);
-  requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
