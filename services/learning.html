@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>OCT-Educating the Mind, Body, & Soul</title>
     <link rel="stylesheet" href="main.css" />
     <link
       rel="icon"
@@ -42,12 +42,21 @@
       }
 
       .links {
+        position: absolute;
+        top: 30px;
+        right: 95px;
         display: flex;
-        gap: 20px;
-        margin-top: 10px;
+        gap: 10px;
+        z-index: 2000;
+        transition: 0.3s;
       }
       .links a {
         text-decoration: underline;
+      }
+      @media only screen and (min-width: 300px) and (max-width: 900px) {
+        .main-container.openNavigation .links {
+          display: none;
+        }
       }
     </style>
   </head>
@@ -65,7 +74,7 @@
         <div class="nav-wrapper">
           <ul class="main-menu">
             <li class="main-menu-item">
-              <a href="../homepage.html" class="link">Home</a>
+              <a href="../index.html" class="link">Home</a>
             </li>
             <li class="main-menu-item">
               <a href="#">Programs &nbsp; <i class="fa-solid fa-plus"></i></a>
@@ -244,7 +253,17 @@
         </form>
       </div>
     </div>
+
     <div class="main-container">
+      <div class="links">
+        <a href="http://octelibrary.com:8081/" target="_blank">OPAC</a
+        ><a href="http://octelibrary.com:8080/" target="_blank">KOHA</a
+        ><a
+          href="https://login.ebsco.com/?requestIdentifier=5b1aef70-9195-4b3f-9bbe-43e50aeb55ea&acrValues=uid&ui_locales&redirect_uri=https://logon.ebsco.zone/api/dispatcher/continue/prompted?state=MjM3OTk1NWY5NmVlNGM5NGI2ODBmYjQ3ZTkwOGZiOGE=&authRequest=eyJraWQiOiIxNjg2MTQ5MjEzNjMxIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJodHRwczpcL1wvYXV0aC5lYnNjby56b25lXC9hcGlcL2Rpc3BhdGNoZXIiLCJhdXRoUmVxdWVzdCI6eyJncmFudF90eXBlIjoiYXV0aG9yaXphdGlvbl9jb2RlIiwic2NvcGUiOiJvcGVuaWQgZW1haWwgYWZmaWxpYXRpb24iLCJhY3JfdmFsdWVzIjoidWlkIiwicmVzcG9uc2VfdHlwZSI6ImNvZGUiLCJyZWRpcmVjdF91cmkiOiJodHRwczpcL1wvc2VhcmNoLmVic2NvaG9zdC5jb21cL3dlYmF1dGhcL1Byb21wdGVkQ2FsbGJhY2suYXNweCIsInN0YXRlIjoiQTNhTHNlRFdHTjRJbHlOQlpHTllPbnRnaTRMMUxNdXRzaHl1NVBEa2dDSGp3YWxELTA4Z2s0SmdOVmhTMVAtb3JJeXdxVkdIUUZ0dnUxTFhOTDNDUDRsM3hhU0lyOGx1d2JOaFh6Z2lPbmtvRzB0MUxPOTFETm9IUGJqYldJMjhMSGpLTVJSRW5PM3JET0N2UHl1dWZtTV9PdlZqUUs3NDNaelg5U2xnOWdjRzBSaEdnV3RPd2NQZEpjcWxDSHI2REJvMlpVdkUxRm9nenVOaHdRR09Ga2F0eDJlaUZWbkdOUElyN0VMNFVYRC1KelhodXJMX0NrUjlUTkJYMHBrbFJPYUl0NDFpYVJiSmdwcXpYMU9melUtZFdHYVNtQWJ1M2xFaG5xSXZocWlBd05kSUhFbUlBSWRBVjNFeVV1dGYzVXhkNDFXWlVOQmx0M0JmVnAtTmdUWHFrT3R5NkFVIiwiY2xpZW50X2lkIjoiYXdneWNJeDU3TXJ3bkRRNWg0VWU2eUNWRVAwcjVNdDkiLCJyZXNwb25zZV9tb2RlIjoicXVlcnkiLCJyZXFJZCI6IjViMWFlZjcwLTkxOTUtNGIzZi05YmJlLTQzZTUwYWViNTVlYSJ9LCJpYXQiOjE3MjkyMTAzMzgsImp0aSI6IjNkOWRlNjM5LTZkMTctNDAxYy1iYTg3LTJkMDVhMmI4MTdlMyIsInJlcUlkIjoiNWIxYWVmNzAtOTE5NS00YjNmLTliYmUtNDNlNTBhZWI1NWVhIn0.GXSkSqn_4I18h5vtriiObBVEq5nndsuBhJcBVpD-NUkZzNqhuFzrhxpGT0mSviuQqqOEz3gwZhV9JW5X6uBIt8ujQZxe7l9KpezIYmoFbIM4tS-iedWUUBiRMAPz-VF-e5IevlnpAXulXh8KzLLtYKWEc5KIL-BafC2gihG1r8SIWpFIljZpl9hwnyejs7JOrMHQ0VawJz32SStN7rWdmdJH5owwuP18ewjjQRdtAoyBakphSeej7qNkJ4iitCiIwSByfLdIVxaH8HTkRsjUORtLPBiu6owVtr_f1knzYj-iyeyFEZlw6P_TYNL3yCB_iKl01vs37AlaD8y438kT8w"
+          target="_blank"
+          >Ebscohost</a
+        >
+      </div>
       <div class="navigation-container">
         <div class="navigation">
           <div class="wrapper">
@@ -381,7 +400,7 @@
             </div>
           </div>
           <div class="wrapper activeNav">
-            <a href="../homepage.html" class="logoNav"
+            <a href="../index.html" class="logoNav"
               ><img
                 src="../img/olivarez-college-tagaytay-logo.png"
                 alt="oct logo"
@@ -468,15 +487,6 @@
             students to use the Learning Commons.
           </li>
         </ul>
-        <div class="links">
-          <a href="http://octelibrary.com:8081/" target="_blank">OPAC</a
-          ><a href="http://octelibrary.com:8080/" target="_blank">KOHA</a
-          ><a
-            href="https://login.ebsco.com/?requestIdentifier=5b1aef70-9195-4b3f-9bbe-43e50aeb55ea&acrValues=uid&ui_locales&redirect_uri=https://logon.ebsco.zone/api/dispatcher/continue/prompted?state=MjM3OTk1NWY5NmVlNGM5NGI2ODBmYjQ3ZTkwOGZiOGE=&authRequest=eyJraWQiOiIxNjg2MTQ5MjEzNjMxIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJodHRwczpcL1wvYXV0aC5lYnNjby56b25lXC9hcGlcL2Rpc3BhdGNoZXIiLCJhdXRoUmVxdWVzdCI6eyJncmFudF90eXBlIjoiYXV0aG9yaXphdGlvbl9jb2RlIiwic2NvcGUiOiJvcGVuaWQgZW1haWwgYWZmaWxpYXRpb24iLCJhY3JfdmFsdWVzIjoidWlkIiwicmVzcG9uc2VfdHlwZSI6ImNvZGUiLCJyZWRpcmVjdF91cmkiOiJodHRwczpcL1wvc2VhcmNoLmVic2NvaG9zdC5jb21cL3dlYmF1dGhcL1Byb21wdGVkQ2FsbGJhY2suYXNweCIsInN0YXRlIjoiQTNhTHNlRFdHTjRJbHlOQlpHTllPbnRnaTRMMUxNdXRzaHl1NVBEa2dDSGp3YWxELTA4Z2s0SmdOVmhTMVAtb3JJeXdxVkdIUUZ0dnUxTFhOTDNDUDRsM3hhU0lyOGx1d2JOaFh6Z2lPbmtvRzB0MUxPOTFETm9IUGJqYldJMjhMSGpLTVJSRW5PM3JET0N2UHl1dWZtTV9PdlZqUUs3NDNaelg5U2xnOWdjRzBSaEdnV3RPd2NQZEpjcWxDSHI2REJvMlpVdkUxRm9nenVOaHdRR09Ga2F0eDJlaUZWbkdOUElyN0VMNFVYRC1KelhodXJMX0NrUjlUTkJYMHBrbFJPYUl0NDFpYVJiSmdwcXpYMU9melUtZFdHYVNtQWJ1M2xFaG5xSXZocWlBd05kSUhFbUlBSWRBVjNFeVV1dGYzVXhkNDFXWlVOQmx0M0JmVnAtTmdUWHFrT3R5NkFVIiwiY2xpZW50X2lkIjoiYXdneWNJeDU3TXJ3bkRRNWg0VWU2eUNWRVAwcjVNdDkiLCJyZXNwb25zZV9tb2RlIjoicXVlcnkiLCJyZXFJZCI6IjViMWFlZjcwLTkxOTUtNGIzZi05YmJlLTQzZTUwYWViNTVlYSJ9LCJpYXQiOjE3MjkyMTAzMzgsImp0aSI6IjNkOWRlNjM5LTZkMTctNDAxYy1iYTg3LTJkMDVhMmI4MTdlMyIsInJlcUlkIjoiNWIxYWVmNzAtOTE5NS00YjNmLTliYmUtNDNlNTBhZWI1NWVhIn0.GXSkSqn_4I18h5vtriiObBVEq5nndsuBhJcBVpD-NUkZzNqhuFzrhxpGT0mSviuQqqOEz3gwZhV9JW5X6uBIt8ujQZxe7l9KpezIYmoFbIM4tS-iedWUUBiRMAPz-VF-e5IevlnpAXulXh8KzLLtYKWEc5KIL-BafC2gihG1r8SIWpFIljZpl9hwnyejs7JOrMHQ0VawJz32SStN7rWdmdJH5owwuP18ewjjQRdtAoyBakphSeej7qNkJ4iitCiIwSByfLdIVxaH8HTkRsjUORtLPBiu6owVtr_f1knzYj-iyeyFEZlw6P_TYNL3yCB_iKl01vs37AlaD8y438kT8w"
-            target="_blank"
-            >Ebscohost</a
-          >
-        </div>
       </div>
     </div>
 

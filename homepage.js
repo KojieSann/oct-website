@@ -12,10 +12,31 @@ window.addEventListener("scroll", () => {
 
 function navigation() {
   $("ul.main-menu li").click(function (e) {
-    if ($(this).siblings("li").find("ul.submenu:visible").length) {
-      $("ul.submenu").slideUp("normal");
+    if ($(this).find("ul.submenu").length) {
+      if ($(this).find("ul.submenu").is(":visible")) {
+        $(this).find("ul.submenu").slideUp("normal");
+        $(".media-nav, .contact-nav").stop().animate(
+          {
+            marginTop: "0px",
+            opacity: 1,
+          },
+          300
+        );
+      } else {
+        if ($(this).siblings("li").find("ul.submenu:visible").length) {
+          $("ul.submenu").slideUp("normal");
+        }
+
+        $(this).find("ul.submenu").slideToggle("normal");
+        $(".media-nav, .contact-nav").stop().animate(
+          {
+            marginTop: "300px",
+            opacity: 0,
+          },
+          300
+        );
+      }
     }
-    $(this).find("ul.submenu").slideToggle("normal");
   });
 
   var tl = new TimelineMax({ paused: true });
@@ -77,6 +98,7 @@ function navigation() {
     tl.reversed(!tl.reversed());
   });
 }
+
 navigation();
 
 function startLoader() {
@@ -97,39 +119,39 @@ function startLoader() {
   }
   updateCounter();
 }
-startLoader();
-gsap.to(".counter", 0.25, {
-  delay: 3.6,
-  opacity: 0,
-});
-gsap.to(".bar", 1.5, {
-  delay: 3.6,
-  opacity: 0,
-  height: 0,
-  stagger: {
-    amount: 0.5,
-  },
-  ease: "power4.inOut",
-});
-gsap.from(".title-oct h2 .char", 1.5, {
-  delay: 3.8,
-  y: 700,
-  stagger: {
-    amount: 0.5,
-  },
-  ease: "power4.inOut",
-});
-gsap.from("#toTop img", 2, {
-  delay: 4.1,
-  x: -200,
-  ease: "power4.inOut",
-});
-gsap.to(".preloaderImg", 2, {
-  delay: 3.6,
-  y: -300,
-  opacity: 0,
-  ease: "power4.inOut",
-});
+// startLoader();
+// gsap.to(".counter", 0.25, {
+//   delay: 3.6,
+//   opacity: 0,
+// });
+// gsap.to(".bar", 1.5, {
+//   delay: 3.6,
+//   opacity: 0,
+//   height: 0,
+//   stagger: {
+//     amount: 0.5,
+//   },
+//   ease: "power4.inOut",
+// });
+// gsap.from(".title-oct h2 .char", 1.5, {
+//   delay: 3.8,
+//   y: 700,
+//   stagger: {
+//     amount: 0.5,
+//   },
+//   ease: "power4.inOut",
+// });
+// gsap.from("#toTop img", 2, {
+//   delay: 4.1,
+//   x: -200,
+//   ease: "power4.inOut",
+// });
+// gsap.to(".preloaderImg", 2, {
+//   delay: 3.6,
+//   y: -300,
+//   opacity: 0,
+//   ease: "power4.inOut",
+// });
 
 // window.addEventListener("scroll", reveal);
 // function reveal() {
