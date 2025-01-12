@@ -126,3 +126,13 @@ openNav.addEventListener("click", () => {
   const container = document.querySelector(".main-container");
   container.classList.toggle("openNavigation");
 });
+
+const closeDocument = document.querySelector(".closeDocument");
+const documentModal = document.querySelector(".bgDocuments");
+const openDocumentModal = document.querySelector(".openDocumentTab");
+closeDocument.addEventListener("click", () => {
+  documentModal.classList.remove("showDocument");
+});
+openDocumentModal.addEventListener("click", () => {
+  documentModal.classList.add("showDocument");
+});

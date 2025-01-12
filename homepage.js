@@ -119,55 +119,69 @@ function startLoader() {
   }
   updateCounter();
 }
-// startLoader();
-// gsap.to(".counter", 0.25, {
-//   delay: 3.6,
-//   opacity: 0,
-// });
-// gsap.to(".bar", 1.5, {
-//   delay: 3.6,
-//   opacity: 0,
-//   height: 0,
-//   stagger: {
-//     amount: 0.5,
-//   },
-//   ease: "power4.inOut",
-// });
-// gsap.from(".title-oct h2 .char", 1.5, {
-//   delay: 3.8,
-//   y: 700,
-//   stagger: {
-//     amount: 0.5,
-//   },
-//   ease: "power4.inOut",
-// });
-// gsap.from("#toTop img", 2, {
-//   delay: 4.1,
-//   x: -200,
-//   ease: "power4.inOut",
-// });
-// gsap.to(".preloaderImg", 2, {
-//   delay: 3.6,
-//   y: -300,
-//   opacity: 0,
-//   ease: "power4.inOut",
-// });
+startLoader();
+gsap.to(".counter", 0.25, {
+  delay: 3.6,
+  opacity: 0,
+});
+gsap.to(".bar", 1.5, {
+  delay: 3.6,
+  opacity: 0,
+  height: 0,
+  stagger: {
+    amount: 0.5,
+  },
+  ease: "power4.inOut",
+});
+gsap.from(".title-oct h2 .char", 1.5, {
+  delay: 3.8,
+  y: 700,
+  stagger: {
+    amount: 0.5,
+  },
+  ease: "power4.inOut",
+});
+gsap.from("#toTop img", 2, {
+  delay: 4.1,
+  x: -200,
+  ease: "power4.inOut",
+});
+gsap.to(".preloaderImg", 2, {
+  delay: 3.6,
+  y: -300,
+  opacity: 0,
+  ease: "power4.inOut",
+});
+gsap.to(".admissionAds", 1, {
+  delay: 5.4,
+  opacity: 1,
+  display: "flex",
+  ease: "power4.out",
+});
+document
+  .querySelector(".closeAdmissionAds")
+  .addEventListener("click", function () {
+    gsap.to(".admissionAds", 0.2, {
+      opacity: 0,
+      display: "none",
+      ease: "power4.inOut",
+    });
+  });
 
-// window.addEventListener("scroll", reveal);
-// function reveal() {
-//   var reveals = document.querySelectorAll(".reveal");
-//   for (var i = 0; i < reveals.length; i++) {
-//     var windowHeight = window.innerHeight;
-//     var revealTop = reveals[i].getBoundingClientRect().top;
-//     var revealPoint = 100;
-//     if (revealTop < windowHeight - revealPoint) {
-//       reveals[i].classList.add("showContent");
-//     } else {
-//       reveals[i].classList.remove("showContent");
-//     }
-//   }
-// }
-
+window.addEventListener("scroll", reveal);
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var revealTop = reveals[i].getBoundingClientRect().top;
+    var revealPoint = 100;
+    if (revealTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("showContent");
+    } else {
+      reveals[i].classList.remove("showContent");
+    }
+  }
+}
 gsap.registerPlugin(ScrollTrigger);
 
 const navItems = document.querySelectorAll(".programs-nav > div");
