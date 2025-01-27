@@ -775,8 +775,7 @@ header .menu-btn {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
-  z-index: 100;
-
+  z-index: 1000000;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -804,6 +803,7 @@ header .menu-btn {
   align-items: center;
   flex-direction: column;
   margin-bottom: 20px;
+  text-align: center;
 }
 .documents .tableHeader img {
   width: 120px;
@@ -905,5 +905,16 @@ header .menu-btn {
 
   .navigation .otherServices .text {
     font-size: 25px;
+  }
+  .bgDocuments .documents {
+    width: 80%;
+    padding: 10px 30px;
+  }
+  .documents th,
+  .documents td {
+    font-size: 10px;
+  }
+  .documents .tableHeader img {
+    width: 90px;
   }
 }
