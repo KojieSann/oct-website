@@ -1,13 +1,42 @@
 Splitting();
 
-const hiddenHeader = document.getElementById("hiddenHeader");
-window.addEventListener("scroll", () => {
-  hiddenHeader.classList.toggle("showHeader", window.scrollY > 500);
-});
+// const hiddenHeader = document.getElementById("hiddenHeader");
+// window.addEventListener("scroll", () => {
+//   hiddenHeader.classList.toggle("showHeader", window.scrollY > 500);
+// });
 
 const backToTopButton = document.getElementById("backToTop");
 window.addEventListener("scroll", () => {
   backToTopButton.classList.toggle("activeBtn", window.scrollY > 500);
+});
+
+function handleClick(event, url, title) {
+  event.preventDefault();
+  show(title, event.currentTarget.closest(".dropdown"));
+  const newTab = window.open(url, "_blank");
+  newTab.focus();
+}
+
+function show(title, dropdown) {
+  const textbox = dropdown.querySelector(".textbox");
+  textbox.value = title;
+}
+
+const dropdowns = document.querySelectorAll(".dropdown");
+
+dropdowns.forEach((dropdown) => {
+  dropdown.onclick = function () {
+    dropdown.classList.toggle("activeShow");
+  };
+});
+
+document.addEventListener("click", (e) => {
+  dropdowns.forEach((dropdown) => {
+    const textbox = dropdown.querySelector(".textbox");
+    if (!dropdown.contains(e.target) && e.target !== textbox) {
+      dropdown.classList.remove("activeShow");
+    }
+  });
 });
 
 function navigation() {

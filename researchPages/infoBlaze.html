@@ -40,6 +40,42 @@
         <i class="fa-solid fa-bars"></i>
       </div>
     </div> -->
+    <div class="modalBG modalBG-infoblaze">
+      <div class="modal">
+        <div class="close closeInfoblaze">
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="texts">
+          <span class="title">The Editorial Board</span>
+          <div class="wrap">
+            <h4>Editor-in-Chief</h4>
+            <p>Raquel M. Perez, PhD, NEd</p>
+          </div>
+          <div class="wrap">
+            <h4>Editorial Board Members</h4>
+            <p>Jon-jon T. Martinez, PhD, NEd</p>
+            <p>Winifredo E. Licop, PhD, NEd</p>
+            <p>Clyde C. Gatpandan, PhD, RN</p>
+            <p>Christopher Del Luna, RN, Man, PhD</p>
+          </div>
+          <div class="wrap">
+            <h4>Copy Editor</h4>
+            <p>Jean Rizza A. Dela Cruz, PhD</p>
+            <p class="position">
+              Head, Center for Research, Publication, Planning & Development
+            </p>
+          </div>
+          <div class="wrap">
+            <h4>In-House Editors</h4>
+            <p>Maureen B. Encabo, LPT</p>
+            <p>Christhel Joy J. Glorioso</p>
+            <p class="position">
+              Staff, Center for Research, Publication, Planning & Development
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <a href="#toTop" class="backToTop" id="backToTop"
       ><img src="../img/olivarez-college-tagaytay-logo.png" alt=""
     /></a>
@@ -212,28 +248,44 @@
         Editorial Board of the Olivarez College DIGEST or Center for Research,
         Publication, Planning and Development.
       </p>
-      <div class="links">
-        <a href="#">Infoblaze V.1</a>
-        <a href="#">Infoblaze V.2</a>
-        <a href="#">Infoblaze V.3</a>
+      <div class="cont">
+        <div class="dropdown">
+          <input
+            type="text"
+            class="textbox input"
+            placeholder="Select Volume"
+            readonly
+          />
+          <span class="icon-down"
+            ><i class="fa-solid fa-chevron-down"></i
+          ></span>
+
+          <div class="option">
+            <a
+              href="./journals/oct-the forum.pdf"
+              target="_blank"
+              onclick="handleClick(event, this.href, 'The forum V.1')"
+              >Infoblaze V.1
+            </a>
+            <a
+              href="./journals/OCT- The Forum_V.2 No.1 (1).pdf"
+              target="_blank"
+              onclick="handleClick(event, this.href, 'The forum V.2 no.1')"
+              >Infoblaze V.2
+            </a>
+            <a
+              href="./journals/OCT- The Forum_V.2 No.2 (1).pdf"
+              target="_blank"
+              onclick="handleClick(event, this.href, 'The forum V.2 no.2')"
+              >Infoblaze V.3
+            </a>
+          </div>
+        </div>
+        <div class="editorial infoblazeBtn">Editorial Board</div>
       </div>
-      <div class="editorialBoards">
-        <h2 class="title">The Editorial Board</h2>
-        <h4>Editor in Chief</h4>
-        <p>Raquel M. Perez, PhD, NEd</p>
-        <h4>Editorial Board Members</h4>
-        <p>Jon-jon T. Martinez, PhD, NEd</p>
-        <p>Winifredo E. Licop, PhD, NEd</p>
-        <p>Clyde C. Gatpandan, PhD, RN</p>
-        <p>Christopher Del Luna, RN, Man, PhD</p>
-        <h4>Copy Editor</h4>
-        <p>Jean Rizza A. Dela Cruz, PhD</p>
-        <h5>Head, Center for Research, Publication, Planning & Development</h5>
-        <h4>In-House Editors</h4>
-        <p>Maureen B. Encabo, LPT</p>
-        <p>Christhel Joy J. Glorioso</p>
-        <h4>Staff, Center for Research, Publication, Planning & Development</h4>
-      </div>
+      <a href="../research.html" class="goBack"
+        ><i class="fa-solid fa-rotate-left"></i
+      ></a>
     </div>
     <footer>
       <div class="footer-wrapper">
@@ -279,6 +331,17 @@
     <script src="../gsap/swiper-bundle.min.js"></script>
     <script src="../gsap/gsap.min.js"></script>
     <script src="../gsap/ScrollTrigger.min.js"></script>
-    <script src="./main.js"></script>
+    <script src="main.js"></script>
+    <script>
+      const infoblaze = document.querySelector(".modalBG-infoblaze");
+      const infoblazeBtn = document.querySelector(".infoblazeBtn");
+      const infoblazeClose = document.querySelector(".closeInfoblaze");
+      infoblazeBtn.addEventListener("click", () => {
+        infoblaze.classList.add("showModal");
+      });
+      infoblazeClose.addEventListener("click", () => {
+        infoblaze.classList.remove("showModal");
+      });
+    </script>
   </body>
 </html>

@@ -321,6 +321,87 @@ header .menu-btn {
   display: flex;
   flex-direction: column;
 }
+.research-container .research-title {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.research-container .research-title h1 {
+  font-size: 35px;
+  text-align: center;
+}
+.research-container .research-title img {
+  width: 200px;
+}
+.research {
+  width: 100%;
+  padding: 50px 100px;
+}
+.research .tab-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #dddd;
+  position: relative;
+}
+.research .tab-box .tab-btn {
+  font-size: 20px;
+  color: #838383;
+  background: none;
+  border: none;
+  padding: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.research .tab-box .line {
+  position: absolute;
+  top: 61px;
+  left: 0;
+  width: 121px;
+  height: 4px;
+  background: #245b44;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.research .tab-box .tab-btn.activeTab {
+  color: #000;
+  font-weight: 600;
+}
+.research .content-box {
+  padding: 5px;
+}
+.research .content-box .content {
+  display: none;
+  animation: showTab 0.5s ease;
+}
+@keyframes showTab {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.research .content-box .content.activeTab {
+  display: block;
+}
+.research .content-box .content .wrapper {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+  flex-direction: column;
+}
+.wrapResearch {
+  width: 25%;
+  font-size: 20px;
+  font-weight: 700;
+}
 
 /* footer */
 footer {
