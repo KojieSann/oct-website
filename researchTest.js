@@ -112,3 +112,42 @@ function showSlider() {
   itemActiveOld.classList.remove("active");
   items[itemActive].classList.add("active");
 }
+
+const tabs = document.querySelectorAll(".tab-btn");
+const allContent = document.querySelectorAll(".content");
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener("click", (e) => {
+    tabs.forEach((tab) => {
+      tab.classList.remove("activeTab");
+    });
+    tab.classList.add("activeTab");
+    var line = document.querySelector(".line");
+    line.style.width = e.target.offsetWidth + "px";
+    line.style.left = e.target.offsetLeft + "px";
+    allContent.forEach((content) => {
+      content.classList.remove("activeTab");
+    });
+    allContent[index].classList.add("activeTab");
+  });
+});
+
+document.querySelectorAll(".wrapResearch").forEach((item, index) => {
+  item.addEventListener("mouseenter", () => {
+    const journalWrappers = document.querySelectorAll(
+      ".slideJournals .wrapper"
+    );
+    if (journalWrappers[index]) {
+      journalWrappers[index].classList.add("showHoverJournal");
+    }
+  });
+
+  item.addEventListener("mouseleave", () => {
+    const journalWrappers = document.querySelectorAll(
+      ".slideJournals .wrapper"
+    );
+    if (journalWrappers[index]) {
+      journalWrappers[index].classList.remove("showHoverJournal");
+    }
+  });
+});
